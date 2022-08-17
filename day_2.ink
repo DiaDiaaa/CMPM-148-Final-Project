@@ -3,6 +3,8 @@ VAR good = 0
 VAR bad = 0
 VAR mental = 0
 
+LIST shop_item = 
+
 -> day_two
 
 === day_two ===
