@@ -2,6 +2,7 @@ VAR Sanity = 10
 VAR Kindness = 0
 VAR Evilness = 0
 
+
  * [Day 1] -> Day1
 
 === Day1 === 
@@ -24,7 +25,7 @@ VAR Evilness = 0
  * Patient’s age -> patient_age
  * Patient’s address -> patient_address
  * Diagnose disorder -> diagnose_disorder
- * Close medical record -> drink_coffee
+ * {patient_name && patient_age && patient_address && diagnose_disorder}Close medical record -> drink_coffee
 
 
 == patient_name
@@ -57,7 +58,7 @@ Dissociative Identity Disorder
  * Check out my awards -> check_out_my_awards
  * [Check out the photo on the desk] -> check_out_photo_on_desk
  * [Take another sip of espresso.] -> take_another_sip_of_espresso
- * [Waiting for the patient] -> wait_for_patient
+ * {check_out_my_awards && check_out_photo_on_desk && take_another_sip_of_espresso}[Waiting for the patient] -> wait_for_patient
 
 == check_out_my_awards
 :
@@ -176,6 +177,8 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
  - * [Park] -> day1_park
    
    * [Commercial Center] -> day1_commercial
+   
+   * [Psychiatric institution] -> day1_psychiatric_institution
 
 == day1_park
 - I left my clinic and went to a nearby park.
@@ -185,7 +188,6 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
  * Looking for a bench
 
 - I found an empty bench at random and sat down, enjoying the sunshine.
-
     ~ Sanity += 2
     
 - It's getting late. And It's time to go home. 
@@ -194,10 +196,37 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 
 
 == day1_commercial
+- I walked to a nearby commercial center after leaving the clinic. Today is still business as usual. Barely see anyone along the way. Despite the fact that almost every company is closed, several businesses insist on staying open.
+ 
+  I was strolling down the street when I noticed a store called "Home of Soul," and my curiosity compelled me to go inside.
+ 
+ * Enter the store.
+ 
+- I walked into the store and took a look around. The shop is small, but it sells a variety of unusual products such as tributes, sculptures, dream nets, and much more stuff that I cannot name.
+
+  After a bit, an old man with glasses emerged from the entrance.
+
+  Old man: Welcome to “Home of Soul”, what would you like to get? Young man.
+
+ * Jeff: “What can I buy here?”
+
+- Old man: Let me see, you can take two things from my shop today, the usage of which may change your destiny, but you will also pay something with a cost that you cannot see. Will you still be interested in purchasing it?
+
+  The old man's words puzzled me; what does he mean by the cost that I cannot see? I don't understand and am stubbed, yet I choose to buy things nonetheless.
+
+ * Jeff: "I would like to purchase some; what do you have for purchase?"
+
+- Old man: Very well, young man, these are all things you may purchase. Choose two products that interest your curiosity.
+
+
+
  * temp -> day1_home
+ 
+== day1_psychiatric_institution
+ * temp -> day1_home
+
 
 == day1_home
 
-- 
-for compile ending
+- for compile ending
     -> END
