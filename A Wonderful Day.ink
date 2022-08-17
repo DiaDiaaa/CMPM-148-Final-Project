@@ -3,6 +3,7 @@ VAR Kindness = 0
 VAR Evilness = 0
 
 VAR commercial_count = 0
+VAR card_count = 0
 
 
  * [Day 1] -> Day1
@@ -181,9 +182,11 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
    
    * [Commercial Center] -> commercial
    
-   * [Psychiatric institution] -> psychiatric_institution
+   * [Psychiatric institution] -> day1_psychiatric_institution
 
 === park ===
+[Park]
+
 - I left my clinic and went to a nearby park.
 
   No matter what time it is here, it is so comfortable, and nice for me to relax my mind and body.
@@ -199,6 +202,8 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 
 
 === commercial ===
+[Commercial Center]
+
 - I walked to a nearby commercial center after leaving the clinic. Today is still business as usual. Barely see anyone along the way. Despite the fact that almost every company is closed, several businesses insist on staying open.
  
   I was strolling down the street when I noticed a store called "Home of Soul," and my curiosity compelled me to go inside.
@@ -223,7 +228,7 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
  * Commercial List -> commercial_list
  
  
-== commercial_list
+== commercial_list ==
 
  * {not blood_scalpel && commercial_count < 2} Blood Scalpel -> blood_scalpel
  * {not adorable_little_sheep && commercial_count < 2} Adorable Little Sheep -> adorable_little_sheep
@@ -284,18 +289,153 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 
 == close_commercial_list
     ~ commercial_count = 0
+    ~ Sanity -= 2 
 - Old man: “You appear to have decided to carry two items with you.”
+ 
+ I left the commercial center with the two items I had purchased, constantly feeling as though something had changed but not knowing what.
+
+ * [Back Home] -> home
+ 
+ 
+ 
+=== day1_psychiatric_institution ===
+[Psychiatric institution]
+
+- I left my clinic and proceeded to the city's largest psychiatric institution.
+
+  I used to work here, but the environment was so dreary that I quit and decided to create my own clinic.
+
+  For some reason, I felt like someone was guiding me here, and I came to this place again.
+
+ * Walk into the Psychiatric institution
+ 
+- The nurse at the front desk recognized me right away.
+ 
+  Nurse: “Hi! Doctor Jeff, What brings you here?” 
+
+ * Jeff: "Ohh, Hi! Nothing, I'm just looking around here. What have you been busy with recently? "
+
+- Nurse: “You are just in time. Recently, we received an elderly lady. She babbles every day. And hope that you can talk to her.”
+
+ * Jeff: "No problem. And where is she? "
+
+- Nurse: “She's in building 44, room 44. Please, Doctor Jeff.”
+
+ * Go to building 44, room 44.
+ 
+- As I got closer and closer to the enigmatic woman, I could sense a suffocating atmosphere creeping up on me. I was standing in front of the door of Room 44, and the awful atmosphere had totally swallowed me up as if a pair of chilly hands had gripped my throat and taken my breath away.
+
+ * Knock on the door
+ 
+- Jeff: “Good afternoon, I am Dr. Jeff. May I come in?”
+
+  As I thought, the whole room was separated by a glass wall, so I could have a very safe conversation with her.
+
+ * Jeff: “Ma’am, How have you been?”
+
+- The old lady: “Aha, what do I smell? It’s the smell of death.” 
+
+  The old lady: “Young man, You're gonna die!”
+
+ * Jeff: “I have met so many patients, many of them have said these words as you say, but most of them are just to intimidate me.”
+
+- Jeff: “Ma’am, I wonder to know, why do you say I’m gonna die? And how do you know?“
+
+  The old lady: “Reason? You should figure it out by yourself, young man.” 
+
+  A villainous smile on her shriveled face
+  
+  The old lady: “Oh yeah, young man”
+
+  She raised her arm and pointed at me.
+
+  The old lady: “Jeff, right? Come over here! I have something good for you.”
+
+  She holds a stack of poker and a grin spreads across her face
+
+  The old lady: “I have a set of Tarot, maybe they will tell you the reason.”
+  
+ * "Playing games with mental patients that is not too much is also a good treatment for them"
+
+- Jeff: “Yes, Ma’am. What‘s the rule?”
+
+  The old lady chuckled.
+
+  The old lady: “I will give you three cards, Jeff. And these three cards represent some revelation, and I'm going to give you some little revelations from the cards.”
+  
+ * Jeff: “Okay, Ma’am”
+
+- The old lady: “And of course, every card you open has a price, so are you ready, young man? "
+
+ * Yes, I’m good to go now.
+ 
+- There are three cards in front of you
+ 
+ * [Choose a card] -> day1_choose_card
+
+== day1_choose_card ==
+ 
+ * [The Star， XVII] -> star_card
+ * [The Moon， XVIII] -> moon_card
+ * [The Sun， XIX] -> sun_card
+ * [Not choose] -> day1_card_not_choose
+
+
+== star_card
+    ~ card_count += 1 
+
+- The Star， XVII: 
+  The old lady: “This is a star in a positive position, which represents the hope hidden in the depths. Although it is not big, it may change your destiny. However, this star has dimmed, maybe, under you In a reincarnation, you should choose a way home"
+
+ * [Back] -> day1_choose_card
+
+== moon_card
+    ~ card_count += 1 
+
+- The Moon， XVIII: 
+  The old lady: “This is a positive position Moon, representing restlessness, confusion, and deception. Your rudeness or lies in your language will give you a different fate.”
+  
+ * [Back] -> day1_choose_card
+
+== sun_card
+    ~ card_count += 1
+
+- The Sun， XIX: 
+  The old lady: “This is a positive position of the sun, representing an active, full of life, and always friendly you that will reward you handsomely.”
+
+ * [Back] -> day1_choose_card
+
+// keep track how many cards has already chose
+== function card_cal(i) ==
+{
+- card_count == 1:
+    ~ Sanity -= 1 
+    // Sanity - 1
+        
+- card_count == 2:
+    ~ Sanity -= 3 
+    // Sanity - 3 
+    
+- card_count == 3:
+    ~ Sanity -= 6 
+    // Sanity  -6 
+}
+
+== day1_card_not_choose ==
+{card_cal(0)}
+
+~ card_count = 0
+
+- The old lady: “It seems that you have already made a choice, and I have given you a revelation. I hope to see you next time, Jeff”
+ 
+ * Leave the Psychiatric institution
+ 
+    ** [Back Home] -> home
 
 
 
 
- * temp -> home
- 
- 
- 
- 
-=== psychiatric_institution ===
- * temp -> home
+
 
 
 === home ===
