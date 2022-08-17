@@ -2,6 +2,8 @@ VAR Sanity = 10
 VAR Kindness = 0
 VAR Evilness = 0
 
+VAR commercial_count = 0
+
 
  * [Day 1] -> Day1
 
@@ -171,16 +173,17 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 
 - I sat down slowly and carefully at my chair, and the chilly perspiration on my back soaked my clothes. Every meeting I have with her makes me uneasy and afraid, fear has gripped every nerve in my body. Yet I'm a psychologist, and I have to take it all.
 
+
 /* out of work */
 * Jennifer is the only patient with an appointment with me today, where should I go now?
 
- - * [Park] -> day1_park
+ - * [Park] -> park
    
-   * [Commercial Center] -> day1_commercial
+   * [Commercial Center] -> commercial
    
-   * [Psychiatric institution] -> day1_psychiatric_institution
+   * [Psychiatric institution] -> psychiatric_institution
 
-== day1_park
+=== park ===
 - I left my clinic and went to a nearby park.
 
   No matter what time it is here, it is so comfortable, and nice for me to relax my mind and body.
@@ -192,10 +195,10 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
     
 - It's getting late. And It's time to go home. 
  
- * [Home] -> day1_home
+ * [Home] -> home
 
 
-== day1_commercial
+=== commercial ===
 - I walked to a nearby commercial center after leaving the clinic. Today is still business as usual. Barely see anyone along the way. Despite the fact that almost every company is closed, several businesses insist on staying open.
  
   I was strolling down the street when I noticed a store called "Home of Soul," and my curiosity compelled me to go inside.
@@ -217,16 +220,85 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
  * Jeff: "I would like to purchase some; what do you have for purchase?"
 
 - Old man: Very well, young man, these are all things you may purchase. Choose two products that interest your curiosity.
-
-
-
- * temp -> day1_home
+ * Commercial List -> commercial_list
  
-== day1_psychiatric_institution
- * temp -> day1_home
+ 
+== commercial_list
+
+ * {not blood_scalpel && commercial_count < 2} Blood Scalpel -> blood_scalpel
+ * {not adorable_little_sheep && commercial_count < 2} Adorable Little Sheep -> adorable_little_sheep
+ * {not a_calligraphy && commercial_count < 2} A calligraphy that says ‘Justice -> a_calligraphy
+ * {not distorted_paintings && commercial_count < 2} Distorted Paintings -> distorted_paintings
+ * {not small_tentacle && commercial_count < 2} Small Tentacle -> small_tentacle
+ * {not animal_tooth && commercial_count < 2} An unknown animal's tooth -> animal_tooth
+ * {not nonsensical_writing && commercial_count < 2} A scroll containing nonsensical writing -> nonsensical_writing
+ * {not superman_toy && commercial_count < 2} Superman Toy -> superman_toy
+ * {not game_disc && commercial_count < 2} 1998 Game Disc -> game_disc
+
+ * {commercial_count == 2} [Old man: “You appear to have decided to carry two items with you.”] -> close_commercial_list
+ 
+== blood_scalpel
+    ~ Evilness += 2
+    ~ commercial_count += 1
+ * [Back] -> commercial_list
+ 
+== adorable_little_sheep
+    ~ Kindness += 1
+    ~ commercial_count += 1
+ * [Back] -> commercial_list
+
+== a_calligraphy
+    ~ Kindness += 2
+    ~ commercial_count += 1
+ * [Back] -> commercial_list
+
+== distorted_paintings
+    ~ Sanity -= 5
+    ~ commercial_count += 1
+ * [Back] -> commercial_list
+
+== small_tentacle
+    ~ Sanity -= 3
+    ~ commercial_count += 1
+ * [Back] -> commercial_list
+ 
+== animal_tooth
+    ~ Evilness += 1
+    ~ commercial_count += 1
+ * [Back] -> commercial_list
+ 
+== nonsensical_writing
+    ~ Sanity -= 1 
+    ~ commercial_count += 1
+ * [Back] -> commercial_list
+ 
+== superman_toy
+    ~ Sanity += 2 
+    ~ commercial_count += 1
+ * [Back] -> commercial_list
+ 
+== game_disc
+    ~ Sanity += 5
+    ~ commercial_count += 1
+ * [Back] -> commercial_list
+
+== close_commercial_list
+    ~ commercial_count = 0
+- Old man: “You appear to have decided to carry two items with you.”
 
 
-== day1_home
+
+
+ * temp -> home
+ 
+ 
+ 
+ 
+=== psychiatric_institution ===
+ * temp -> home
+
+
+=== home ===
 
 - for compile ending
     -> END
