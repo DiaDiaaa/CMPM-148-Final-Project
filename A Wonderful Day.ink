@@ -2,6 +2,8 @@ VAR Sanity = 10
 VAR Kindness = 0
 VAR Evilness = 0
 
+VAR Pendant = 0
+
 VAR commercial_count = 0
 VAR card_count = 0
 
@@ -182,7 +184,9 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
    
    * [Commercial Center] -> commercial
    
-   * [Psychiatric institution] -> day1_psychiatric_institution
+   * [Psychiatric Institution] -> day1_psychiatric_institution
+   
+   * [Go Home] -> go_home
 
 === park ===
 [Park]
@@ -429,16 +433,100 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 - The old lady: “It seems that you have already made a choice, and I have given you a revelation. I hope to see you next time, Jeff”
  
  * Leave the Psychiatric institution
- 
     ** [Back Home] -> home
 
 
 
 
+=== go_home ===
+- Just as I was about to leave the clinic, I noticed that Ms.Jennifer seem left something on the couch.
+ 
+ * [Check out]
+ 
+- It looks like a pendant.
+    ~ Pendant += 1 
+
+ * [Open the pendant]
+ 
+- Inside the pendant was a family portrait of an apparently lovely couple with their children, but the photo of the father has been peeled off.
+
+* [Leave the clinic]
+    ** [Back Home] -> home
 
 
 
 === home ===
+- As I came home, I stretched and relaxed out on the sofa.
 
-- for compile ending
+  But after a time, I stood up and grabbed a book off the shelf.
+
+ * Open DSM-5
+ 
+- I opened DSM-5, which lists several typical forms of mental disorders.
+
+ * [Mental Disorders List] -> mental_disorders_list
+
+== mental_disorders_list ==
+ * [Dissociative Identity Disorder (as known as DID)] -> DID
+ * [Depression] -> depression
+ * [Bipolar Disorder] -> bipolar_disorder
+ * [Close DSM-5] -> close_dsm5
+ 
+== DID
+- Dissociative Identity Disorder (as known as DID):
+  There will most certainly be one or more substantial identities with their own past in the patient's mental world. They can usually speak with their primary identity and gain control of their body, although some patients are not aware of this. There is another personality in their body, resulting in the "missing time" phenomenon.
+  
+ * [Back] -> mental_disorders_list
+
+== depression
+- Depression: 
+  Individuals with depression are frequently unpleasant and depressed for a long time, and even severe patients exhibit world-weariness, negativity, and strong suicidal impulses. The majority of patients are depressed as a result of overwhelming external pressure. They must take medicine for an extended period of time and insist on seeing a psychiatrist improve their health.
+
+ * [Back] -> mental_disorders_list
+ 
+== bipolar_disorder
+- Bipolar Disorder:
+  Patients with bipolar disorder typically encounter both mania and depression. The disorder's etiology is unclear, however, it is frequently associated with external factors such as chronic stress and early trauma. This sort of patient is often hyperactive, sleep duration is severely shortened, and severe individuals have suicidal impulses.
+
+ * [Back] -> mental_disorders_list
+
+== close_dsm5 
+- I went to the restroom after reading about mental disorders and glanced at myself through the mirror.
+
+* Sanity Check -> day1_ending
+
+=== function day1_sanity_check(s) ===
+{
+    - Sanity <= -10:
+        : {Sanity}
+        You've completely lost control of yourself; your left and right faces are distorted and utterly incorrect, your left face's eyes are insane, and your tongue is protruding out of your mouth. Your right face, on the other hand, is terribly depressed. The right eye appears to have recently sobbed, and the corner of the lips is fully down, obviously miserable.
+
+    - Sanity > -10 && Sanity <= 0:
+        : {Sanity}
+        Something is amiss with you today; your eyes are visibly red, but you are thrilled, and the grin at the corner of your mouth is somewhat evil.
+
+    - Sanity > 0 && Sanity <= 10:
+        : {Sanity}
+        You appear fatigued today, with black bags under your eyes; you may need to take a break.
+
+    - Sanity > 10 && Sanity <= 20:
+        : {Sanity}
+        You appeared more energetic today, and despite your beard, you are still fairly refreshing.
+        
+    - Sanity > 20:
+        : {Sanity}
+        You are quite confident today, you can handle anything, and you are very spiritual.
+}
+
+
+=== day1_ending ==
+{day1_sanity_check(1)}
+
+~ Sanity += 1
+- * You cleaned up a bit, ate a quick meal, and went straight to bed. -> day2
+
+
+
+=== day2 ===
+- [[for compile ending]]
     -> END
