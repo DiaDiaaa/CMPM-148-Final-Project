@@ -13,9 +13,9 @@ VAR card_count = 0
 === Day1 === 
 [Day 1]
 - As usual, I drove from my house to my clinic.
- * Push the Door open
+ * [Open the door]
 
-- As I arrived at the clinic, I pushed open the entrance door and proceeded to the lounge. I made a freshly brewed mug of espresso using the classic coffee maker that usually resided in the lounge. 
+- As arrived at the clinic, I open the entrance door and proceeded to the lounge. I made a freshly brewed mug of espresso using the classic coffee maker that usually resided in the lounge. 
 
  I walked inside my office and sat down expertly on a chair.
 
@@ -30,28 +30,41 @@ VAR card_count = 0
  * Patient’s age -> patient_age
  * Patient’s address -> patient_address
  * Diagnose disorder -> diagnose_disorder
- * {patient_name && patient_age && patient_address && diagnose_disorder}Close medical record -> drink_coffee
+ * {patient_name && patient_age && patient_address && diagnose_disorder} [Close medical record] -> drink_coffee
 
 
 == patient_name
 : 
 Jennifer
- * [Back] -> open_medical_record
+ * {not patient_age} Patient’s age -> patient_age
+ * {not patient_address} Patient’s address -> patient_address
+ * {not diagnose_disorder} Diagnose disorder -> diagnose_disorder
+ * {patient_name && patient_age && patient_address && diagnose_disorder} [Close medical record] -> drink_coffee
 
 == patient_age
 :
 26 years old, born on April 4th, 1996.
- * [Back] -> open_medical_record
-
+ * {not patient_name} Patient’s name -> patient_name
+ * {not patient_address} Patient’s address -> patient_address
+ * {not diagnose_disorder} Diagnose disorder -> diagnose_disorder
+ * {patient_name && patient_age && patient_address && diagnose_disorder} [Close medical record] -> drink_coffee
+ 
 == patient_address
 :
 2377, moonlight road, 444 room
- * [Back] -> open_medical_record
+ * {not patient_name} Patient’s name -> patient_name
+ * {not patient_age} Patient’s age -> patient_age
+ * {not diagnose_disorder} Diagnose disorder -> diagnose_disorder
+ * {patient_name && patient_age && patient_address && diagnose_disorder} [Close medical record] -> drink_coffee
+
 
 == diagnose_disorder
 :
 Dissociative Identity Disorder
- * [Back] -> open_medical_record
+ * {not patient_name} Patient’s name -> patient_name
+ * {not patient_age} Patient’s age -> patient_age
+ * {not patient_address} Patient’s address -> patient_address
+ * {patient_name && patient_age && patient_address && diagnose_disorder} [Close medical record] -> drink_coffee
 
 
 /* start wait patient */     // has back choice
@@ -60,23 +73,28 @@ Dissociative Identity Disorder
 
  While I waited for the patient, I sipped my espresso gently.
 
- * Check out my awards -> check_out_my_awards
+ * [Check out my awards] -> check_out_my_awards
  * [Check out the photo on the desk] -> check_out_photo_on_desk
  * [Take another sip of espresso.] -> take_another_sip_of_espresso
  * {check_out_my_awards && check_out_photo_on_desk && take_another_sip_of_espresso}[Waiting for the patient] -> wait_for_patient
 
 == check_out_my_awards
-:
 I dusted the crystal award and Certificates on the shelf with care. Several honors have been bestowed upon me, including best psychologist of 1999 and most compassionate psychologist. I've also earned an Award for Research in Psychiatry, an Award for Research in Schizophrenia, and the trust and esteem of many colleagues.
-* [Back] -> drink_coffee
+ * {not check_out_photo_on_desk} [Check out the photo on the desk] -> check_out_photo_on_desk
+ * {not take_another_sip_of_espresso} [Take another sip of espresso.] -> take_another_sip_of_espresso
+ * {check_out_my_awards && check_out_photo_on_desk && take_another_sip_of_espresso}[Waiting for the patient] -> wait_for_patient
 
 == check_out_photo_on_desk
 - The photo on the table shows a seemingly perfect family of three. My virtuous wife, my lovely daughter, and I, on my daughter’s birthday. But I was always busy with my job, which led to the division of the family.
- * [Back] -> drink_coffee
+ * {not check_out_my_awards} [Check out my awards] -> check_out_my_awards
+ * {not take_another_sip_of_espresso} [Take another sip of espresso.] -> take_another_sip_of_espresso
+ * {check_out_my_awards && check_out_photo_on_desk && take_another_sip_of_espresso}[Waiting for the patient] -> wait_for_patient
 
 == take_another_sip_of_espresso
 - The mellow espresso filled my mouth. This was brought to me by a former patient of mine. I have to say that this espresso is particularly delicious, with a little fruity sweetness swirling on the tip of my tongue.
- * [Back] -> drink_coffee
+ * {not check_out_my_awards} [Check out my awards] -> check_out_my_awards
+ * {not check_out_photo_on_desk} [Check out the photo on the desk] -> check_out_photo_on_desk
+ * {check_out_my_awards && check_out_photo_on_desk && take_another_sip_of_espresso}[Waiting for the patient] -> wait_for_patient
 
 
 == wait_for_patient
