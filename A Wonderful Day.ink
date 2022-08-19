@@ -24,7 +24,7 @@ LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, to
 
 ~ current_day = 1
 
-- As usual, I drove from my house to my clinic. # CLASS: jeff
+- As usual, I drove from my house to my clinic.
  * [Open the door]
 
 - As arrived at the clinic, I open the entrance door and proceeded to the lounge. I made a freshly brewed mug of espresso using the classic coffee maker that usually resided in the lounge. 
@@ -114,41 +114,41 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 
  Knock knock，
  
- Jeff: Please come in.
+ Jeff: Please come in. # CLASS: Jeff
  
  * The door is slowly opened
 
 
 - A woman who covered half of her face walked in, her left face was covered by a piece of cloth, and her right face was always a faint smile, but after looking at it for a long time, it would feel a little scary.
- * Jeff: "Welcome back and nice to see you, Ms. Jennifer. How are you feeling today?" # CLASS: jeff
+ * Jeff: "Welcome back and nice to see you, Ms. Jennifer. How are you feeling today?" # CLASS: Jeff
     ~ Sanity += 1
 
- * Jeff: "You're late, Ms. Jennifer. How have you been?"
+ * Jeff: "You're late, Ms. Jennifer. How have you been?" # CLASS: Jeff
     ~ Evilness += 1
     ~ Sanity -= 1
     
-- Jennifer: It's been good recently," he "hasn't been out much recently, and I feel that the medicine you prescribed by the doctor is very effective.
+- Jennifer: It's been good recently," he "hasn't been out much recently, and I feel that the medicine you prescribed by the doctor is very effective. # CLASS: Jennifer
 
-  Jeff: That’s good, Ms. Jennifer. This is a very good treatment result, as long as you take the medicine regularly, "he" will not come out again.
+  Jeff: That’s good, Ms. Jennifer. This is a very good treatment result, as long as you take the medicine regularly, "he" will not come out again. # CLASS: Jeff
 
-  Jeff: Now I'm going to ask you some questions to determine your state of mind, Ms. Jennifer.
+  Jeff: Now I'm going to ask you some questions to determine your state of mind, Ms. Jennifer. # CLASS: Jeff
   
- * Jeff: “Have you been dreaming about anything the last few nights?”
+ * Jeff: “Have you been dreaming about anything the last few nights?” # CLASS: Jeff
  
-- Jennifer: I've been having dreams that I'm in a room with two chairs, one of which is sitting on a man who is restrained by five chains. I'm not sure who he is, yet he gives me a familiar vibe.
- * Jeff: "What have you eaten these days?"
+- Jennifer: I've been having dreams that I'm in a room with two chairs, one of which is sitting on a man who is restrained by five chains. I'm not sure who he is, yet he gives me a familiar vibe. # CLASS: Jennifer
+ * Jeff: "What have you eaten these days?"# CLASS: Jeff
  
-- Jennifer: I eat a lot of veggies and hardly a little meat. Just as you said last time, I need to eat more vegetables.
+- Jennifer: I eat a lot of veggies and hardly a little meat. Just as you said last time, I need to eat more vegetables. # CLASS: Jennifer
 
- * Jeff: "Now, how do you feel when you take this knife in my hand?"
+ * Jeff: "Now, how do you feel when you take this knife in my hand?" # CLASS: Jeff
  
-- Jennifer slowly picked up the knife. At this time, I was very nervous. I am the one who knew what had happened to her.
+- Jennifer slowly picked up the knife. At this time, I was very nervous. I am the one who knew what had happened to her. # CLASS: Jennifer
 
- Jennifer: Nothing Special.
+ Jennifer: Nothing Special. # CLASS: Jennifer
  
  Hearing what she said, I slowly relaxed. Although she didn't know it, my hand was on the alert button all the time.
  
- * Jeff: “Seems that our treatment is working well, which means that’s great! Ms. Jennifer, and "he" should not come out in the near future”
+ * Jeff: “Seems that our treatment is working well, which means that’s great! Ms. Jennifer, and "he" should not come out in the near future” # CLASS: Jeff
  
 - * [Jeff: All right, give me a second, I will give you your medicine for next week.] -> day1_medicine_cabinet
 
