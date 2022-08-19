@@ -1,3 +1,5 @@
+#theme: dark
+
 @ -1,550 +0,0 @@
 VAR Sanity = 10
 VAR Kindness = 0
@@ -22,7 +24,7 @@ LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, to
 
 ~ current_day = 1
 
-- As usual, I drove from my house to my clinic.
+- As usual, I drove from my house to my clinic. # CLASS: jeff
  * [Open the door]
 
 - As arrived at the clinic, I open the entrance door and proceeded to the lounge. I made a freshly brewed mug of espresso using the classic coffee maker that usually resided in the lounge. 
@@ -118,7 +120,7 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 
 
 - A woman who covered half of her face walked in, her left face was covered by a piece of cloth, and her right face was always a faint smile, but after looking at it for a long time, it would feel a little scary.
- * Jeff: "Welcome back and nice to see you, Ms. Jennifer. How are you feeling today?"
+ * Jeff: "Welcome back and nice to see you, Ms. Jennifer. How are you feeling today?" # CLASS: jeff
     ~ Sanity += 1
 
  * Jeff: "You're late, Ms. Jennifer. How have you been?"
