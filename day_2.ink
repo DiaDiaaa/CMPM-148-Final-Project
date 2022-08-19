@@ -10,91 +10,92 @@ LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, to
 
 === day_two ===
 
-- 今天，又像往常一样，我又一次来到了我的诊所，今天的病人都非常的友好，大部分人都已经进入愈期。
+- I returned to my clinic today, as normal. Along the way, several folks approached me and said hi. Everyone was pleasant, and the majority of them had already begun their recuperation process.
 
-* "knock knock"(敲门声）
+* [knock knock]
 
-- 突如其来的敲门声让我感到一丝诧异，我记得今天的病人都已经来了，应该没有人还有预约了。
+- The sudden knock on the door made me feel a little surprised. I remember that all the patients have come today, and no one should have an appointment.
 -
-*”请进“
+* "Come in"
 -
--只见昨天的女病人又一次出现在了你的面前。
+- The patient from yesterday appeared in front of you again.
 
-    * “您好，jennifer女士，发生了什么事么” 
+    * Hello, Ms. Jennifer, what happened? 
         ~ Kindness += 1
         ~ Sanity += 2
     
-    * "您好，jennifer女士，我记得今天的你没有预约才对"
+    * Hello, Ms. Jennifer, I recall that you didn't have an appointment today
         ~ Sanity += 1
     
-    * “怎么回事，jennifer女士，我们下次见面是在下周”
+    * What's the matter, Ms. Jennifer? Our next meeting is next week.
         ~ Evilness += 1
         ~ Sanity -= 1
 
 
--Jennifer: 医生，又见面了，今天不知道为什么，又想来看看你，让你看看我的情况。
+- Jennifer: "Hi Dr.Jeff, nice to see you, something brought me here, and want me to see you again, to let you know more about me."
 
-为什么这个女病人又来了，她今天的状态明显不对，我有些害怕，我悄悄的把抽屉里早已准备好的麻醉针放在裤袋里，以防万一。
+- I have no idea that she will come to see me again, but I have a bad feeling about her state. 
+- My hands start to sweat, I feel nervous, and I already put my hand on the button of the alarm. I'm glad I had the Anesthesia needle ready in advance and put it in my pocket, just in case.
 
-- 医生：那么， Jennifer女士，那么就让我们开始我们的例行询问。
 
- * “最近几天晚上，有梦到些什么么”
+- Jeff: “Nice to see you, Ms.Jennifer, now let's start our routine inquiry.”
+
+ * Jeff: "Did you dream about something last night?"
     
-- 昨天晚上，我梦到那个男人身上的锁链似乎断了几条，他已经能站起来了，医生，你说这是什么情况？
+- Jennifer: "Last night, I had a dream that several of the chains on the man seemed to be broken, and he could stand up. What is the meaning behind it? I wonder know."
 
 - 
- * "Jennifer女士，这是一个不好的sign, 一会我将会给你一些药效更强大的药物，你今天要服用5次才行，每次一粒"
-- 好的医生。
+ * Jeff: "Ms. Jennifer, seems this is a bad sign. I will give you some stronger medicines. You need to take 5 times today, one pill each time"
+- Jennifer: Okay, thank you, Dr. Jeff.
 
 -
- * ”昨天吃了些什么？”
-- 昨天我似乎在无意识的状态下吃了些生肉，啊，那种味道，真是让人迷醉。
+ * Jeff: “What did you eat yesterday?”
+- Jennifer: I ate some raw meat yesterday, seemingly without realizing it. Ah, the taste, it was intoxicating.
 
 - 
- * ”现在，你握起我手里的这把刀，有什么感觉？”
-- 我颤抖的将这把刀交给了她
+ * Jeff: "How do you feel now that you have this knife in your hand?"
 
-- 怎么了，医生，你的手怎么在抖呀？你在害怕我么？
+- I trembled as I handed her the knife.
 
-    * "是的" 
+    * Yes 
         ~ Evilness += 1
         ~ Sanity += 1
-    * "没有，只是房间有点冷" 
+    * Nope, it's just that the room is a bit chilly. 
         ~ Kindness += 1
         ~ Sanity -= 1
 -
 
-她接过刀，我很紧张，手已经伸到裤袋里，握着我的麻醉针，随时准备麻醉她。
+- Every nerve in my body got tightened as she took over the knife. My hand was already in my trouser pocket, clutching my anesthetic needle, ready to sedate her at any moment.
 
-医生，这把刀似乎不太顺手啊，和我之前用的比，差了好多。
+- This knife does not look to be very comfortable. It is considerably weaker to the one I previously used.
 
-* ”看到她没有攻击的倾向，你放心了下来，然而冷汗已经浸湿了你后背。”
+* You're slightly relieved that she has no tendency to hurt anyone, but the chilly perspiration has soaked your back.
 
-- Jennifer女士，你现在的情况非常不好，我现在就给你去拿药。
-    * “隐藏的抽屉”
-        找到了，强效药被一个红色的瓶子装着
-    * “离开”
-        就在你准备起身的时候，你感觉到你的肩膀被人按住了，你非常用力的想站起来，但却一动不动，这完全不是一个女性所能拥有的力量。
-- Jennifer: 医生啊，你说，这药，不会害死我吧。
+- Jeff: Ms. Jennifer, your current condition is critical; I will provide you with medication right now.
+    * The Hidden drawer
+        Found a strong medicine in a red bottle
+    * Leave
+        Just as you were about to stand up, you felt your shoulders being held down, and you tried so hard to stand up, but didn't move. This is not a strength a woman can have.
+- Jennifer: Tell me, Dr. Jeff, this drug won't kill me, will it?
 
-* ”完全不会，jennifer女士，这是特效药“
-Jennifer: 真的么？医生，你可不要骗我啊？骗我的话，后果，你可能负担不起呀。
+* "Not at all, Ms. Jennifer. It's just a wonder drug."
+
+- Jennifer: “Ohh, really? Dr. Jeff, you better not deceive me, cause no one in this world can be able to afford the consequences, including you.”
 
 -
-    * (说实话）这里面的药有比较大的副作用，吃完后可能会呕吐，但是效果非常不错。
+    * Tell her the truth: The medicine here has significant adverse effects, and you may vomit after taking it, but the impact is excellent.
         ~ Sanity += 1
         ~ Kindness += 1
-    * （说谎）这个药，一点副作用都没有，只是比较强效而已。
+    * Lie: This medicine has no negative side effects; it is simply more potent.
         ~ Sanity -= 2
         ~ Evilness += 2
     
     
-- Jennifer：我知道了，医生，祝你有个美好的一天，嘻嘻
+- Jennifer: “Got it, thank you. Wish you have a great rest of your day! Hehe”
 
-说完，jennifer便离开了。
+- Then, Jennifer leaves the room.
 
-我瘫坐在地上，刚刚所发生的事仿佛让我死了一遍，我得赶紧离开这里，以防她再次回来。
-
+- I slumped to the ground, and what had just happened seemed to suffocate me over and over again. I wanted to get out of here before she came back.
 "It's time to leave the clinic; where should I go next?"
 
 * Park ->Park
@@ -109,11 +110,9 @@ No matter what time it is here, it is so comfortable, and nice for me to relax m
 * [Looking for a bench]
 - I found an empty bench at random and sat down, enjoying the sunshine.
 ~ Sanity += 3
-* [Home] ->day2_home
 
-/*
-* "It's getting late. And It's time to go home" -> day2_home
-*/
+* [It's getting late. And It's time to go home] -> day2_home
+
 
 === day2_commercial_center
 You return to the commercial center and enter the "Home of Soul" store.
@@ -203,19 +202,19 @@ day 1
 * [Home] -> day2_home
     
 === day2_psychiatric_institution
-I immediately left my clinic and went to the mental hospital. I needed to see the old lady. I needed her inspiration.
+- I immediately left my clinic and went to the mental hospital. I needed to see the old lady. I needed her inspiration.
 -
 *[building 44, room 44]
 -
 
-The old lady: “Nice to see you again, young man, seems something bad happened to you”
+- The old lady: “Nice to see you again, young man, seems something bad happened to you”
 
-The old lady takes out the tarot cards
+- The old lady takes out the tarot cards
 
-The old lady: “I know what you want, young man, let’s get to the point, Come over here young man and we start divination immediately.”
+- The old lady: “I know what you want, young man, let’s get to the point, Come over here young man and we start divination immediately.”
 
 
-“There are three cards in front of you”
+- There are three cards in front of you
 
 * [Choose a card] -> day2_card
 

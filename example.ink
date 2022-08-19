@@ -1,6 +1,8 @@
 LIST test = one, two, three
 
-
+/*
+LIST shop_item = blood_scalpel, sheep, justice, painting, tentacle, tooth, writing, toy, disc
+*/
 
 ->example
 
@@ -52,10 +54,10 @@ current list count = {LIST_COUNT(test)}
     *[BACK] -> example_2 
 
 === example_3
-
+-
 { test !? one:
     one took off from example 2
-}
+} * one
 
 { test !? two:
     two took off from example 2
