@@ -573,50 +573,48 @@ Commercial count:
 
 - The sudden knock on the door made me feel a little surprised. I remember that all the patients have come today, and no one should have an appointment.
 -
-* "Come in"
+* "Come in" # CLASS: Jeff
 -
 - The patient from yesterday appeared in front of you again.
 
-    * Hello, Ms. Jennifer, what happened? 
+    * Hello, Ms. Jennifer, what happened? # CLASS: Jeff
         ~ Kindness += 1
         ~ Sanity += 2
     
-    * Hello, Ms. Jennifer, I recall that you didn't have an appointment today
+    * Hello, Ms. Jennifer, I recall that you didn't have an appointment today. # CLASS: Jeff
         ~ Sanity += 1
     
-    * What's the matter, Ms. Jennifer? Our next meeting is next week.
+    * What's the matter, Ms. Jennifer? Our next meeting is next week. # CLASS: Jeff
         ~ Evilness += 1
         ~ Sanity -= 1
 
 
-- Jennifer: "Hi dr.Jeff, nice to see you, something brought me here, and want me to see you again, to let you know more about me."
-
-- Jennifer: "Hi dr.Jeff, nice to see you, something brought me here, and want me to see you again, to let you know more about me."
+- Jennifer: "Hi dr.Jeff, nice to see you, something brought me here, and want me to see you again, to let you know more about me." # CLASS: Jennifer
 
 - I have no idea that she will come to see me again, but I have a bad feeling about her state. 
 - My hands start to sweat, I feel nervous, and I already put my hand on the button of the alarm. I'm glad I had the Anesthesia needle ready in advance and put it in my pocket, just in case.
 
 
-- Jeff: “Nice to see you, Ms.Jennifer, now let's start our routine inquiry.”
+- Jeff: “Nice to see you, Ms.Jennifer, now let's start our routine inquiry.” # CLASS: Jeff
 
- * Jeff: "Did you dream about something last night?"
-    
-- Jennifer: "Last night, I had a dream that several of the chains on the man seemed to be broken, and he could stand up. What is the meaning behind it? I wonder know."
+ * Jeff: "Did you dream about something last night?" # CLASS: Jeff
+     
+- Jennifer: "Last night, I had a dream that several of the chains on the man seemed to be broken, and he could stand up. What is the meaning behind it? I wonder know." # CLASS: Jennifer
 
 - 
- * Jeff: "Ms. Jennifer, seems this is a bad sign. I will give you some stronger medicines. You need to take 5 times today, one pill each time"
-- Jennifer: Okay, thank you, Dr. Jeff.
+ * Jeff: "Ms. Jennifer, seems this is a bad sign. I will give you some stronger medicines. You need to take 5 times today, one pill each time" # CLASS: Jeff
+- Jennifer: Okay, thank you, Dr. Jeff. # CLASS: Jennifer
 
 -
- * Jeff: “What did you eat yesterday?”
-- Jennifer: I ate some raw meat yesterday, seemingly without realizing it. Ah, the taste, it was intoxicating.
+ * Jeff: “What did you eat yesterday?” # CLASS: Jeff
+- Jennifer: I ate some raw meat yesterday, seemingly without realizing it. Ah, the taste, it was intoxicating. # CLASS: Jennifer
 
 - 
- * Jeff: "How do you feel now that you have this knife in your hand?"
+ * Jeff: "How do you feel now that you have this knife in your hand?" # CLASS: Jeff
 
 - I trembled as I handed her the knife.
 
-    * Yes 
+    * Yes. 
         ~ Evilness += 1
         ~ Sanity += 1
     * Nope, it's just that the room is a bit chilly. 
@@ -630,32 +628,32 @@ Commercial count:
 
 * You're slightly relieved that she has no tendency to hurt anyone, but the chilly perspiration has soaked your back.
 
-- Jeff: Ms. Jennifer, your current condition is critical; I will provide you with medication right now.
-    * The Hidden drawer
+- Jeff: Ms. Jennifer, your current condition is critical; I will provide you with medication right now. # CLASS: Jeff
+    * The Hidden drawer 
         Found a strong medicine in a red bottle
     * Leave
         Just as you were about to stand up, you felt your shoulders being held down, and you tried so hard to stand up, but didn't move. This is not a strength a woman can have.
-- Jennifer: Tell me, Dr. Jeff, this drug won't kill me, will it?
+- Jennifer: Tell me, Dr. Jeff, this drug won't kill me, will it? # CLASS: Jennifer
 
-* "Not at all, Ms. Jennifer. It's just a wonder drug."
+* "Not at all, Ms. Jennifer. It's just a wonder drug." # CLASS: Jeff
 
-- Jennifer: “Ohh, really? Dr. Jeff, you better not deceive me, cause no one in this world can be able to afford the consequences, including you.”
+- Jennifer: “Ohh, really? Dr. Jeff, you better not deceive me, cause no one in this world can be able to afford the consequences, including you.” # CLASS: Jennifer
 
 -
-    * Tell her the truth: The medicine here has significant adverse effects, and you may vomit after taking it, but the impact is excellent.
+    * Tell her the truth: The medicine here has significant adverse effects, and you may vomit after taking it, but the impact is excellent. # CLASS: Jeff
         ~ Sanity += 1
         ~ Kindness += 1
-    * Lie: This medicine has no negative side effects; it is simply more potent.
+    * Lie: This medicine has no negative side effects; it is simply more potent. # CLASS: Jeff
         ~ Sanity -= 2
         ~ Evilness += 2
     
     
-- Jennifer: “Got it, thank you. Wish you have a great rest of your day! Hehe”
+- Jennifer: “Got it, thank you. Wish you have a great rest of your day! Hehe” # CLASS: Jennifer
 
 - Then, Jennifer leaves the room.
 
 - I slumped to the ground, and what had just happened seemed to suffocate me over and over again. I wanted to get out of here before she came back.
-"It's time to leave the clinic; where should I go next?"
+ It's time to leave the clinic; where should I go next?
 
 * Park ->Park
 * Commercial Center -> day2_commercial_center
@@ -679,7 +677,7 @@ You return to the commercial center and enter the "Home of Soul" store.
  *[Go into the store]
 -
 
-Old man: Welcome, dear visitor. Are you going to my store today? Please select two products from my store today. 
+Old man: Welcome, dear visitor. Are you going to my store today? Please select two products from my store today. # CLASS: oldMan
 
 * [Begin] -> commercial_list
 
@@ -696,11 +694,11 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 *[building 44, room 44]
 -
 
-- The old lady: “Nice to see you again, young man, seems something bad happened to you”
+- The old lady: “Nice to see you again, young man, seems something bad happened to you” # CLASS: oldLady
 
 - The old lady takes out the tarot cards
 
-- The old lady: “I know what you want, young man, let’s get to the point, Come over here young man and we start divination immediately.”
+- The old lady: “I know what you want, young man, let’s get to the point, Come over here young man and we start divination immediately.” # CLASS: oldLady
 
 
 - There are three cards in front of you
@@ -715,24 +713,24 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 * [Not choose] -> day2_card_finish
 
 === Strength 
-- You choose Strength, VIII
-- The old lady: “This is a positive force. Meaning that tomorrow, something very bad may happen to you, but your inner courage will be very important. Only by facing your fears can things turn around.”
+- Strength, VIII: 
+- The old lady: “This is a positive force. Meaning that tomorrow, something very bad may happen to you, but your inner courage will be very important. Only by facing your fears can things turn around.” # CLASS: oldLady
 
 ~ Sanity -= 1
 
 *[Back] ->day2_card
 
 === Judgement
-- You choose Judgement，XX
-- The old lady: “This approval looks very strange. Although it represents resurrection, in a sense, you will not die tomorrow, but in the future, it may be resurrected in another way.”
+- Judgement，XX: 
+- The old lady: “This approval looks very strange. Although it represents resurrection, in a sense, you will not die tomorrow, but in the future, it may be resurrected in another way.” # CLASS: oldLady
 
 ~ Sanity -= 2
 
 *[Back] -> day2_card
 
 === Hermit
-- You choose The Hermit，IX
-- The old lady: “This is a hermit in an upright position. He represents slow progress in the dark. From the orientation of this card, walking to the left may lead to a seemingly better place.”
+- The Hermit，IX: 
+- The old lady: “This is a hermit in an upright position. He represents slow progress in the dark. From the orientation of this card, walking to the left may lead to a seemingly better place.” # CLASS: oldLady
 
 ~ Sanity -= 3
 
@@ -742,9 +740,9 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 
 ~ commercial_count = 0
 
-- The old lady: “It seems that you have already chosen and understood it. Remember, tomorrow will be a disaster for you. Be sure to remember the revelation of the tarot cards!”
+- The old lady: “It seems that you have already chosen and understood it. Remember, tomorrow will be a disaster for you. Be sure to remember the revelation of the tarot cards!” # CLASS: oldLady
 
-- “Thank you, Ma’am”
+- “Thank you, Ma’am” # CLASS: Jeff
 
 - After that, you hurried home.
 
