@@ -153,7 +153,7 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 - * [Jeff: All right, give me a second, I will give you your medicine for next week.] -> day1_medicine_cabinet
 
 == day1_medicine_cabinet
- Jeff: All right, give me a second, I will give you your medicine for next week.
+ Jeff: All right, give me a second, I will give you your medicine for next week. # CLASS: Jeff
  
 - I went to my medicine cabinet, 
   Where is Jennifer's medicine?
@@ -185,20 +185,20 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
         ~ Kindness += 2
         ~ Sanity += 1
         
-    * Here's your medicine, ma'am, with your usual dosage.
+    * Here's your medicine, ma'am, with your usual dosage. # CLASS: Jeff
         ~ Evilness += 1
         ~ Sanity -= 2 
     
-    * Here’s your medicine, ma’am. Keep in mind to take it after meals with your usual dosage.
+    * Here’s your medicine, ma’am. Keep in mind to take it after meals with your usual dosage. # CLASS: Jeff
     
 
-- Jennifer: Alright, thank you. 
+- Jennifer: Alright, thank you. # CLASS: Jennifer
 
-  Jeff: Ms.Jennifer, that's all for now; I'll see you again next week at the same time as today. I hope your condition improves.
+  Jeff: Ms.Jennifer, that's all for now; I'll see you again next week at the same time as today. I hope your condition improves. # CLASS: Jeff
   
   I opened the door for her once I finished the conversation.
   
- * Jennifer: Sure, but I feel we'll cross paths again soon.
+ * Jennifer: Sure, but I feel we'll cross paths again soon. # CLASS: Jennifer
 
 - I trembled as I saw what she said to me with a sneaky smirk on her face.
 
@@ -248,17 +248,17 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 
   After a bit, an old man with glasses emerged from the entrance.
 
-  Old man: Welcome to “Home of Soul”, what would you like to get? Young man.
+  Old man: Welcome to “Home of Soul”, what would you like to get? Young man. # CLASS: oldMan
 
- * Jeff: “What can I buy here?”
+ * Jeff: “What can I buy here?” # CLASS: Jeff
 
-- Old man: Let me see, you can take two things from my shop today, the usage of which may change your destiny, but you will also pay something with a cost that you cannot see. Will you still be interested in purchasing it?
+- Old man: Let me see, you can take two things from my shop today, the usage of which may change your destiny, but you will also pay something with a cost that you cannot see. Will you still be interested in purchasing it? # CLASS: oldMan
 
   The old man's words puzzled me; what does he mean by the cost that I cannot see? I don't understand and am stubbed, yet I choose to buy things nonetheless.
 
- * Jeff: "I would like to purchase some; what do you have for purchase?"
+ * Jeff: "I would like to purchase some; what do you have for purchase?" # CLASS: Jeff
 
-- Old man: Very well, young man, these are all things you may purchase. Choose two products that interest your curiosity.
+- Old man: Very well, young man, these are all things you may purchase. Choose two products that interest your curiosity. # CLASS: oldMan
  * Commercial List -> commercial_list
  
 == commercial_list
@@ -326,7 +326,7 @@ Commercial count:
 == close_commercial_list
     ~ commercial_count = 0
     ~ Sanity -= 2 
-- Old man: “You appear to have decided to carry two items with you.”
+- Old man: “You appear to have decided to carry two items with you.” # CLASS: oldMan
  
 - I left the commercial center with the two items I had purchased, constantly feeling as though something had changed but not knowing what.
 
@@ -350,15 +350,15 @@ Commercial count:
  
 - The nurse at the front desk recognized me right away.
  
-  Nurse: “Hi! Doctor Jeff, What brings you here?” 
+  Nurse: “Hi! Doctor Jeff, What brings you here?” # CLASS: nurse
 
- * Jeff: "Ohh, Hi! Nothing, I'm just looking around here. What have you been busy with recently? "
+ * Jeff: "Ohh, Hi! Nothing, I'm just looking around here. What have you been busy with recently? " # CLASS: Jeff
 
-- Nurse: “You are just in time. Recently, we received an elderly lady. She babbles every day. And hope that you can talk to her.”
+- Nurse: “You are just in time. Recently, we received an elderly lady. She babbles every day. And hope that you can talk to her.” # CLASS: nurse
 
- * Jeff: "No problem. And where is she? "
+ * Jeff: "No problem. And where is she? " # CLASS: Jeff
 
-- Nurse: “She's in building 44, room 44. Please, Doctor Jeff.”
+- Nurse: “She's in building 44, room 44. Please, Doctor Jeff.” # CLASS: nurse
 
  * Go to building 44, room 44.
  
@@ -366,49 +366,49 @@ Commercial count:
 
  * Knock on the door
  
-- Jeff: “Good afternoon, I am Dr. Jeff. May I come in?”
+- Jeff: “Good afternoon, I am Dr. Jeff. May I come in?” # CLASS: Jeff
 
   As I thought, the whole room was separated by a glass wall, so I could have a very safe conversation with her.
 
- * Jeff: “Ma’am, How have you been?”
+ * Jeff: “Ma’am, How have you been?” # CLASS: Jeff
 
-- The old lady: “Aha, what do I smell? It’s the smell of death.” 
+- The old lady: “Aha, what do I smell? It’s the smell of death.” # CLASS: oldLady
 
-  The old lady: “Young man, You're gonna die!”
+  The old lady: “Young man, You're gonna die!” # CLASS: oldLady
 
- * Jeff: “I have met so many patients, many of them have said these words as you say, but most of them are just to intimidate me.”
+ * Jeff: “I have met so many patients, many of them have said these words as you say, but most of them are just to intimidate me.” # CLASS: Jeff
 
-- Jeff: “Ma’am, I wonder to know, why do you say I’m gonna die? And how do you know?“
+- Jeff: “Ma’am, I wonder to know, why do you say I’m gonna die? And how do you know?“ # CLASS: Jeff
 
-  The old lady: “Reason? You should figure it out by yourself, young man.” 
+  The old lady: “Reason? You should figure it out by yourself, young man.” # CLASS: oldLady
 
-  A villainous smile on her shriveled face
+  A villainous smile on her shriveled face.
   
-  The old lady: “Oh yeah, young man”
+  The old lady: “Oh yeah, young man” # CLASS: oldLady
 
   She raised her arm and pointed at me.
 
-  The old lady: “Jeff, right? Come over here! I have something good for you.”
+  The old lady: “Jeff, right? Come over here! I have something good for you.” # CLASS: oldLady
 
-  She holds a stack of poker and a grin spreads across her face
+  She holds a stack of poker and a grin spreads across her face.
 
-  The old lady: “I have a set of Tarot, maybe they will tell you the reason.”
+  The old lady: “I have a set of Tarot, maybe they will tell you the reason.” # CLASS: oldLady
   
- * "Playing games with mental patients that is not too much is also a good treatment for them"
+ * "Playing games with mental patients that is not too much is also a good treatment for them."
 
-- Jeff: “Yes, Ma’am. What‘s the rule?”
+- Jeff: “Yes, Ma’am. What‘s the rule?” # CLASS: Jeff
 
   The old lady chuckled.
 
-  The old lady: “I will give you three cards, Jeff. And these three cards represent some revelation, and I'm going to give you some little revelations from the cards.”
+  The old lady: “I will give you three cards, Jeff. And these three cards represent some revelation, and I'm going to give you some little revelations from the cards.” # CLASS: oldLady
   
- * Jeff: “Okay, Ma’am”
+ * Jeff: “Okay, Ma’am” # CLASS: Jeff
 
-- The old lady: “And of course, every card you open has a price, so are you ready, young man? "
+- The old lady: “And of course, every card you open has a price, so are you ready, young man? " # CLASS: oldLady
 
- * Yes, I’m good to go now.
+ * Yes, I’m good to go now. # CLASS: Jeff
  
-- There are three cards in front of you
+- There are three cards in front of you.
  
  * [Choose a card] -> day1_choose_card
 
@@ -424,7 +424,7 @@ Commercial count:
     ~ card_count += 1 
 
 - The Star， XVII: 
-  The old lady: “This is a star in a positive position, which represents the hope hidden in the depths. Although it is not big, it may change your destiny. However, this star has dimmed, maybe, under you In a reincarnation, you should choose a way home"
+  The old lady: “This is a star in a positive position, which represents the hope hidden in the depths. Although it is not big, it may change your destiny. However, this star has dimmed, maybe, under you In a reincarnation, you should choose a way home" # CLASS: oldLady
 
  * [Back] -> day1_choose_card
 
@@ -432,7 +432,7 @@ Commercial count:
     ~ card_count += 1 
 
 - The Moon， XVIII: 
-  The old lady: “This is a positive position Moon, representing restlessness, confusion, and deception. Your rudeness or lies in your language will give you a different fate.”
+  The old lady: “This is a positive position Moon, representing restlessness, confusion, and deception. Your rudeness or lies in your language will give you a different fate.” # CLASS: oldLady
   
  * [Back] -> day1_choose_card
 
@@ -440,7 +440,7 @@ Commercial count:
     ~ card_count += 1
 
 - The Sun， XIX: 
-  The old lady: “This is a positive position of the sun, representing an active, full of life, and always friendly you that will reward you handsomely.”
+  The old lady: “This is a positive position of the sun, representing an active, full of life, and always friendly you that will reward you handsomely.” # CLASS: oldLady
 
  * [Back] -> day1_choose_card
 
@@ -465,7 +465,7 @@ Commercial count:
 
 ~ card_count = 0
 
-- The old lady: “It seems that you have already made a choice, and I have given you a revelation. I hope to see you next time, Jeff”
+- The old lady: “It seems that you have already made a choice, and I have given you a revelation. I hope to see you next time, Jeff” # CLASS: oldLady
  
  * Leave the Psychiatric institution
     ** [Back Home] -> home
@@ -533,23 +533,23 @@ Commercial count:
 === function sanity_check(s) ===
 {
     - Sanity <= -10:
-        Sanity : {Sanity}
+        Sanity : {Sanity} # CLASS: statusCheck
         You've completely lost control of yourself; your left and right faces are distorted and utterly incorrect, your left face's eyes are insane, and your tongue is protruding out of your mouth. Your right face, on the other hand, is terribly depressed. The right eye appears to have recently sobbed, and the corner of the lips is fully down, obviously miserable.
 
     - Sanity > -10 && Sanity <= 0:
-        Sanity : {Sanity}
+        Sanity : {Sanity} # CLASS: statusCheck
         Something is amiss with you today; your eyes are visibly red, but you are thrilled, and the grin at the corner of your mouth is somewhat evil.
 
     - Sanity > 0 && Sanity <= 10:
-        Sanity : {Sanity}
+        Sanity : {Sanity} # CLASS: statusCheck
         You appear fatigued today, with black bags under your eyes; you may need to take a break.
 
     - Sanity > 10 && Sanity <= 20:
-        Sanity : {Sanity}
+        Sanity : {Sanity} # CLASS: statusCheck
         You appeared more energetic today, and despite your beard, you are still fairly refreshing.
         
     - Sanity > 20:
-        Sanity : {Sanity}
+        Sanity : {Sanity} # CLASS: statusCheck
         You are quite confident today, you can handle anything, and you are very spiritual.
 }
 

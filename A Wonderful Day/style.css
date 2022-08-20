@@ -191,6 +191,22 @@ img {
     color:rgb(226, 79, 11);
 }
 
+.oldMan{
+    color: rgb(149, 255, 151);
+}
+
+.nurse{
+    color: rgb(168, 210, 158);
+}
+
+.oldLady{
+    color:rgb(108, 166, 134);
+}
+
+.statusCheck{
+    color:rgb(249, 213, 255);
+}
+
 #controls {
     z-index: 4;
     font-size: 9pt;
