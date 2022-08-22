@@ -1038,9 +1038,250 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
  
 * [It is time to go to bed] -> day4
 
-/* ---------------- DAY 3 ------------------ */
-=== day4    
-Placeholder
--> END
+/* ---------------- DAY 4 ------------------ */
+=== day4 ===
+Day 4
+{ Pendant == 1: 
+    -> Orphanage
+  -else:
+    -> jennifer_house
+}
+
+
+=== Orphanage
+- You awoke after a deep slumber with a buzzing sound in your ears and your eyes appear to be a bit confused about what is in front of you. The scenario from yesterday's chase is still playing in your head, making you feel terrified and apprehensive.
+
+- Since you are not feeling well today, you called the clinic and asked for a day off to adjust your mood and recollect yourself.
+
+- You clutched your forehead, a necklace loomed in your mind, as if Jennifer had left it on the sofa.
+
+- You get out of bed, stroll over to the desk, and get Jennifer's jewelry from the drawer. You recalled that Jennifer mentioned yesterday that she has a son who is in an orphanage.
+
+* [Investigation]
+
+- You find Jennifer's profile on one of the shelves. You quickly flip through the profile and notice that the name of her child is Justin, and he is currently at the largest orphanage in this city, "Windows of Hope Orphanage".
+
+- You choose to take a look into her child.
+
+* [Windows of Hope Orphanage] -> inside_orphanage
+
+
+=== inside_orphanage
+- Since you have done a study and research with my team at Windows of Hope Orphanage, you have had a lot of communication with the orphanage director. So you contacted the orphanage director, who was eager to assist me in resolving the issue.
+
+- Orphanage director: “Hey, long time no see, Dr.Jeff, What brought you here?”
+
+* Jeff: “Long time no see. To be honest, I am looking for a kid called Justin, about 7 years old. He might be the child of one of my patients. I am here to see if there is any way to help my patient. May I see the child?”
+
+- Orphanage director: “Justin? We have so many children with this name; give me a second, I'll look into it, and I'll get back to you later. You may feel free to visit our orphanage on your own if you want”
+
+* [Visit]
+
+- Where would you want to go now?
+
+* [First Floor] ->first_floor_orphanage
+
+* [Second Floor] ->second_floor_orphanage
+
+=== first_floor_orphanage
+- You choose to take a look at the first floor.
+- You enter the first floor and have a look around. Right adjacent to the building, you discovered a restaurant, classrooms, an amusement park, and even a swimming pool.
+- You recall searching for information on the orphanage on the Internet. As this orphanage was created with charitable funding by affluent individuals, many of the facilities inside are pretty well done, and there is even an emergency operating room on the first floor in case a kid gets an emergency illness unexpectedly.
+
+* [Take a look around]
+
+- You entered the cafeteria, went to the dining table, and looked at what the kids were eating today.
+
+* [Cafeteria Menu]
+
+- You take a closer look at the menu, which just has a few options.
+
+- Sandwich, milk, and a peach.
+
+- Pizza, apple juice, and salad.
+
+- Cheese, orange juice, and salad.
+
+* [Leave the cafeteria]
+
+- After seeing practically everything on the first floor, you decide to visit the second floor.
+
+* [Second Floor] ->second_floor_orphanage
+
+=== second_floor_orphanage
+
+- You came to the second floor.
+
+- As you proceed down the long hallway, you notice the playroom, the lounge, and the dormitories. The second floor appears to be a play and relaxation area for youngsters.
+
+- On the second floor, there are even rows of computers where kids may play games or study.
+
+- As you're walking around on the second floor. A little girl appears in front of you and walks towards you.
+
+* [Walk Forward]
+
+- The girl looks at you with a little doubt.
+
+- ???: “Sir, I have never seen you before, who are you?”
+
+- You knelt down and looked at the little girl and responded with a smile.
+
+* Jeff: “Hi sweetie, I’m looking for a child, called Justin, do you know him?”
+
+- The little girl thought for a moment and replied. 
+
+- ???: “Justin? There are so many Justin here, I’m not sure which Justin you are looking for. By the way, my name is Katherine.”
+
+* Jeff: “Nice to meet you, Katherine, I’m Jeff.”
+
+- Katherine: “Nice to meet you, uncle Jeff. I have something for you!”
+
+- Katharine smiled as she pulled out candy from her pocket and handed it to you.
+
+* Jeff: “Thank you, Katherine!” 
+~Sanity += 1
+
+- Katherine: “You are welcome, Jeff. One of my friends told me that candy is the sign of our friendship, so now we are friends.”
+
+-
+ * Jeff: “Oh yeah! We are friends now~”
+-
+
+* You placed candy inside your pocket and patted Katherine's head.
+
+- Katherine: “Ohh, Jeff, I think the director is looking for you!”
+
+- Orphanage director: “Ohh, Dr. Jeff, here you are with Katherine. I was looking for you. Here you go, I think he might be the child you that are looking for. He now is in the playroom, do you want me to take you to see him?”
+
+-
+ * Jeff: “Oh, sure, thank you, sir.”
+-
+
+-
+ * Jeff: “And see you later, Katherine.”
+-
+
+- Katherine: "see you later, Uncle Jeff."
+
+* [Playroom] ->Playroom
+
+=== Playroom
+- You enter the playroom, which is crammed with toys and appears to be in disarray.
+
+- You noticed a little boy playing with building blocks alone in a corner, while the other children seem to be isolating him.
+
+- Orphanage director: “Justin is the child in the corner; he's not an orphan; Her mother left him at the door of the orphanage; his mother comes to see him once or twice a week; I'm not sure why I haven't been here this week.”
+
+- Looking back on what happened this week, you can see why she didn't visit her son.
+
+* Jeff: “He looks lonely in the corner.”
+
+- Orphanage director: "In fact, most of the children are fear to play with him because he appears to have a powerful aura, which makes most of us feel oppressed.”
+
+- He shook his head and continued.
+
+- Orphanage director: "Once, a child was fighting with him for a toy. Justin was mad at that child and pushed the other child down without saying any word, and smashed the other's head with the toy he grabbed. When I got to the scene, Justin was already back in the corner with his toy, and he looked calm as if nothing had happened. Therefore, most of the children are very afraid to get close to Justin. "
+
+- You are nervous because you see Jennifer's shadow in Justin. Perhaps this is the reason that Jennifer chose to send Justin here as a way of protection.
+
+- While you're thinking about the relationship between Justin and Jennifer, Katherine walks to Justin's corner and plays with Justin's blocks.
+
+- Katherine took out candy from her pocket and put it right next to Justin.
+
+- You're wondering if you should remind the orphanage director to keep an eye on Justin in order to prevent him from committing any other violent acts.
+
+* Remind the director -> remind
+
+* Keep Slient ->slient
+
+=== remind
+- Jeff: "Sir, keep an eye on him when you have time. If he still has a violent problem, please call me immediately. I am his mother's attending physician, so please contact me!"
+
+- Orphanage director: "Sure, no problem."
+
+* You take a second look at Justin before you leave, and hope Justin won't be influenced by his mother.
+~Evilness += 3
+
+- And just out of sight, there's a pair of eyes staring at you.
+
+*[Leave Orphanage] -> day4_choose
+
+
+=== slient
+
+- You choose to keep silent, and you believe that his friendship or love from a friend can truly protect him.
+
+* After a few words with the director, you left the orphanage.
+~Kindness += 3
+
+- And just out of sight, you felt that there were a pair of eyes staring at you.
+
+*[Leave Orphanage] -> day4_choose
+
+
+=== jennifer_house
+- You awoke after a deep slumber with a buzzing sound in your ears and your eyes appear to be a bit confused about what is in front of you. The scenario from yesterday's chase is still playing in your head, making you feel terrified and apprehensive.
+
+- Since you are not feeling well today, you called the clinic and asked for a day off to adjust your mood and recollect yourself.
+
+- You decide to go to Jennifer's house to check if there are any clues about her, in the hopes of improving her health.
+
+* [Jennifer’s house]
+
+- You arrive to Jennifer's house and knock on her door respectfully. You waited for a while and didn't receive a response.
+
+- Then you softly twisted the doorknob and discovered that the door was not locked. Creak, the door was pushed open a little crack.
+
+- Even if you are aware that entering another person's house is rude and disrespectful, especially when it comes to a patient's privacy. Your inner curiosity, on the other hand, draws you in since everything that happened this week frustrated you.
+
+
+* [Enter the house] -> inside_house
+
+=== inside_house
+- Jennifer's house is not as messy as you expected, but it is a touch too neat, and the whole layout style is radically different from the aggressive Jennifer you remember from yesterday.
+
+* [Checkout the kitchen] ->kitchen
+
+* [Checkout the bathroom] ->bathroom
+
+
+=== kitchen 
+- When you walk into the kitchen, you discover that everything is exceptionally clean and neat, with no indication of dust throughout.
+
+* Open the fridge ->fridge
+
+* Check the closet ->closet
+
+* Check the teapot ->teapot
+
+* [Leave the kitchen] ->inside_house
+
+=== fridge
+- You pulled open the fridge. Inside, raw meat is precisely placed, and there are even a few frozen-to-death animals on the top rack. You shudder when you see this.
+
+* [Back] ->kitchen
+
+=== closet
+
+- There was nothing in the closet other than a few perfectly arranged plates and glasses.
+
+* [Back] ->kitchen
+
+=== teapot
+
+- In one corner, you see a peculiar circular ceramic teapot. You stepped over to the teapot, gently lifted it up, and shook it; it was empty. You opened the teapot and smelled a faint odor of blood rising from it.
+
+* [Back] ->kitchen
+
+
+=== bathroom
+
+
+
+->END
+
+
+=== day4_choose
+->END
 
     -> END
