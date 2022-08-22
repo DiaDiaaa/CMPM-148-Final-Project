@@ -859,7 +859,7 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 
 - When you hear her words, your heart stops and dread takes over. A scarlet raincoat came near, she stooped down, looking at you with an evilly smile.
 
-- * Jennifer: “What a pity! Where are you? Uh Ah~! That's only the last option left, Dr.Jeff!  You're under the bed!!!” # CLASS: Jeff
+- * Jennifer: “What a pity! Where are you? Uh Ah~! That's only the last option left, Dr. Jeff!  You're under the bed!!!” # CLASS: Jennifer
 
 - A person emerged in front of you the following second. A face emerged in front of you after a time. You stare in astonishment at her desperate expression. You were shaking with terror, unable to move, and unable to control your heart's anxiety. You are yanked out of bed by a force.
 
@@ -929,7 +929,7 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
  
 - Jennifer: "Ah, you aren't there, then where are you?" # CLASS: Jennifer
 
- * Jennifer: “Aha, how about the counter? You’re hiding under the counter, aren’t you?”
+ * Jennifer: “Aha, how about the counter? You’re hiding under the counter, aren’t you?” # CLASS: Jennifer
 
 - * Jennifer: "Aha! Not here either, then I know where you are, lovely doctor!!!!" # CLASS: Jennifer
 
