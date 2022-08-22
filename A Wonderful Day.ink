@@ -17,8 +17,10 @@ VAR visited_psy = false
 LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, toy, disc
 
 
- * [Day 1] -> Day1
+//  * [Day 1] -> Day1
+* [Day 3] -> day3
 
+/* ---------------- DAY 1 ------------------ */
 === Day1 === 
 [Day 1]
 
@@ -561,7 +563,7 @@ Commercial count:
 - * You cleaned up a bit, ate a quick meal, and went straight to bed. -> day2
 
 
-
+/* ---------------- DAY 2 ------------------ */
 === day2 ===
 ~ current_day = 2
 
@@ -768,8 +770,276 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 ~ Sanity += 1
 - * You cleaned up a bit, ate a quick meal, and went straight to bed. -> day3
 
+/* ---------------- DAY 3 ------------------ */
+==== day3 ====
+    ~ current_day = 3
+    
+- [Day 3]
 
-=== day3
+- I awoke drowsily from my bed and struggled to get out of it. Today's condition isn't great, but my head is swollen like a balloon, it hurts somewhat, and my entire body is incredibly weak. It might have been somewhat due to the woman from yesterday, but I still have to go to the clinic today.
+
+ * Take a few bites of breakfast and head to work
+ 
+ - As usual, when you arrive at the clinic, you make yourself a cup of freshly brewed espresso. You're sitting on your chair, quietly staring at Newton's balance balls in front of you. Praying that patient does not appear today.
+
+ * “Tic-tac-tic-tac…”
+
+- You've met all of the patients by approximately two o'clock in the afternoon. Jennifer does not appear to be arriving today. Thinking about this makes me feel relieved, and I swiftly pack my belongings.
+
+- Today, I don't want to go anywhere; I have a nagging feeling that something dreadful will happen, and all I want to do is get home as quickly as possible.
+
+ * [Leave the clinic]
+ 
+- On the walk home, I constantly had the feeling that something was wrong. I was continuously aware of a chill behind my back as if someone was watching me.
+
+ * [Walk faster]
+
+- You quicken your footsteps, but the sound of footsteps behind you gradually grows louder and louder as it chases after me.
+
+- You decide to go back and find out who the individual is! You come to a halt, turn around fast, and shout at the person who is following.
+
+ * Who are you? Why are you following me! # CLASS: Jeff
+ 
+- I only saw the other party wearing a scarlet raincoat and seeing the person clearly clutching a corroded kitchen knife in her hand.
+
+- Meanwhile, the individual in the scarlet raincoat gradually removed his hat. A familiar face stood in front of you, but her eyes does not look the same as usual.
+
+ * Jennifer! What are you doing here! # CLASS: Jeff
+ 
+- She smiled contemptuously.
+
+- Jennifer: What am I doing here? Of course, my lovely doctor, I am here for you. # CLASS: Jennifer
+
+- She raised her hand, clutching the rusty knife in her hand, and took a glance at it with a smile. She exuded a bloodthirsty vibe all over her.
+
+- Jennifer: I've been waiting and preparing for so long to dismember you flawlessly!  # CLASS: Jennifer
+
+ * [Run!]
+ 
+- You run desperately, and the woman behind you does the same. You plead for help the entire route, but the road appears desolate. You quickly get your phone from your jacket pocket, but there is no signal around here.
+
+ * You fled to a neighboring commercial center in a hurry.
+ 
+- You flee to the nearest commercial center. However, the center was deserted, and all of the stores were shuttered. You knocked on every shop's door, but no one replied no matter how hard you banged.
+
+- The woman behind you is drawing closer and closer. There are only two paths in front of you. Which one should I choose?
+
+* [Go to the left] -> day3_left_route
+* [Go to the right] -> day3_right_route
+
+/* left */
+=== day3_left_route
+
+- You didn't give it much thought and dashed to the road on the left. This path leads to the second floor of the commercial center. 
+
+- You reach the second floor, where practically all of the stores are closed.
+  However, you discover that the entrance to a furniture store is still open, leaving you with only one option.
+  
+ * Go to the bedding store
+ 
+- Jennifer: “Stop running, You are running too fast, I can't catch up with you!” # CLASS: Jennifer
+
+- Jennifer: “Uh Oh! I can see you. Now, you have nowhere to escape~” # CLASS: Jennifer
+
+ * You entered the store, but there are not much places for you can hide. Where would you hide?
+    
+    - * [Hide under the bed] -> day3_under_bed
+      * [Hide under the counter] -> day3_hide_under_counter
+      * [Hide inside the bed] -> day3_inside_bed
+ 
+/* under bed */    
+== day3_under_bed
+- You hastily hide under the bed. The suffocating atmosphere makes your every nerve full of vigilance. The sound of footsteps accompanied by the rapid beating of the heart is terrifying as if the scythe of the Thanatos had been placed on the neck, and it felt like the scythe would take away your life in the next second.
+
+- * Jennifer: "Where are you, Doctor? Ha, you want to play Peek-a-boo, right? Ho! You're not going to conceal yourself behind the quilt, aren’t you?" # CLASS: Jennifer
+
+- Woosh, She stabbed the bed next to her fiercely as soon as she finished speaking.
+
+- * Jennifer: “Aha, how about the counter? You’re hiding under the counter, aren’t you?” # CLASS: Jennifer
+
+- When you hear her words, your heart stops and dread takes over. A scarlet raincoat came near, she stooped down, looking at you with an evilly smile.
+
+- * Jennifer: “What a pity! Where are you? Uh Ah~! That's only the last option left, Dr.Jeff!  You're under the bed!!!” # CLASS: Jeff
+
+- A person emerged in front of you the following second. A face emerged in front of you after a time. You stare in astonishment at her desperate expression. You were shaking with terror, unable to move, and unable to control your heart's anxiety. You are yanked out of bed by a force.
+
+- Jennifer's eyes sharpened and she grabbed you by the neck, forcing you against the wall and clutching a half-rusted knife. You struggle to get free, but her power is extraordinary, and she soon stops you.
+
+- * Jeffiner: "Hey, doctor, peek-a-boo is a lot of fun, but I'm bored of it, so it's time for execution!" # CLASS: Jennifer
+
+- You shut your eyes closed and refuse to face death. As the knife was about to penetrate your chest, the hand that was clutching your neck gradually loosen. I slowly opened my eyes and tried to breathe again and saw Jennifer clutching her head in her hands, as if in anguish.
+
+- * Jennifer: “Run! I'm not going to last long!” # CLASS: Jennifer
+
+- * Jennifer: "It's you again, why are you obstructing me, you bastard, get off here!" # CLASS: Jennifer
+
+- * Jennifer: “Run!!!” # CLASS: Jennifer
+
+- As you look at the woman in front of you seems to be in great pain! And you have no other choices. However, this is your only chance to run. What will you do?
+
+ * [Run away] -> day3_run_away
+ * [Stay with her, try to awaken a woman's main personality] -> day3_stay
+ 
+
+/* under counter */
+== day3_hide_under_counter
+- You hastily duck under the counter. The suffocating atmosphere makes your every nerve full of vigilance. The sound of footsteps accompanied by the rapid beating of the heart is terrifying as if the scythe of the Thanatos had been placed on the neck, and it felt like the scythe would take away your life in the next second.
+
+ * Jennifer: "Where are you, Doctor? Ha, you want to play Peek-a-boo, right? Ho! You're not going to conceal yourself behind the quilt, aren’t you?" # CLASS: Jennifer
+ 
+ - Woosh, She stabbed the bed next to her fiercely as soon as she finished speaking.
+
+ * Jennifer: "Ah, you won't hide under the bed, will you?" # CLASS: Jennifer
+ 
+- She didn't say anything else, but her silence worried you more. 
+
+ * Jennifer: "How come I can't find you anywhere, doctor.” # CLASS: Jennifer
+ 
+- The phone fell to the ground unexpectedly. She seemed to have sensed sound and halted her footsteps.
+
+ * Jennifer: “Aha, here you are!" # CLASS: Jennifer
+ 
+- When you hear her words, your heart stops and dread takes over. A scarlet raincoat came near, she stooped down, looking at you with an evilly smile.
+ 
+ * Jennifer: “I found you, Doctor” # CLASS: Jennifer
+ 
+- Jennifer's eyes sharpened and she grabbed you by the neck, forcing you against the wall and clutching a half-rusted knife. You struggle to get free, but her power is extraordinary, and she soon stops you.
+
+ * Jennifer: "Hey, doctor, peek-a-boo is a lot of fun, but I'm bored of it, so it's time for execution!" # CLASS: Jennifer
+ 
+- You shut your eyes closed and refuse to face death. As the knife was about to penetrate your chest, the hand that was clutching your neck gradually loosen. I slowly opened my eyes and tried to breathe again and saw Jennifer clutching her head in her hands, as if in anguish.
+
+ * Jennifer: “Run! I'm not going to last long!” # CLASS: Jennifer
+ 
+- * Jennifer: "It's you again, why are you obstructing me, you bastard, get off here!" # CLASS: Jennifer
+
+- * Jennifer: “Run!!!” # CLASS: Jennifer
+
+- As you look at the woman in front of you seems to be in great pain! And you have no other choices. However, this is your only chance to run. What will you do?
+
+ * [Run away] -> day3_run_away
+ * [Stay with her, try to awaken a woman's main personality] -> day3_stay
+
+
+/* inside bed */
+== day3_inside_bed
+- You choose to hide under the quilt on the bed. The suffocating atmosphere makes your every nerve full of vigilance. The sound of footsteps accompanied by the rapid beating of the heart is terrifying as if the scythe of the Thanatos had been placed on the neck, and it felt like the scythe would take away your life in the next second.
+
+ * Jennifer: "Where are you, Doctor? Ha, you want to play Peek-a-boo, right? Ho! you won't hide under the bed, will you??" # CLASS: Jennifer
+ 
+- Jennifer: "Ah, you aren't there, then where are you?" # CLASS: Jennifer
+
+ * Jennifer: “Aha, how about the counter? You’re hiding under the counter, aren’t you?”
+
+- * Jennifer: "Aha! Not here either, then I know where you are, lovely doctor!!!!" # CLASS: Jennifer
+
+- When you hear her words, your heart stops and dread takes over. The quilt on your body was pulled, and a scarlet raincoat stand right next to you. She starts to bend down, looking at you with an evilly smile.
+
+ * Jennifer: "Hello there, lovely doctor. What a lovely spot to hide." # CLASS: Jennifer
+ 
+- * Jennifer: "Hey, doctor, peek-a-boo is a lot of fun, but I'm bored of it, so it's time for execution!" # CLASS: Jennifer
+
+- You shut your eyes closed and refuse to face death. As the knife was about to penetrate your chest, the hand that was clutching your neck gradually loosen. I slowly opened my eyes and tried to breathe again and saw Jennifer clutching her head in her hands, as if in anguish.
+
+ * Jennifer: “Run! I'm not going to last long!” # CLASS: Jennifer
+ 
+- * Jennifer: "It's you again, why are you obstructing me, you bastard, get off here!" # CLASS: Jennifer
+
+- * Jennifer: “Run!!!” # CLASS: Jennifer
+
+- As you look at the woman in front of you seems to be in great pain! And you have no other choices. However, this is your only chance to run. What will you do?
+
+ * [Run away] -> day3_run_away
+ * [Stay with her, try to awaken a woman's main personality] -> day3_stay
+
+
+/* run away OR stay */
+== day3_run_away
+    ~ Sanity -= 2
+    ~ Evilness += 1
+    
+- You still opted to flee, leaving the lady wailing alone; you know you can't do anything but rush home and lock the door.
+
+ *[Go Home] -> day3_back_home
+
+== day3_stay
+    ~ Sanity -= 1 
+    ~ Kindness += 2
+
+- You chose to stay and approached the woman carefully and softly. You had a firm grasp on her shoulders.
+
+ * Jeff: "I'm not leaving, Ms. Jennifer; think of the most valuable person or object in your life!" Don't allow 'her' take over you or your thinking!" # CLASS: Jeff
+ 
+ - Jennifer: “Shut up! Dr.Jeff! You don’t know anything! After I take control of this body, I will definitely not kill you easily this time. I will torment you slowly. until you feel death is the real detachment!” # CLASS: Jennifer
+ 
+ - Jennifer:  “My son! Justin, I miss him. He is in the orphanage, I haven’t seen him this week, I miss him so much! Dr.Jeff, Justin is my most precious one. I can’t let you, I can't let you take control of my body, not even a little bit, I want to see my Justin.” # CLASS: Jennifer
+ 
+ * Jeff: “Jennifer! You can do it! Justin, he misses you too. Now hurry up and think about the best things between you and your son, and that is the only way to temporarily seal ‘her’." # CLASS: Jeff
+ 
+- Jennifer finally stopped screaming as the minutes passed, and she grew silent. She had successfully kept "her" under control for the time being.
+
+- You gently put her to bed, watched her sleep peacefully, and then departed to go home.
+
+ *[Go Home] -> day3_back_home
+
+/* right */
+=== day3_right_route
+- After some consideration, you pick the right path.
+  
+  The path to the right leads to the commercial's center subterranean garage.
+  
+  You have a lot of options right now because there are so many cars in the basement garage; you may hide in numerous areas to try to avoid the chase.
+
+ * [Pick a car and hide under it.] -> day3_under_car
+ * [Randomly pick a car and hide behind it.] -> day3_behind_car
+ * [Find a pillar and hide.] -> day3_pillar
+ 
+ 
+== day3_under_car 
+- You pick a car with a slightly higher bottom, so it's better for you to get in and hide.
+  
+  After a time, you heard audible footsteps coming from the stairs, which made you quite worried, but it appears that the other party went because he noticed too many cars there and thought it was bothersome.
+
+
+
+ *[Although it was temporarily safe, you still had great care and dared not make any noise, then you left the mall and returned home.] -> day3_back_home
+ 
+== day3_behind_car
+- You picked a big truck and you hid in the back of the truck.
+
+  After a time, you heard audible footsteps coming from the stairs, which made you quite worried, but it appears that the other party went because he noticed too many cars there and thought it was bothersome.
+
+ *[Although it was temporarily safe, you still had great care and dared not make any noise, then you left the mall and returned home.] -> day3_back_home
+
+== day3_pillar
+- You find a pillar very far from the stairs and hide.
+
+  After a long time, you find that nothing seems to happen, you don't hear any sound, and you feel temporarily safe.
+  
+  
+ *[Although it was temporarily safe, you still had great care and dared not make any noise, then you left the mall and returned home.] -> day3_back_home
+ 
+ 
+/* back home */
+=== day3_back_home
+- When you get home, you immediately undress, head straight to the bathroom, turn on the shower, and turn the temperature down so that only cold water can temporarily calm your mind.
+
+ * You then gaze at yourself in the mirror.
+ 
+- * [Sanity Check]
+
+{sanity_check(1)}
+
+- * [Leave the bathroom]
+
+- You've just narrowly escaped today, and you're feeling uneasy and collapsed. Because you don't exercise much, your legs are painful and feeble.
+
+ ~ Sanity += 1
+ 
+* [It is time to go to bed] -> day4
+
+/* ---------------- DAY 3 ------------------ */
+=== day4    
 Placeholder
 -> END
 
