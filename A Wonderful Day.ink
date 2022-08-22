@@ -7,9 +7,10 @@ VAR Evilness = 0
 
 VAR current_day = 0
 
-VAR Pendant = 0
+VAR Pendant = 1
 
 VAR commercial_count = 0
+VAR commercial_max = 2
 VAR card_count = 0
 
 VAR visited_psy = false
@@ -18,10 +19,10 @@ LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, to
 
 
 //  * [Day 1] -> Day1
-* [Day 3] -> day3
+* [Day 4] -> day4
 
 /* ---------------- DAY 1 ------------------ */
-=== Day1 === 
+=== day1 === 
 [Day 1]
 
 ~ current_day = 1
@@ -268,17 +269,17 @@ Commercial count:
 {commercial_count}
 
 
- * {shop_item !? scalpel && commercial_count < 2} Blood Scalpel -> blood_scalpel
- * {shop_item !? sheep && commercial_count < 2} Adorable Little Sheep -> adorable_little_sheep
- * {shop_item !? justice && commercial_count < 2} A calligraphy that says 'Justice' -> a_calligraphy
- * {shop_item !? painting && commercial_count < 2} Distorted Paintings -> distorted_paintings
- * {shop_item !? tentacle && commercial_count < 2} Small Tentacle -> small_tentacle
- * {shop_item !? tooth && commercial_count < 2} An unknown animal's tooth -> animal_tooth
- * {shop_item !? writing && commercial_count < 2} A scroll containing nonsensical writing -> nonsensical_writing
- * {shop_item !? toy && commercial_count < 2} Superman Toy -> superman_toy
- * {shop_item !? disc && commercial_count < 2} 1998 Game Disc -> game_disc
+ * {shop_item !? scalpel && commercial_count < commercial_max} Blood Scalpel -> blood_scalpel
+ * {shop_item !? sheep && commercial_count < commercial_max} Adorable Little Sheep -> adorable_little_sheep
+ * {shop_item !? justice && commercial_count < commercial_max} A calligraphy that says 'Justice' -> a_calligraphy
+ * {shop_item !? painting && commercial_count < commercial_max} Distorted Paintings -> distorted_paintings
+ * {shop_item !? tentacle && commercial_count < commercial_max} Small Tentacle -> small_tentacle
+ * {shop_item !? tooth && commercial_count < commercial_max} An unknown animal's tooth -> animal_tooth
+ * {shop_item !? writing && commercial_count < commercial_max} A scroll containing nonsensical writing -> nonsensical_writing
+ * {shop_item !? toy && commercial_count < commercial_max} Superman Toy -> superman_toy
+ * {shop_item !? disc && commercial_count < commercial_max} 1998 Game Disc -> game_disc
  
- + {commercial_count <= 2} [Old man: “You appear to have decided to carry two items with you.”] -> close_commercial_list
+ + {commercial_count == commercial_max} [Old man: “You appear to have decided to carry {commercial_max} items with you.”] -> close_commercial_list
  
 == blood_scalpel
     ~ Evilness += 2
@@ -334,7 +335,7 @@ Commercial count:
 
  + { current_day == 1} [Back Home] -> home
  + { current_day == 2} [Back Home] ->day2_home
- 
+ + { current_day == 4} [Back Home] ->day4_home
  
 === day1_psychiatric_institution ===
 
@@ -1038,9 +1039,16 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
  
 * [It is time to go to bed] -> day4
 
+
+
+
+
+
 /* ---------------- DAY 4 ------------------ */
 === day4 ===
 Day 4
+~current_day = 4
+
 { Pendant == 1: 
     -> Orphanage
   -else:
@@ -1282,6 +1290,117 @@ Day 4
 
 
 === day4_choose
+- It's noon, it's still early, do you want to go somewhere?
+
+* Park ->day4_park
+
+* Commercial Center ->day4_commercial
+
+* Psychiatric institution -> day4_psy
+
+* Return Home -> day4_return_home
+
+=== day4_park
+- I went to a nearby park.
+
+- No matter what time it is here, it is so comfortable, and nice for me to relax my mind and body.
+
+*[Looking for a bench]
+
+- I found a quiet place at random, walked toward an empty bench, and sat down. I lean my back against the bench, feel the wind breeze through my figure tips and close my eyes enjoying the sunlight.
+
+- Time passed quickly. The sky is painted a beautiful golden color. It seems to be dusk.
+
+* [It's getting late. And It's time to go home] ->day4_home
+
+=== day4_commercial
+~commercial_max = 1
+
+- You return to the commercial center and enter the "Home of Soul" store.
+
+- Old man: Welcome, dear visitor. Are you going to my store today? Please select oneproducts from my store today.
+
+*[Begin] -> commercial_list
+
+=== day4_psy
+- You arrive at the psychiatric institution, you need to meet the old lady straight away, and you need her to reveal herself.
+
+* [Building 44, Room 44]
+
+- The old lady: Ah, young man, you seem to have barely survived, but the deadness within you is growing rapidly heavier and heavier, therefore let's start divination right now.
+
+- There are three cards in front of you.
+
+-> day4_card
+
+
+=== day4_card
+
+* [The Fool，0] ->Fool
+
+* [Death，XIII] ->Death
+
+* [The Hanged Man，XII] -> Hanged_Man
+
+* Not choose -> day4_card_finish
+
+
+=== Fool
+~card_count += 1
+
+- The old lady: This is The Fool. It marks the beginning or end of everything. You're going to meet someone who will drastically change your life. You have no choice except to confront him.
+
+*[Back] ->day4_card
+
+=== Death
+~card_count += 1
+
+- The old lady: This is a reversal, the death represents a silver lining in this reversal. Only kindness will keep you alive. If you chose evil, your journey to misery has just begun.
+
+*[Back] ->day4_card
+
+=== Hanged_Man
+- Old lady: This is the Hanged Man, which represents the process of self-sacrifice; perhaps sacrifice is the only way to survival.
+
+*[Back] ->day4_card
+
+=== day4_card_finish
+- The old lady: “It seems that you have already made a choice, and I have given you a revelation. I hope to see you next time, Jeff.”
+
+- Jeff: “Thank you, Ma’am.”
+
+- After that, you hurried
+
+* [Home] -> day4_home
+
+=== day4_return_home
+
+- I decided to go home right away, and nothing occurred on the way.
+
+~Sanity += 1
+
+->day4_home
+
+=== day4_home
+
+- You hurriedly ate something and went to the restroom as you got home.
+
+*["You then gaze at yourself in the mirror."]
+
+- * [Sanity Check]
+
+{sanity_check(1)}
+
+- * [Leave the bathroom]
+
+~Sanity += 1
+
+- *[It is time to go to bed] -> day5
+
 ->END
 
+
+
+
+=== day5
     -> END
