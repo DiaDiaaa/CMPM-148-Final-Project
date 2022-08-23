@@ -7,7 +7,7 @@ VAR Evilness = 0
 
 VAR current_day = 0
 
-VAR Pendant = 1
+VAR Pendant = 0
 
 VAR commercial_count = 0
 VAR commercial_max = 2
@@ -1252,10 +1252,17 @@ Day 4
 
 * [Checkout the bathroom] ->bathroom
 
+* [Second floor] ->jennifer_second_floor
+
 
 === kitchen 
 - When you walk into the kitchen, you discover that everything is exceptionally clean and neat, with no indication of dust throughout.
 
+~Sanity -= 1
+
+->kitchen_list
+
+=== kitchen_list
 * Open the fridge ->fridge
 
 * Check the closet ->closet
@@ -1267,26 +1274,154 @@ Day 4
 === fridge
 - You pulled open the fridge. Inside, raw meat is precisely placed, and there are even a few frozen-to-death animals on the top rack. You shudder when you see this.
 
-* [Back] ->kitchen
+* [Back] ->kitchen_list
 
 === closet
 
 - There was nothing in the closet other than a few perfectly arranged plates and glasses.
 
-* [Back] ->kitchen
+* [Back] ->kitchen_list
 
 === teapot
 
 - In one corner, you see a peculiar circular ceramic teapot. You stepped over to the teapot, gently lifted it up, and shook it; it was empty. You opened the teapot and smelled a faint odor of blood rising from it.
 
-* [Back] ->kitchen
+* [Back] ->kitchen_list
 
 
 === bathroom
+- You arrive at the toilet.
+- The toilet is very clean, but there is something that makes you feel a slight sense of strangeness.
+
+~Sanity -= 1
+
+->bathroom_list
+
+=== bathroom_list
+
+* Check the sink -> jennifer_sink
+
+* Checkout the bathtub ->jennifer_bathtub
+
+* Check the drawer ->jennifer_drawer
+
+* Leave the bathroom -> inside_house
+
+=== jennifer_sink
+- You see two toothbrushes, one red and one white, in the cup on the sink. But, as far as you know, Jennifer is living alone in the house so far.  So, who is this other toothbrush, you're puzzled.
+
+* [Back] ->bathroom_list
+
+=== jennifer_bathtub
+- There are two very distinct shampoos and body creams next to the tub, one for men and one for ladies.
+
+* [Back] ->bathroom_list
+
+=== jennifer_drawer
+- There are several pairs of red gloves in the drawer. You instantly feel suffocated, and the scene of being hunted and slain the day before returns to your thoughts. That day, she appeared to be wearing red gloves.
+
+* [Back] ->bathroom_list
+
+=== jennifer_second_floor
+- Second floor
+
+- You move ahead to the second floor and enter the bedroom.
+
+- The furnishings in the room make you shudder.
+
+-The bedroom is completely separated into two halves, the left area has a red bed, and the left wall is also dyed red. However, my scalp was numb because there were many knife marks on the walls, and some new scratches were buried in the old scratches. It's similar to a great work of art that was created over a long time.
+
+- However, the right space is totally white, with white walls, a white bed and comforter, and even white table and chairs, which contrasts sharply with the red area next to it.
+
+* Checkout the ‘red’ area -> red_area
+
+
+=== red_area
+~Sanity -= 1
+- You reach the red area and find a red journal on the ground.
+
+* Checkout the journal
 
 
 
-->END
+- Monday
+
+- She went to the doctor today. Although she appeared normal, my chains were loosening, and I would soon be able to fully possess her body. I gradually regained all of the time and memories I had lost.
+
+* [Next Page]
+
+
+
+- Tuesday
+
+- The feeling of being able to control this body is great. I went to the doctor early in the morning, hahahaha, I was so excited to see the doctor's horrified expression and shaking hands.
+
+- What if the doctor is no longer alive, maybe I can completely occupy this body.
+
+- Rest in peace, Ms. Jennifer. 
+
+- What belongs to me must be mine sooner or later.
+
+* [Next Page]
+
+
+
+- Wednesday
+
+- Damn it! The coward flee and didn't even get to murder him today. I wouldn't have let him go away if it hadn't been for that jerk!
+
+* [Next Page]
+
+- The page is empty, it seems to be the end of the journal.
+
+* [Close the journal] ->close_journal
+
+=== white_area
+- You enter the "white" area and find a pristine white journal on the desk.
+
+* Checkout the journal
+
+
+
+- Monday
+
+- I saw the doctor Jeff today, and he said my condition is in remission. I'm pleased since it appears that I'll be able to get a nice night's sleep today. Oh, and don't forget to pay Justin a visit at the orphanage on Thursday; I haven't seen him in a week and I miss him very terribly.
+
+* [Next Page]
+
+
+
+- Tuesday
+
+- Today, I feel as if I've been in a trance, and my memory is on and off. The body is becoming increasingly out of control, and every time I wake up strangely, my body is throbbing and I appear to have been battered. This is not good; I will have to increase the dose somewhat.
+
+* [Next Page]
+
+
+
+- Wednesday
+
+- What did I do today? I awoke in an unusual location and injured my doctor with a knife. Oh my God, what have I done? My control over my body is eroding; I can't keep on like this; I have to stop him!
+
+* [Next Page]
+
+- The page is empty, it seems to be the end of the journal.
+
+* [Close the journal] ->close_journal
+
+
+=== close_journal
+~Sanity -= 1
+- Reading Jennifer's journal also reveals that she appears to struggle with bodily control.
+
+* [Leave the room] ->leave_jennifer
+
+=== leave_jennifer
+- You left Jennifer's room, and the clock struck twelve. It's time for me to depart. It will be hazardous if "he" returns if you do not leave.
+
+- And as you're leaving, you see what appears to be a basement door in Jennifer's backyard, but there's no time to investigate. You hurry away.
+
+-> day4_choose
 
 
 === day4_choose
