@@ -2,7 +2,7 @@
 
 @ -1,550 +0,0 @@
 VAR Sanity = 10
-VAR Kindness = 0
+VAR Kindness = 5
 VAR Evilness = 0
 
 VAR current_day = 0
@@ -17,9 +17,8 @@ VAR visited_psy = false
 
 LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, toy, disc
 
-
 //  * [Day 1] -> Day1
-* [Day 2] -> day2
+* [Day 2] -> not_sacrifice
 
 /* ---------------- DAY 1 ------------------ */
 === day1 === 
@@ -770,8 +769,26 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 
 {sanity_check(1)}
 
+-
+ * [Leave the bathroom]
+-
+
+- You wander into the living room, desperate for some way to unwind.
+
+* [Turn on the computer] 
+    - You find an old yellow book named "Enjoy Life" and read it slowly. Seem learned something new.
+    ~ Sanity += 2
+
+* [Read]
+    - You find an old yellow book named "Enjoy Life" and read it slowly. Seem learned something new.
+    ~ Sanity += 1
+
+* [Watch horror movie]
+    - You turn on the smart TV and quickly discovered a high-rated horror film on the Internet. Then, you turn off the light and start to watch it. After watching it, you felt even more uneasy.
+    ~ Sanity -= 1
+
 ~ Sanity += 1
-- * You cleaned up a bit, ate a quick meal, and went straight to bed. -> day3
+- * Then you simply eat something for dinner and retire to bed.. -> day3
 
 /* ---------------- DAY 3 ------------------ */
 ==== day3 ====
@@ -1534,10 +1551,450 @@ Day 4
 
 - *[It is time to go to bed] -> day5
 
-->END
 
+=== function sanity_check_ending(s) ===
+{
+    - Sanity <= -10:
+        Sanity : {Sanity} # CLASS: statusCheck
+        Even though you appear to be peaceful on the surface, your inner hunger for slaughter and blood has utterly deceived you. Even if you try to deny it, you are indeed the second Erebos the moment you pick up the butcher knife.
+
+    - Sanity > -10 && Sanity <= 0:
+        Sanity : {Sanity} # CLASS: statusCheck
+        Although there is no difficulty on the outside, you are already on the verge of going insane on the inside.
+
+    - Sanity > 0 && Sanity <= 20:
+        Sanity : {Sanity} # CLASS: statusCheck
+        You appear fatigued today, with black bags under your eyes; you may need to take a break.
+        
+    - Sanity > 20:
+        Sanity : {Sanity} # CLASS: statusCheck
+        Despite your outward demeanor, you are a very peaceful, spiritual, and cheerful person on the inside.
+}
 
 
 
 === day5
-    -> END
+
+- Friday morning, you wake up feeling great and decide to go to work.
+
+* [Go to work]
+
+- You arrive at the clinic, you open the door and find a very delicate letter on your desk.
+
+* [Checkout the letter] 
+
+Dear Dr. Jeff
+
+I heartily invited you to come to my homes. I also request that you arrive to my place on schedule at one o'clock in the afternoon. If you do not attend, I will surely "invite" you in person.
+
+Sincerely,
+Nicolas Erebos
+
+-
+ * It's him. He was not about to let me go.
+-
+
+- You become increasingly restless as time passes and it is time to leave work. 
+
+- You recheck the letter and can't believe it's happening to you.
+
+-
+ * "Cuckoo, cuckoo" 
+-
+
+-
+ * It’s time to get off work, and it’s time to end it.
+-
+
+* [Jennifer’s house] ->day5_jennifer
+
+=== day5_jennifer
+
+- You showed there on time at Jennifer's house. At this time, a woman dressed formally stood in front of the door, seemingly for a long time.
+
+- Lord Erebos: “Welcome, my dearest doctor. I've been anticipating this moment for quite some time. I've prepared a modest welcoming ceremony for you down below. Despite its simplicity, I hope you enjoy it.”
+
+- Lord Erebos: “Please follow me.”
+
+* You follow him down to the basement. I could sense a faint aroma only a few steps away.
+
+- Lord Erebos: "This way please.Oh, I also made you a wonderful little gift."
+
+* [Continue following]
+
+- This never-ending staircase perplexes you. Why is the underground space so vast and frightening? You have no idea why there is such a vast underground space. He appeared to read my mind the next second.
+
+- Lord Erebos: You may be wondering why the subterranean is so vast. Allow me to tell you a story.
+
+- Lord Erebos: An ancestor lived here hundreds of years ago, buying all land in the area and establishing his own murder empire. This kingdom and intelligence network were built by a top assassination family over many years, but it didn't take long for the kingdom to suffer a major mishap.
+
+- Lord Erebos: An ancestor lived here hundreds of years ago, buying all land in the area and establishing his own murder empire. This kingdom and intelligence network were built by a top assassination family over many years, but it didn't take long for the kingdom to suffer a major mishap.
+
+- Lord Erebos: The daughter of a sheriff on the ground fell in love with the oldest son in the family. Love put him in a trance, and in order to protect himself, he revealed all the secrets from the ground to the sheriff, leading the family to be slaughtered overnight. Women, children, and the senior in family were not spared and were mutilated horrifically.
+
+* You noticed the hatred in his eyes when he said those words.
+
+- Lord Erebos: The lone remaining enraged patriarch recognized the traitor and gave his life to the ancient gods, who cursed the family and ensured that they would never escape their fate.
+
+- Jeff: "So you were created."
+
+- He nodded.
+
+* “So how long have you been?”
+
+- Lord Erebos: Of course, I've been alive for 437 years. Whenever a member of this family dies, I am passed on to their next kid, and due to the curse, they will always have offspring.
+
+- Jeff: “That doesn’t make sense.”
+
+- Lord Erebos: “Does that make sense? Indeed, my existence cannot be explained by common reason, just as if there is faith, if you believe in the presence of gods, it exists, and if you do not believe, it does not exist.”
+
+- Jeff: "Then how come you wanted to murder me before?"
+
+- Lord Erebos: “You had already endangered my life by then. But now you're a partner who can help me the most.”
+
+- Jeff: “Partner? Why partner?”
+
+- Lord Erebos: “I'm aware of what you done in the past. Since you're a doctor; as long as you're there, I can manage this body and do anything I want, and as long as you're there, I won't even go to a psychiatric institution.”
+
+- Lord Erebos: “So, now that we've covered a lot of ground, let's look at the small gift I've prepared for you.”
+
+- From his arms, he grabbed a pretty small mirror.
+
+- Lord Erebos: “This mirror is a small gift from me to you. Although it appears to be pointless, it can determine the shape of your heart. Come try it out.”
+
+* [Take the mirror and take a look.] 
+
+- {sanity_check_ending(1)}
+
+* [Ending Check] -> ending_check
+
+=== ending_check
+
+{ 
+- Sanity >= 20 && Kindness >= 20:
+    ->Sacrifices_ending
+
+- Sanity > 0 && Sanity < 20 && Kindness >= 5:
+    -> Seal
+    
+- Sanity <= 0 && Sanity >= -1 && Evilness >= 2:
+    ->join
+    
+}
+
+=== Sacrifices_ending
+- Lord Erebos: "Hmph~ It appears that you are rather cheerful, but so what? Would you want to join my squad, doctor? As long as you are here, one act under cover while the other is in the open, then we will obtain all we desire."
+
+* [You noted that his right hand appeared to be pointing in a certain direction at this point. You sneaked a peek there and discovered a very hidden letter.]
+
+- Jeff: I think I require some thought time.
+
+* [You move towards that place as you speak, but you dare not go too fast.]
+
+- Lord Erebos: No worries, my dear doctor. I'll give you 10 minutes, and because I've been talking for so long, please allow me to grab something to drink. By the way, don't even think of running away. The entire underground has been locked off, and you can't get out.
+
+* [Lord Erebos left.]
+
+- This is a fantastic chance for you. You rush over to the message.
+
+* [Open the message]
+
+- Doctor, This is Jennifer, and I've hidden this message here. The only way to get rid of him is described here, but it comes at a high price. Doctor, in order to completely free yourself of him, you must first gain his trust and enable his personality to infiltrate your body. I don't have a better solution for you right now, so I'll have to rely on your doctor.
+
+- Then there's a "killed" knife beneath your feet. He uses this knife to stab into the heart as he enters your body, trapping him. He'll never live beyond his death in this knife!
+
+- I know the price is high, and you must exchange your life, but if you do not, you must find a way to wake me up and seal him.
+
+* You dig up the earth beneath your feet and, indeed, conceal a pale knife.
+
+- You gently place it in your pocket, and then it's time to make the decision!
+
+* [Sacrifices] -> sacrifice
+
+* [Not Sacrifices] -> not_sacrifice
+
+=== sacrifice
+- You have taken a quiet decision in your heart.
+
+- At the same moment, Lord Erebos returned with a cup of tea in his hand.
+
+- Lord Erebos: So what is the decision?
+
+- Jeff: I'd would like to join you, but there is one request.
+
+- Lord Erebos: What request?
+
+-
+ * You know what you're about to do next is going to be extremely hazardous, but you're willing to try.
+-
+
+- Jeff: “Lord Erebos, don’t you think it's uncomfortable for you to be in this woman's body? You're plainly a male, but you have to share a woman's body.”
+
+- Lord Erebos: “What do you mean?”
+
+- Jeff: “Why not you want to enter my body? I control it during the day, and you control it at night. so that we may genuinely become one is acting behind the scenes while the other is out in the open.”
+
+* When Lord Erebos heard what you said, he laughed.
+
+- Lord Erebos: “My dear doctor, you definitely match my hunger; I know you and I are the same!”
+
+- Jeff: “So, would you want to come in?”
+
+- Lord Erebos: “Of course, I can't wait, and you may begin whenever you're ready!”
+
+- Jeff: “I’m fully ready!”
+
+* ["You witness Jennifer's body collapse instantly, and a foreign soul squeezes into your mind, giving you a searing headache, but you know, the opportunity is here!"]
+
+- You pulled the knife from your arms, the pale hue of a death scythe waiting to harvest life.
+
+- You thrust the knife into your own heart, causing terrible agony, and the earl in your body realized this as well, roaring in pain.
+
+- Lord Erebos: “How dare you deceive me! I can, believe it or not, make your life worse than death!”
+
+- Jeff: “If only you could!”
+
+* ["The knife in your hand emits a faint glow, and you can feel the alien spirit filling your head being drawn slowly into the knife."]
+
+- He is no longer there, yet your life is passing you by.
+
+- Drip, drip, drip. It's incredible because there's no blood flowing out of your wound, yet you can hear blood trickling to the ground. However, you can feel your eyelids closing and a grin forming at the corner of your mouth.
+
+- Ah, it's over.
+
+* A year later
+
+- A mother and a kid approached a gravestone.
+
+- They were dressed in black and placed a bouquet of flowers in front of the gravestone, as if to say hello and farewell.
+
+- Because of your sacrifice, the centuries-old curse has been lifted, and your soul is making its way to paradise.
+
+- Step by step, you ascend the lengthy stairwell. Just as you were ready to enter paradise, a vortex erupted in front of your eyes, radiating a brilliant light and eventually engulfing you and you vanished.
+
+->END
+
+=== not_sacrifice
+
+- You have taken a quiet decision in your heart.
+
+- At the same moment, Lord Erebos returned with a cup of espresso in his hand.
+
+- Lord Erebos: So what is the decision?
+
+- -> seal_soul
+
+something
+
+=== seal_soul
+
+- Jeff: I refused!
+
+- 
+ * When he heard your refusal, the Lord Erebos paused for a time in his drinking. He then drank his drink and flung it to the ground.
+-
+
+- Lord Erebos: Refuse? Hahahhah, Then there is only one option for those who reject me is death!”
+
+- 
+ * You saw the him get a knife from his arms.
+-
+
+- Lord Erebos: “Did you see the doctor? This knife is known as ‘Hell.’”
+
+- He looked at the knife, placed his finger in front of his lip, and struck a quiet posture.
+
+- Lord Erebos: “Shhh, pay attention, this knife is screaming all the time. There are over 100 individuals imprisoned here, each of which I killed personally, and you, doctor, will be the next!”
+
+* When he finished speaking, he held it out toward your direction.
+
+- It scrapes a lot of scars no matter how successfully you dodge.
+
+- You know you have no chance of winning, so the only thing you can do now is wake up Jennifer!
+
+- Jeff: Jennifer! Don't allow this evil take control of your head! Consider your children! He still requires your assistance; he cannot survive without his mother!
+
+- [Inside of Jennifer's mind] 
+
+- Jennifer: Doctor, I think I heard what the doctor said.
+
+- Jennifer: My son, Justin, he needs me, I shouldn't be sunk in sleep any more, I have to wake up.
+
+- [Outside of Jennifer's mind]
+
+- Jeff: Wake up, Jennifer!
+
+- Lord Erebos: Why are you still awake! I should have obliterated your existence!
+
+- Jennifer: Grab his knife right now! And pierce my body!
+
+- Lord Erebos: “Don't even consider it!”
+
+* When you saw Lord Erebos screaming on the ground, you grabbed the knife from his fingers and stabbed him and her body hard.
+
+- Lord Erebos: Nooooooooo!
+
+* The soul in the knife flowed into this body, and all the souls within became chains, trapping the Lord Erebos in the depths of consciousness.
+
+- You sank on the ground and drew a big breath after all of this. You had never witnessed such a fantastic spectacle before, but you did it.
+
+- Jennifer passed out on the ground at this time, you found the key to the door on her body, and then carried her out of the basement.
+
+- The warm sunlight fell on you and Jennifer the instant you opened the cellar door, like a heavenly light descending, extremely sacred.
+
+* [A year later] 
+
+- You arrived at the clinic as usual. Jennifer's follow-up appointment is today. It's been a year since our previous visit.
+
+- Many things happened this year, but you perfectly sealed him, and Jennifer was never controlled again, and she also brought back her kid since she was in good form.
+
+- However, as soon as you go into the clinic, you see a note on your desk.
+
+* [ Open the Letter ]
+
+- This letter has just five words, yet it gives you the shivers.
+
+- "I miss you, dearest Doctor."
+
+-> ending_chapter
+
+
+=== Seal
+
+- Lord Erebos: “Oh, it appears that you haven't yet been fully eroded by madness, but it appears that you will be soon. So, do you want to come along with me? doctor?”
+
+- Jeff: I refused!
+
+-> seal_soul
+
+=== join 
+- Lord Erebos: It appears that the craziness is progressively disintegrating you, which is excellent, doctor; it demonstrates that you and I are a wonderful match!
+
+- Lord Erebos: “So would you like to join me?”
+
+- Jeff: “What advantage I could get to be your partner?”
+
+* Your eyes are going wild; you don't care if Jennifer can be spared; all you want to do is follow your heart.
+
+- Lord Erebos: “Advantage! Of course there are advantages! As long as you join me, I can offer you whatever you desire, glory, fortune, women, power, and I can teach you our family's top assassination method, at least in this world. People do not survive more than 5 days.”
+
+- Jeff: “I have no enemies, but I am obsessed with money and beauty.”
+
+- Lord Erebos: “You are free to obtain it whenever you want! Allow me to arrange the ceremony props.”
+
+* With that, Lord Erebos went, but he returned after a while.
+
+- I noticed he was carrying five candles and a jug of crimson liquid.
+
+- He moved gently to the circular platform, poured the liquid into an upside-down five-pointed star, and lighted the five candles in the five corners.
+
+- Lord Erebos slowly walk toward you with two cups in his hands.
+
+- He put a cup infront of you.
+
+* [Pick up the cup]
+
+- Lord Erebos: “We shall conduct the exchange ritual under the careful eye of the devil now that the ceremony has begun.”
+
+- He moved gently to the circular platform, poured the liquid into an upside-down five-pointed star, and lighted the five candles in the five corners.
+
+- Lord Erebos: “You must, like I did, slit your hand and allow the blood to run into my cup.”
+
+* [Take over the knife.]
+
+- Lord Erebos: “You must, like me, cut your palm and allow the blood to flow into my cup.”
+
+- You swiped your palm over the table without hesitation. You frowned, but you did not cry out in agony. The glass quickly filled up.
+
+- Lord Erebos: “Then, when the ritual concludes, drink the blood that belongs to both of us, and the pact is accomplished. In the future, there will be no treachery between the two of us. Anyone who wishes to betray will be punished in hell.”
+
+- You didn't say anything, but you drank the cup in one gulp. Your tongue was filled with a strong crimson stench, and the hint of sweetness made you feel a bit delectable.
+
+* "He also finished drinking in front of you"
+
+- You instantly sensed a connection between your spirit and the Count. You could sense it even if it wasn't very powerful.
+
+- Lord Erebos: “Then, let us alter the world and become true lords of it in the future!”
+
+- You simply nodded without saying anything. You understand that your life has progressed to the point where you can no longer turn back.
+
+-> ending_chapter
+
+=== Substitution
+
+- Lord Erebos: You appear to have gone utterly insane! You and I are identical!
+
+- Lord Erebos: “So do you want to join me?”
+
+- Jeff: “What advantage I could get to be your partner?”
+
+* Yours is insane. You don't give a damn what happens to Jennifer, and you even have a plan in your head.
+
+- Lord Erebos: “Advantage! Of course there are advantages! As long as you join me, I can offer you whatever you desire, glory, fortune, women, power, and I can teach you our family's top assassination method, at least in this world. People do not survive more than 5 days.”
+
+- Jeff: “I have no enemies, but I am obsessed with money and beauty.”
+
+- Lord Erebos: “You are free to obtain it whenever you want! Allow me to arrange the ceremony props.”
+
+* With that, Lord Erebos went, but he returned after a while.
+
+- I noticed he was carrying five candles and a jug of crimson liquid.
+
+- He moved gently to the circular platform, poured the liquid into an upside-down five-pointed star, and lighted the five candles in the five corners.
+
+- Lord Erebos slowly walk toward you with two cups in his hands.
+
+- He put a cup infront of you.
+
+* [Pick up the cup]
+
+- Lord Erebos: “We shall conduct the exchange ritual under the careful eye of the devil now that the ceremony has begun.”
+
+- Lord Erebos removed the knife from his arms and sliced his hand, allowing the blood to gently drip into the cup you were holding. It will be full in no time.
+
+- The knife is then handed to you.
+
+- Take over the knife.
+
+- Lord Erebos: “You must, like I did, slit your hand and allow the blood to run into my cup.”
+
+- You took the knife, but instead of swiping it towards your palm, you stabbed Lord Erebos. The knife penetrated the heart precisely.
+
+- He looks at you in bewilderment, unable to comprehend what you're doing right now.
+
+- Lord Erebos: “Why?”
+
+- Jeff: “Why? The rationale is straightforward. It's too dull for me to be with you. It's better to let me take your place and become a new demon. Think about it, I'm a doctor by day and a devil at night, what a fantastic idea.”
+
+- Lord Erebos: “Hmph, hum, hum, I honestly misjudged you, doctor; it was my negligence that placed it in your hands, but I won't die; I will be back at any moment as long as there is a possibility.”
+
+* "You have a creepy grin, but it's a really dismal smile."
+
+- Jeff: “Will you be back? Hahaha. No No. You will never get the opportunity. My dearest, Erebos.”
+
+- You slowly kneel on the ground and read the words towards the inverted pentagram that is in front of you.
+
+- “My dear demon, I sacrifice the body and two souls of the sinner in front of me to you, and I hope to get a little attention from you, as long as you look at me, I will be satisfied!"
+
+- Your eyes are filled with lunacy at this point, and the magical circle in front of you is slowly glowing. Jennifer's body vanishes in front of you in a moment, and your head is filled with insane ravings.
+
+* “ya -nyth, ya goka athg” (My servent, I grant sign)
+
+- When you heard the Crusoe response, your whole body trembled, and the yellow brains flowed out of your seven orifices. You know, you have obtained His approval.
+
+- At this moment, your life is going in a completely different direction
+
+->ending_chapter
+
+=== ending_chapter
+- A yellow tentacle gently closed the book, wearing a yellow cloak and carrying a book and a pen, writing and sketching in the air.
+
+- ???: This seems to be his end; yet, it is not the ending I desire, therefore let him reincarnate.
+
+- ???: Hm? Who’s there? Hm…a human?
+
+- ???: I didn't anticipate a human to dare to look at this deity, and while the bravery is sufficient, having a human sent to the door is not a terrible thing. Then you've been chosen as the protagonist of the next tale!!
+
+- The END
+
+->END
