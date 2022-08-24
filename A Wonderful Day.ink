@@ -19,7 +19,7 @@ LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, to
 
 
 //  * [Day 1] -> Day1
-* [Day 4] -> day4
+* [Day 2] -> day2
 
 /* ---------------- DAY 1 ------------------ */
 === day1 === 
@@ -290,6 +290,8 @@ Commercial count:
     ~ Kindness += 1
     ~ commercial_count += 1
  * [Back] -> commercial_list
+ 
+ 
 
 == a_calligraphy
     ~ Kindness += 2
@@ -1077,11 +1079,11 @@ Day 4
 === inside_orphanage
 - Since you have done a study and research with my team at Windows of Hope Orphanage, you have had a lot of communication with the orphanage director. So you contacted the orphanage director, who was eager to assist me in resolving the issue.
 
-- Orphanage director: “Hey, long time no see, Dr.Jeff, What brought you here?”
+- Orphanage director: “Hey, long time no see, Dr.Jeff, What brought you here?” # CLASS: whoever
 
-* Jeff: “Long time no see. To be honest, I am looking for a kid called Justin, about 7 years old. He might be the child of one of my patients. I am here to see if there is any way to help my patient. May I see the child?”
+* Jeff: “Long time no see. To be honest, I am looking for a kid called Justin, about 7 years old. He might be the child of one of my patients. I am here to see if there is any way to help my patient. May I see the child?” #CLASS: Jeff
 
-- Orphanage director: “Justin? We have so many children with this name; give me a second, I'll look into it, and I'll get back to you later. You may feel free to visit our orphanage on your own if you want”
+- Orphanage director: “Justin? We have so many children with this name; give me a second, I'll look into it, and I'll get back to you later. You may feel free to visit our orphanage on your own if you want” # CLASS: whoever
 
 * [Visit]
 
@@ -1130,46 +1132,46 @@ Day 4
 
 - The girl looks at you with a little doubt.
 
-- ???: “Sir, I have never seen you before, who are you?”
+- ???: “Sir, I have never seen you before, who are you?” # CLASS: whoever
 
 - You knelt down and looked at the little girl and responded with a smile.
 
-* Jeff: “Hi sweetie, I’m looking for a child, called Justin, do you know him?”
+* Jeff: “Hi sweetie, I’m looking for a child, called Justin, do you know him?” # CLASS: Jeff
 
 - The little girl thought for a moment and replied. 
 
-- ???: “Justin? There are so many Justin here, I’m not sure which Justin you are looking for. By the way, my name is Katherine.”
+- ???: “Justin? There are so many Justin here, I’m not sure which Justin you are looking for. By the way, my name is Katherine.” # CLASS: whoever
 
-* Jeff: “Nice to meet you, Katherine, I’m Jeff.”
+* Jeff: “Nice to meet you, Katherine, I’m Jeff.” # CLASS: Jeff
 
-- Katherine: “Nice to meet you, uncle Jeff. I have something for you!”
+- Katherine: “Nice to meet you, uncle Jeff. I have something for you!” # CLASS: whoever
 
-- Katharine smiled as she pulled out candy from her pocket and handed it to you.
+- Katharine smiled as she pulled out candy from her pocket and handed it to you. 
 
-* Jeff: “Thank you, Katherine!” 
+* Jeff: “Thank you, Katherine!” # CLASS: Jeff
 ~Sanity += 1
 
-- Katherine: “You are welcome, Jeff. One of my friends told me that candy is the sign of our friendship, so now we are friends.”
+- Katherine: “You are welcome, Jeff. One of my friends told me that candy is the sign of our friendship, so now we are friends.” # CLASS: whoever
 
 -
- * Jeff: “Oh yeah! We are friends now~”
+ * Jeff: “Oh yeah! We are friends now~” # CLASS: Jeff
 -
 
 * You placed candy inside your pocket and patted Katherine's head.
 
-- Katherine: “Ohh, Jeff, I think the director is looking for you!”
+- Katherine: “Ohh, Jeff, I think the director is looking for you!” # CLASS: whoever
 
-- Orphanage director: “Ohh, Dr. Jeff, here you are with Katherine. I was looking for you. Here you go, I think he might be the child you that are looking for. He now is in the playroom, do you want me to take you to see him?”
-
--
- * Jeff: “Oh, sure, thank you, sir.”
--
+- Orphanage director: “Ohh, Dr. Jeff, here you are with Katherine. I was looking for you. Here you go, I think he might be the child you that are looking for. He now is in the playroom, do you want me to take you to see him?” # CLASS: whoever
 
 -
- * Jeff: “And see you later, Katherine.”
+ * Jeff: “Oh, sure, thank you, sir.” # CLASS: Jeff
 -
 
-- Katherine: "see you later, Uncle Jeff."
+-
+ * Jeff: “And see you later, Katherine.” # CLASS: Jeff
+-
+
+- Katherine: "see you later, Uncle Jeff." # CLASS: whoever
 
 * [Playroom] ->Playroom
 
@@ -1178,17 +1180,17 @@ Day 4
 
 - You noticed a little boy playing with building blocks alone in a corner, while the other children seem to be isolating him.
 
-- Orphanage director: “Justin is the child in the corner; he's not an orphan; Her mother left him at the door of the orphanage; his mother comes to see him once or twice a week; I'm not sure why I haven't been here this week.”
+- Orphanage director: “Justin is the child in the corner; he's not an orphan; Her mother left him at the door of the orphanage; his mother comes to see him once or twice a week; I'm not sure why I haven't been here this week.” # CLASS: whoever
 
 - Looking back on what happened this week, you can see why she didn't visit her son.
 
-* Jeff: “He looks lonely in the corner.”
+* Jeff: “He looks lonely in the corner.” # CLASS: Jeff
 
-- Orphanage director: "In fact, most of the children are fear to play with him because he appears to have a powerful aura, which makes most of us feel oppressed.”
-
+- Orphanage director: "In fact, most of the children are fear to play with him because he appears to have a powerful aura, which makes most of us feel oppressed.” # CLASS: whoever
+ 
 - He shook his head and continued.
 
-- Orphanage director: "Once, a child was fighting with him for a toy. Justin was mad at that child and pushed the other child down without saying any word, and smashed the other's head with the toy he grabbed. When I got to the scene, Justin was already back in the corner with his toy, and he looked calm as if nothing had happened. Therefore, most of the children are very afraid to get close to Justin. "
+- Orphanage director: "Once, a child was fighting with him for a toy. Justin was mad at that child and pushed the other child down without saying any word, and smashed the other's head with the toy he grabbed. When I got to the scene, Justin was already back in the corner with his toy, and he looked calm as if nothing had happened. Therefore, most of the children are very afraid to get close to Justin. " # CLASS: whoever
 
 - You are nervous because you see Jennifer's shadow in Justin. Perhaps this is the reason that Jennifer chose to send Justin here as a way of protection.
 
@@ -1203,9 +1205,9 @@ Day 4
 * Keep Slient ->slient
 
 === remind
-- Jeff: "Sir, keep an eye on him when you have time. If he still has a violent problem, please call me immediately. I am his mother's attending physician, so please contact me!"
+- Jeff: "Sir, keep an eye on him when you have time. If he still has a violent problem, please call me immediately. I am his mother's attending physician, so please contact me!" # CLASS: Jeff
 
-- Orphanage director: "Sure, no problem."
+- Orphanage director: "Sure, no problem." # CLASS: whoever
 
 * You take a second look at Justin before you leave, and hope Justin won't be influenced by his mother.
 ~Evilness += 3

@@ -207,6 +207,22 @@ img {
     color:rgb(249, 213, 255);
 }
 
+.director{
+    color:rgb(151, 143, 255);
+}
+
+.wenhao{
+    color: rgb(100, 146, 160);
+}
+
+.boJue{
+    color:rgb(60, 114, 84);
+}
+
+.haSiTa{
+    color:rgb(0, 168, 76);
+}
+
 #controls {
     z-index: 4;
     font-size: 9pt;
