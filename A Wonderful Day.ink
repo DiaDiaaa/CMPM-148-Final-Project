@@ -264,8 +264,8 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
  * Commercial List -> commercial_list
  
 == commercial_list
-Commercial count: 
-{commercial_count}
+// Commercial count: 
+// {commercial_count}
 
 
  * {shop_item !? scalpel && commercial_count < commercial_max} Blood Scalpel -> blood_scalpel
