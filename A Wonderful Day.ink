@@ -1,6 +1,6 @@
 #theme: dark
 
-@ -1,550 +0,0 @@
+// @ -1,550 +0,0 @@
 VAR Sanity = 10
 VAR Kindness = 5
 VAR Evilness = 0
