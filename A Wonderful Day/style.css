@@ -188,39 +188,35 @@ img {
 }
 
 .Jennifer{
-    color:rgb(226, 79, 11);
+    color:rgb(177, 176, 176);
 }
 
 .oldMan{
-    color: rgb(149, 255, 151);
+    color: rgb(198, 250, 187);
 }
 
 .nurse{
-    color: rgb(168, 210, 158);
+    color: rgb(151, 143, 255);
 }
 
 .oldLady{
-    color:rgb(108, 166, 134);
+    color:rgb(131, 0, 192);
 }
 
 .statusCheck{
     color:rgb(249, 213, 255);
 }
 
-.director{
+.whoever{
     color:rgb(151, 143, 255);
 }
 
-.wenhao{
-    color: rgb(100, 146, 160);
-}
-
 .boJue{
-    color:rgb(60, 114, 84);
+    color:rgb(128, 0, 0);
 }
 
 .haSiTa{
-    color:rgb(0, 168, 76);
+    color:rgb(233, 222, 122);
 }
 
 #controls {
