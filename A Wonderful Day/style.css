@@ -212,7 +212,7 @@ img {
 }
 
 .bojue{
-    color:rgb(128, 0, 0);
+    color:rgb(197, 5, 5);
 }
 
 .hasita{
@@ -222,6 +222,11 @@ img {
 .emo{
     color: rgb(83, 18, 13);
 }
+
+.ke{
+    color: rgb(255, 151, 215);
+}
+
 #controls {
     z-index: 4;
     font-size: 9pt;

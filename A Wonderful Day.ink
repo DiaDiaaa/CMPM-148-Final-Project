@@ -334,7 +334,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
     ~ Sanity -= 2 
 - Old man: You appear to have decided to carry two items with you. # CLASS: oldMan
  
-- You left the commercial center with the two items You had purchased, constantly feeling as though something had changed but not knowing what.
+- You left the commercial center with the {commercial_max} items you had purchased, constantly feeling as though something had changed but not knowing what.
 
  + { current_day == 1} [Back Home] -> home
  + { current_day == 2} [Back Home] ->day2_home
@@ -516,7 +516,7 @@ card count: {card_count}
 
 -  But after a time, you stood up and grabbed a book off the shelf.
 
- * Open DSM-5
+ * [Open DSM-5]
  
 - You opened the DSM-5, which lists several typical forms of mental disorders.
 
@@ -639,21 +639,21 @@ card count: {card_count}
 
 - Jennifer: What's the matter, and why are your hands shaking? Are you scared of me? # CLASS: Jennifer
 
-    * Yes. 
+    * Yes. # CLASS: Jeff
         ~ Evilness += 1
         ~ Sanity += 1
-    * Nope, it's just that the room is a bit chilly. 
+    * Nope, it's just that the room is a bit chilly. # CLASS: Jeff
         ~ Kindness += 1
         ~ Sanity -= 1
 - 
 
 - Every nerve in your body got tightened as she took over the knife. Your hand was already in the trouser pocket, clutching your anesthetic needle, ready to sedate her at any moment.
 
-- This knife does not look to be very comfortable. It is considerably weaker to the one I previously used.
+- Jennifer: This knife does not look to be very comfortable. It is considerably weaker to the one I previously used. # CLASS: Jennifer
 
 * You're slightly relieved that she has no tendency to hurt anyone, but the chilly perspiration has soaked your back.
 
-- Jeff: Ms. Jennifer, your current condition is critical; I will provide you with medication right now. # CLASS: Jeff
+- Jeff: Ms. Jennifer, your current condition is critical. I will provide you with medication right now. # CLASS: Jeff
 
  * [The Hidden drawer] 
  
@@ -841,11 +841,11 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - You've met all of the patients by approximately two o'clock in the afternoon. Jennifer does not appear to be arriving today. Thinking about this makes me feel relieved, and you swiftly pack your belongings.
 
-- Today, you don't want to go anywhere; you have a nagging feeling that something dreadful will happen, and all you want to do is get home as quickly as possible.
+- Today, you don't want to go anywhere. You have a nagging feeling that something dreadful will happen, and all you want to do is get home as quickly as possible.
 
  * [Leave the clinic]
  
-- On the walk home, you constantly had the feeling that something was wrong. you was continuously aware of a chill behind your back as if someone was watching me.
+- On the way home, you constantly had the feeling that something was wrong. You was continuously aware of a chill behind your back as if someone was watching me.
 
  * [Walk faster]
 
@@ -863,11 +863,11 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
  
 - She smiled contemptuously.
 
-- Jennifer: What am I doing here? Of course, my lovely doctor, I am here for you. # CLASS: Jennifer
+- Jennifer: What am I doing here? Of course, my lovely doctor, I am here for you. # CLASS: bojue
 
 - She raised her hand, clutching the rusty knife in her hand, and took a glance at it with a smile. She exuded a bloodthirsty vibe all over her.
 
-- Jennifer: I've been waiting and preparing for so long to dismember you flawlessly!  # CLASS: Jennifer
+- Jennifer: I've been waiting and preparing for so long to dismember you flawlessly!  # CLASS: bojue
 
  * [Run!]
  
@@ -892,9 +892,9 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
   
  * [Go to the bedding store]
  
-- Jennifer: Stop running, You are running too fast, I can't catch up with you! # CLASS: Jennifer
+- Jennifer: Stop running, you are running too fast, I can't catch up with you! # CLASS: bojue
 
-- Jennifer: Uh Oh! I can see you. Now, you have nowhere to escape~ # CLASS: Jennifer
+- Jennifer: Uh Oh! I can see you. Now, you have nowhere to escape~ # CLASS: bojue
 
  * You entered the store, but there are not much places for you can hide. Where would you hide?
     
@@ -906,27 +906,27 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 == day3_under_bed
 - You hastily hide under the bed. The suffocating atmosphere makes your every nerve full of vigilance. The sound of footsteps accompanied by the rapid beating of the heart is terrifying as if the scythe of the Thanatos had been placed on the neck, and it felt like the scythe would take away your life in the next second.
 
-- * Jennifer: Where are you, Doctor? Ha, you want to play Peek-a-boo, right? Ho! You're not going to conceal yourself behind the quilt, aren't you? # CLASS: Jennifer
+- * Jennifer: Where are you, Doctor? Ha, you want to play Peek-a-boo, right? Ho! You're not going to conceal yourself behind the quilt, aren't you? # CLASS: bojue
 
 - Woosh, She stabbed the bed next to her fiercely as soon as she finished speaking.
 
-- * Jennifer: Aha, how about the counter? You're hiding under the counter, aren't you? # CLASS: Jennifer
+- * Jennifer: Aha, how about the counter? You're hiding under the counter, aren't you? # CLASS: bojue
 
 - When you hear her words, your heart stops and dread takes over. A scarlet raincoat came near, she stooped down, looking at you with an evilly smile.
 
-- * Jennifer: What a pity! Where are you? Uh Ah~! That's only the last option left, Dr. Jeff!  You're under the bed!!! # CLASS: Jennifer
+- * Jennifer: What a pity! Where are you? Uh Ah~! That's only the last option left, Dr. Jeff!  You're under the bed!!! # CLASS: bojue
 
 - A person emerged in front of you the following second. A face emerged in front of you after a time. You stare in astonishment at her desperate expression. You were shaking with terror, unable to move, and unable to control your heart's anxiety. You are yanked out of bed by a force.
 
 - Jennifer's eyes sharpened and she grabbed you by the neck, forcing you against the wall and clutching a half-rusted knife. You struggle to get free, but her power is extraordinary, and she soon stops you.
 
-- * Jeffiner: Hey, doctor, peek-a-boo is a lot of fun, but I'm bored of it, so it's time for execution! # CLASS: Jennifer
+- * Jeffiner: Hey, doctor, peek-a-boo is a lot of fun, but I'm bored of it, so it's time for execution! # CLASS: bojue
 
 - You shut your eyes closed and refuse to face death. As the knife was about to penetrate your chest, the hand that was clutching your neck gradually loosen. You slowly opened your eyes and tried to breathe again and saw Jennifer clutching her head in her hands, as if in anguish.
 
 - * Jennifer: Run! I'm not going to last long! # CLASS: Jennifer
 
-- * Jennifer: It's you again, why are you obstructing me, you bastard, get off here! # CLASS: Jennifer
+- * Jennifer: It's you again, why are you obstructing me, you bastard, get off here! # CLASS: bojue
 
 - * Jennifer: Run!!! # CLASS: Jennifer
 
@@ -940,33 +940,33 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 == day3_hide_under_counter
 - You hastily duck under the counter. The suffocating atmosphere makes your every nerve full of vigilance. The sound of footsteps accompanied by the rapid beating of the heart is terrifying as if the scythe of the Thanatos had been placed on the neck, and it felt like the scythe would take away your life in the next second.
 
- * Jennifer: Where are you, Doctor? Ha, you want to play Peek-a-boo, right? Ho! You're not going to conceal yourself behind the quilt, aren't you? # CLASS: Jennifer
+ * Jennifer: Where are you, Doctor? Ha, you want to play Peek-a-boo, right? Ho! You're not going to conceal yourself behind the quilt, aren't you? # CLASS: bojue
  
  - Woosh, She stabbed the bed next to her fiercely as soon as she finished speaking.
 
- * Jennifer: Ah, you won't hide under the bed, will you? # CLASS: Jennifer
+ * Jennifer: Ah, you won't hide under the bed, will you? # CLASS: bojue
  
 - She didn't say anything else, but her silence worried you more. 
 
- * Jennifer: How come I can't find you anywhere, doctor. # CLASS: Jennifer
+ * Jennifer: How come I can't find you anywhere, doctor. # CLASS: bojue
  
 - The phone fell to the ground unexpectedly. She seemed to have sensed sound and halted her footsteps.
 
- * Jennifer: Aha, here you are! # CLASS: Jennifer
+ * Jennifer: Aha, here you are! # CLASS: bojue
  
 - When you hear her words, your heart stops and dread takes over. A scarlet raincoat came near, she stooped down, looking at you with an evilly smile.
  
- * Jennifer: I found you, Doctor # CLASS: Jennifer
+ * Jennifer: I found you, Doctor # CLASS: bojue
  
 - Jennifer's eyes sharpened and she grabbed you by the neck, forcing you against the wall and clutching a half-rusted knife. You struggle to get free, but her power is extraordinary, and she soon stops you.
 
- * Jennifer: Hey, doctor, peek-a-boo is a lot of fun, but I'm bored of it, so it's time for execution! # CLASS: Jennifer
+ * Jennifer: Hey, doctor, peek-a-boo is a lot of fun, but I'm bored of it, so it's time for execution! # CLASS: bojue
  
 - You shut your eyes closed and refuse to face death. As the knife was about to penetrate your chest, the hand that was clutching your neck gradually loosen. You slowly opened your eyes and tried to breathe again and saw Jennifer clutching her head in her hands, as if in anguish.
 
  * Jennifer: Run! I'm not going to last long! # CLASS: Jennifer
  
-- * Jennifer: It's you again, why are you obstructing me, you bastard, get off here! # CLASS: Jennifer
+- * Jennifer: It's you again, why are you obstructing me, you bastard, get off here! # CLASS: bojue
 
 - * Jennifer: Run!!! # CLASS: Jennifer
 
@@ -980,25 +980,25 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 == day3_inside_bed
 - You choose to hide under the quilt on the bed. The suffocating atmosphere makes your every nerve full of vigilance. The sound of footsteps accompanied by the rapid beating of the heart is terrifying as if the scythe of the Thanatos had been placed on the neck, and it felt like the scythe would take away your life in the next second.
 
- * Jennifer: Where are you, Doctor? Ha, you want to play Peek-a-boo, right? Ho! you won't hide under the bed, will you?? # CLASS: Jennifer
+ * Jennifer: Where are you, Doctor? Ha, you want to play Peek-a-boo, right? Ho! you won't hide under the bed, will you?? # CLASS: bojue
  
-- Jennifer: Ah, you aren't there, then where are you? # CLASS: Jennifer
+- Jennifer: Ah, you aren't there, then where are you? # CLASS: bojue
 
- * Jennifer: Aha, how about the counter? You're hiding under the counter, aren' you? # CLASS: Jennifer
+ * Jennifer: Aha, how about the counter? You're hiding under the counter, aren' you? # CLASS: bojue
 
-- * Jennifer: Aha! Not here either, then I know where you are, lovely doctor!!!! # CLASS: Jennifer
+- * Jennifer: Aha! Not here either, then I know where you are, Dear Doctor!!!! # CLASS: bojue
 
 - When you hear her words, your heart stops and dread takes over. The quilt on your body was pulled, and a scarlet raincoat stand right next to you. She starts to bend down, looking at you with an evilly smile.
 
- * Jennifer: Hello there, lovely doctor. What a lovely spot to hide. # CLASS: Jennifer
+ * Jennifer: Hello there, Dear Doctor. What a lovely spot to hide. # CLASS: bojue
  
-- * Jennifer: Hey, doctor, peek-a-boo is a lot of fun, but I'm bored of it, so it's time for execution! # CLASS: Jennifer
+- * Jennifer: Hey, doctor, peek-a-boo is a lot of fun, but I'm bored of it, so it's time for execution! # CLASS: bojue
 
 - You shut your eyes closed and refuse to face death. As the knife was about to penetrate your chest, the hand that was clutching your neck gradually loosen. You slowly opened your eyes and tried to breathe again and saw Jennifer clutching her head in her hands, as if in anguish.
 
  * Jennifer: Run! I'm not going to last long! # CLASS: Jennifer
  
-- * Jennifer: It's you again, why are you obstructing me, you bastard, get off here! # CLASS: Jennifer
+- * Jennifer: It's you again, why are you obstructing me, you bastard, get off here! # CLASS: bojue
 
 - * Jennifer: Run!!! # CLASS: Jennifer
 
@@ -1025,7 +1025,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
  * Jeff: I'm not leaving, Ms. Jennifer; think of the most valuable person or object in your life! Don't allow 'he' take over you or your thinking! # CLASS: Jeff
  
- - Jennifer: Shut up! Dr.Jeff! You don' know anything! After I take control of this body, I will definitely not kill you easily this time. I will torment you slowly. until you feel death is the real detachment! # CLASS: Jennifer
+ - Jennifer: Shut up! Dr.Jeff! You don' know anything! After I take control of this body, I will definitely not kill you easily this time. I will torment you slowly. until you feel death is the real detachment! # CLASS: bojue
  
  - Jennifer:  My son! Justin, I miss him. He is in the orphanage, I haven't seen him this week, I miss him so much! Dr.Jeff, Justin is my most precious one. I can't let you, I can't let you take control of my body, not even a little bit, I want to see my Justin. # CLASS: Jennifer
  
@@ -1133,7 +1133,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 === inside_orphanage
 - Since you have done a study and research with your team at Windows of Hope Orphanage, you have had a lot of communication with the orphanage director. So you contacted the orphanage director, who was eager to assist me in resolving the issue.
 
-- Orphanage director: Hey, long time no see, Dr.Jeff, What brought you here? # CLASS: whoever
+- Orphanage director: Hey, long time no see, Dr. Jeff, what brought you here? # CLASS: whoever
 
 * Jeff: Long time no see. To be honest, I am looking for a kid called Justin, about 7 years old. He might be the child of one of my patients. I am here to see if there is any way to help my patient. May I see the child? # CLASS: Jeff
 
@@ -1158,7 +1158,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 * [Cafeteria Menu]
 
-- You take a closer look at the menu, which just has a few options.
+- You take a closer look at the menu, which just has a few options:
 
 - Sandwich, milk, and a peach.
 
@@ -1186,7 +1186,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - The girl looks at you with a little doubt.
 
-- ???: Sir, I have never seen you before, who are you? # CLASS: whoever
+- ???: Sir, I have never seen you before, who are you? # CLASS: ke
 
 - You knelt down and looked at the little girl and responded with a smile.
 
@@ -1194,18 +1194,18 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - The little girl thought for a moment and replied. 
 
-- ???: Justin? There are so many Justin here, I'm not sure which Justin you are looking for. By the way, my name is Katherine. # CLASS: whoever
+- ???: Justin? There are so many Justin here, I'm not sure which Justin you are looking for. By the way, my name is Katherine. # CLASS: ke
 
 * Jeff: Nice to meet you, Katherine, I'm Jeff. # CLASS: Jeff
 
-- Katherine: Nice to meet you, uncle Jeff. I have something for you! # CLASS: whoever
+- Katherine: Nice to meet you, uncle Jeff. I have something for you! # CLASS: ke
 
 - Katharine smiled as she pulled out candy from her pocket and handed it to you. 
 
 * Jeff: Thank you, Katherine! # CLASS: Jeff
     ~Sanity += 1
 
-- Katherine: You are welcome, Jeff. One of my friends told me that candy is the sign of our friendship, so now we are friends. # CLASS: whoever
+- Katherine: You are welcome, Jeff. One of my friends told me that candy is the sign of our friendship, so now we are friends. # CLASS: ke
 
 -
  * Jeff: Oh yeah! We are friends now~ # CLASS: Jeff
@@ -1213,7 +1213,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 * You placed candy inside your pocket and patted Katherine's head.
 
-- Katherine: Ohh, Jeff, I think the director is looking for you! # CLASS: whoever
+- Katherine: Ohh, Jeff, I think the director is looking for you! # CLASS: ke
 
 - Orphanage director: Ohh, Dr. Jeff, here you are with Katherine. I was looking for you. Here you go, I think he might be the child you that are looking for. He now is in the playroom, do you want me to take you to see him? # CLASS: whoever
 
@@ -1225,7 +1225,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
  * Jeff: And see you later, Katherine. # CLASS: Jeff
 -
 
-- Katherine: See you later, Uncle Jeff. # CLASS: whoever
+- Katherine: See you later, Uncle Jeff. # CLASS: ke
 
 * [Playroom] ->Playroom
 
@@ -1512,7 +1512,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - You return to the commercial center and enter the "Home of Soul" store.
 
-- Old man: Welcome, dear visitor. You are coming to my store again! Please select oneproducts from my store today. # CLASS: oldMan
+- Old man: Welcome, dear visitor. You are coming to my store again! Please select one product from my store today. # CLASS: oldMan
 
 *[Begin] -> commercial_list
 
@@ -1587,7 +1587,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - You hurriedly ate something and went to the restroom as you got home.
 
-*[You then gaze at yourself in the mirror]
+* You then gaze at yourself in the mirror.
 
 - * [Sanity Check]
 
@@ -1597,7 +1597,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
     ~ Sanity += 1
 
-- *[It is time to go to bed] -> day5
+- *It is time to go to bed. -> day5
 
 
 === function sanity_check_ending(s) ===
@@ -1622,6 +1622,8 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 /* ---------------- DAY 5 ------------------ */
 === day5
+- *[Day 5]
+- [Day 5]
 
 - Friday morning, you wake up feeling great and decide to go to work.
 
@@ -1721,16 +1723,15 @@ Nicolas Erebos # CLASS: bojue
 { 
     - Sanity >= 20 && Kindness >= 20:
         ->Sacrifices_ending
-
-    - Sanity > 0 && Sanity < 20 && Kindness >= 5:
-        -> Seal
     
     - Sanity <= 0 && Sanity >= -10 && Evilness >= 2:
         ->join
 
     - Sanity < -10 && Evilness >= 5:  
         ->Substitution
-    
+        
+    - else:
+        -> Seal
 }
 
 === Sacrifices_ending
