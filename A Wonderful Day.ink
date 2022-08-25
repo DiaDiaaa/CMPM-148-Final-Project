@@ -18,7 +18,7 @@ VAR visited_psy = false
 LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, toy, disc
 
 //  * [Day 1] -> Day1
-* [Day 2] -> not_sacrifice
+* [Day 2] -> day2
 
 /* ---------------- DAY 1 ------------------ */
 === day1 === 
@@ -659,10 +659,10 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 - I slumped to the ground, and what had just happened seemed to suffocate me over and over again. I wanted to get out of here before she came back.
  It's time to leave the clinic; where should I go next?
 
-* Park ->Park
-* Commercial Center -> day2_commercial_center
-* Psychiatric institution -> check_visited
-* Return home -> day2_go_home
+* [Park] ->Park
+* [Commercial Center] -> day2_commercial_center
+* [Psychiatric institution] -> check_visited
+* [Return home] -> day2_go_home
 
 === Park 
 I left my clinic and went to a nearby park.
