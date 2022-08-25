@@ -32,7 +32,7 @@ LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, to
 - As usual, you drove from your house to your clinic.
  * [Open the door]
 
-- As arrived at the clinic, you open the entrance door and proceeded to the lounge. you made a freshly brewed mug of espresso using the classic coffee maker that usually resided in the lounge. 
+- As arrived at the clinic, you open the entrance door and proceeded to the lounge. You made a freshly brewed mug of espresso using the classic coffee maker that usually resided in the lounge. 
 
  You walked inside to your office and sat down expertly on a chair.
 
@@ -88,23 +88,23 @@ Dissociative Identity Disorder
 == drink_coffee
 - You took a slow sip of coffee and waited for the patient to arrive.
 
- While You waited for the patient, You sipped your espresso gently.
+ While waited for the patient, you sipped your espresso gently.
 
  * [Check out your awards] -> check_out_my_awards
  * [Check out the photo on the desk] -> check_out_photo_on_desk
- * [Take another sip of espresso.] -> take_another_sip_of_espresso
+ * [Take another sip of espresso] -> take_another_sip_of_espresso
  * {check_out_my_awards && check_out_photo_on_desk && take_another_sip_of_espresso}[Waiting for the patient] -> wait_for_patient
 
 == check_out_my_awards
-You dusted the crystal award and Certificates on the shelf with care. Several honors have been bestowed upon you, including best psychologist of 1999 and most compassionate psychologist. You have also earned an Award for Research in Psychiatry, an Award for Research in Schizophrenia, and the trust and esteem of many colleagues.
+You dusted the crystal award and certificates on the shelf with care. Several honors have been bestowed upon you, including best psychologist of 1999 and most compassionate psychologist. You have also earned an Award for Research in Psychiatry, an Award for Research in Schizophrenia, and the trust and esteem of many colleagues.
  * {not check_out_photo_on_desk} [Check out the photo on the desk] -> check_out_photo_on_desk
- * {not take_another_sip_of_espresso} [Take another sip of espresso.] -> take_another_sip_of_espresso
+ * {not take_another_sip_of_espresso} [Take another sip of espresso] -> take_another_sip_of_espresso
  * {check_out_my_awards && check_out_photo_on_desk && take_another_sip_of_espresso}[Waiting for the patient] -> wait_for_patient
 
 == check_out_photo_on_desk
 - The photo on the table shows a seemingly perfect family of three. Your virtuous wife, your lovely daughter, and you on your daughter's birthday. But you was always busy with the job, which led to the division of the family.
  * {not check_out_my_awards} [Check out your awards] -> check_out_my_awards
- * {not take_another_sip_of_espresso} [Take another sip of espresso.] -> take_another_sip_of_espresso
+ * {not take_another_sip_of_espresso} [Take another sip of espresso] -> take_another_sip_of_espresso
  * {check_out_my_awards && check_out_photo_on_desk && take_another_sip_of_espresso}[Waiting for the patient] -> wait_for_patient
 
 == take_another_sip_of_espresso
@@ -115,7 +115,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
 
 
 == wait_for_patient
-- you waited for her while reading the materials. Time passed slowly, and finally.
+- You waited for her while reading the materials. Time passed slowly, and finally.
 
  Knock knock,
  
@@ -132,7 +132,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
     ~ Evilness += 1
     ~ Sanity -= 1
     
-- Jennifer: It's been good recently,"he"hasn't been out much recently, and I feel that the medicine you prescribed by the doctor is very effective. # CLASS: Jennifer
+- Jennifer: It's been good recently,"he" hasn't been out much recently, and I feel that the medicine you prescribed by the doctor is very effective. # CLASS: Jennifer
 
   Jeff: That's good, Ms. Jennifer. This is a very good treatment result, as long as you take the medicine regularly, "he" will not come out again. # CLASS: Jeff
 
@@ -141,7 +141,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
  * Jeff: Have you been dreaming about anything the last few nights? # CLASS: Jeff
  
 - Jennifer: I've been having dreams that I'm in a room with two chairs, one of which is sitting on a man who is restrained by five chains. I'm not sure who he is, yet he gives me a familiar vibe. # CLASS: Jennifer
- * Jeff: What have you eaten these days?# CLASS: Jeff
+ * Jeff: What have you eaten these days? # CLASS: Jeff
  
 - Jennifer: I eat a lot of veggies and hardly a little meat. Just as you said last time, I need to eat more vegetables. # CLASS: Jennifer
 
@@ -149,7 +149,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
  
 - Jennifer slowly picked up the knife. At this time, you was very nervous. You are the one who knew what had happened to her. # CLASS: Jennifer
 
- Jennifer: Nothing Special. # CLASS: Jennifer
+ Jennifer: Nothing special. # CLASS: Jennifer
  
  Hearing what she said, you slowly relaxed. Although she didn't know it, your hand was on the alert button all the time.
  
@@ -198,7 +198,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
 
 - Jennifer: Alright, thank you. # CLASS: Jennifer
 
-  Jeff: Ms.Jennifer, that's all for now; I'll see you again next week at the same time as today. I hope your condition improves. # CLASS: Jeff
+  Jeff: Ms.Jennifer, that's all for now. I'll see you again next week at the same time as today. I hope your condition improves. # CLASS: Jeff
   
   You opened the door for her once I finished the conversation.
   
@@ -206,7 +206,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
 
 - You are tremble when you saw her with a sneaky smirk on her face.
 
- * Creak…The door shutted.
+ * Creak… The door shutted.
 
 - You sat down slowly and carefully at the chair, and the chilly perspiration on your back soaked your clothes. Every meeting you have with her makes you uneasy and afraid, fear has gripped every nerve in your body. Yet you are a psychologist, and you have to take it all.
 
@@ -234,7 +234,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
 - You found an empty bench at random and sat down, enjoying the sunshine.
     ~ Sanity += 2
     
-- It's getting late. And It's time to go home. 
+- It's getting late. And it's time to go home. 
  
  * [Home] -> home
 
@@ -248,19 +248,19 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
  
  * [Enter the store]
  
-- You walked into the store and took a look around. The shop is small, but it sells a variety of unusual products such as tributes, sculptures, dream nets, and much more stuff that You cannot name.
+- You walked into the store and took a look around. The shop is small, but it sells a variety of unusual products such as tributes, sculptures, dream nets, and much more stuff that you cannot name.
 
   After a bit, an old man with glasses emerged from the entrance.
 
-  Old man: Welcome to Home of Soul, what would you like to get? Young man. # CLASS: oldMan
+  Old man: Welcome to Home of Soul. What would you like to get? Young man. # CLASS: oldMan
 
  * Jeff: What can I buy here? # CLASS: Jeff
 
 - Old man: Let me see, you can take two things from my shop today, the usage of which may change your destiny, but you will also pay something with a cost that you cannot see. Will you still be interested in purchasing it? # CLASS: oldMan
 
-  The old man's words puzzled me; what does he mean by the cost that I cannot see? I don't understand and am stubbed, yet I choose to buy things nonetheless.
+  The old man's words puzzled me. What does he mean by the cost that I cannot see? I don't understand and am stubbed. Yet I choose to buy things nonetheless.
 
- * Jeff: I would like to purchase some; what do you have for purchase? # CLASS: Jeff
+ * Jeff: I would like to purchase some. What do you have for purchase? # CLASS: Jeff
 
 - Old man: Very well, young man, these are all things you may purchase. Choose two products that interest your curiosity. # CLASS: oldMan
  * Commercial List -> commercial_list
