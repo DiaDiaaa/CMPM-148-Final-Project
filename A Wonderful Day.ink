@@ -14,6 +14,7 @@ VAR commercial_max = 2
 VAR card_count = 0
 
 VAR visited_psy = false
+VAR visited_shop = false
 
 LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, toy, disc
 
@@ -240,6 +241,10 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
 
 
 === commercial ===
+
+~visited_shop  = true
+
+
 [Commercial Center]
 
 - You walked to a nearby commercial center after leaving the clinic. Today is still business as usual. Barely see anyone along the way. Despite the fact that almost every company is closed, several businesses insist on staying open.
@@ -686,7 +691,7 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
  It's time to leave the clinic; where should you go next?
 
 * [Park] ->Park
-* [Commercial Center] -> day2_commercial_center
+* [Commercial Center] -> check_visited_shop
 * [Psychiatric institution] -> check_visited
 * [Return home] -> day2_go_home
 
@@ -721,6 +726,19 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - visited_psy == true && current_day == 4:
     ->day4_psy
+
+}
+
+=== check_visited_shop
+{ 
+- visited_shop == false:
+    ->commercial
+
+- visited_shop == true && current_day == 2:
+    ->day2_commercial_center
+
+- visited_shop == true && current_day == 4:
+    ->day4_commercial
 
 }
 
@@ -1488,7 +1506,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 * [Park] ->day4_park
 
-* [Commercial Center] ->day4_commercial
+* [Commercial Center] -> check_visited_shop
 
 * [Psychiatric institution] -> check_visited
 
