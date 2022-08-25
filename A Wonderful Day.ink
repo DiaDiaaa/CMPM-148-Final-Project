@@ -1719,9 +1719,12 @@ Nicolas Erebos # CLASS: bojue
 * [Ending Check] -> ending_check
 
 === ending_check
+- Sanity: {Sanity} # CLASS: statusCheck
+- Evilness: {Evilness} # CLASS: statusCheck
+- Kindness: {Kindness} # CLASS: statusCheck
 
 { 
-    - Sanity >= 20 && Kindness >= 20:
+    - Sanity >= 20 && Kindness >= 10:
         ->Sacrifices_ending
     
     - Sanity <= 0 && Sanity >= -10 && Evilness >= 2:
