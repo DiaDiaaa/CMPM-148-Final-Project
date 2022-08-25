@@ -17,8 +17,8 @@ VAR visited_psy = false
 
 LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, toy, disc
 
-//  * [Day 1] -> Day1
-* [Day 2] -> day2
+ * [Day 1] -> day1
+// * [Day 2] -> day1
 
 /* ---------------- DAY 1 ------------------ */
 === day1 === 
@@ -26,10 +26,10 @@ LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, to
 
 ~ current_day = 1
 
-- As usual, I drove from my house to my clinic.
+- As usual, you drove from my house to my clinic.
  * [Open the door]
 
-- As arrived at the clinic, I open the entrance door and proceeded to the lounge. I made a freshly brewed mug of espresso using the classic coffee maker that usually resided in the lounge. 
+- As arrived at the clinic, you open the entrance door and proceeded to the lounge. I made a freshly brewed mug of espresso using the classic coffee maker that usually resided in the lounge. 
 
  I walked inside my office and sat down expertly on a chair.
 
@@ -227,7 +227,7 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 
   No matter what time it is here, it is so comfortable, and nice for me to relax my mind and body.
 
- * Looking for a bench
+ * [Looking for a bench]
 
 - I found an empty bench at random and sat down, enjoying the sunshine.
     ~ Sanity += 2
@@ -244,7 +244,7 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
  
   I was strolling down the street when I noticed a store called "Home of Soul," and my curiosity compelled me to go inside.
  
- * Enter the store.
+ * [Enter the store.]
  
 - I walked into the store and took a look around. The shop is small, but it sells a variety of unusual products such as tributes, sculptures, dream nets, and much more stuff that I cannot name.
 
@@ -350,7 +350,7 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 
   For some reason, I felt like someone was guiding me here, and I came to this place again.
 
- * Walk into the Psychiatric institution
+ * [Walk into the Psychiatric institution]
  
 - The nurse at the front desk recognized me right away.
  
@@ -364,11 +364,11 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 
 - Nurse: “She's in building 44, room 44. Please, Doctor Jeff.” # CLASS: nurse
 
- * Go to building 44, room 44.
+ * [Go to building 44, room 44.]
  
 - As I got closer and closer to the enigmatic woman, I could sense a suffocating atmosphere creeping up on me. I was standing in front of the door of Room 44, and the awful atmosphere had totally swallowed me up as if a pair of chilly hands had gripped my throat and taken my breath away.
 
- * Knock on the door
+ * [Knock on the door]
  
 - Jeff: “Good afternoon, I am Dr. Jeff. May I come in?” # CLASS: Jeff
 
@@ -569,7 +569,9 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 === day2 ===
 ~ current_day = 2
 
-- Day 2
+- * [Day 2]
+
+- [Day 2]
 
 - I returned to my clinic today, as normal. Along the way, several folks approached me and said hi. Everyone was pleasant, and the majority of them had already begun their recuperation process.
 
@@ -582,7 +584,7 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 - The patient from yesterday appeared in front of you again.
 
     * Hello, Ms. Jennifer, what happened? # CLASS: Jeff
-        ~ Kindness += 1
+        ~ Kindness += 1 
         ~ Sanity += 2
     
     * Hello, Ms. Jennifer, I recall that you didn't have an appointment today. # CLASS: Jeff
@@ -618,6 +620,8 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 
 - I trembled as I handed her the knife.
 
+- Jennifer: What's the matter, and why are your hands shaking? Are you scared of me? # CLASS: Jennifer
+
     * Yes. 
         ~ Evilness += 1
         ~ Sanity += 1
@@ -633,10 +637,15 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 * You're slightly relieved that she has no tendency to hurt anyone, but the chilly perspiration has soaked your back.
 
 - Jeff: Ms. Jennifer, your current condition is critical; I will provide you with medication right now. # CLASS: Jeff
-    * The Hidden drawer 
-        Found a strong medicine in a red bottle
-    * Leave
-        Just as you were about to stand up, you felt your shoulders being held down, and you tried so hard to stand up, but didn't move. This is not a strength a woman can have.
+
+ * [The Hidden drawer] 
+ 
+-  Found a strong medicine in a red bottle
+
+ * [Leave]
+ 
+- Just as you were about to stand up, you felt your shoulders being held down, and you tried so hard to stand up, but didn't move. This is not a strength a woman can have.
+
 - Jennifer: Tell me, Dr. Jeff, this drug won't kill me, will it? # CLASS: Jennifer
 
 * "Not at all, Ms. Jennifer. It's just a wonder drug." # CLASS: Jeff
