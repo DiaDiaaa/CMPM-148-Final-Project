@@ -332,7 +332,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
 == close_commercial_list
     ~ commercial_count = 0
     ~ Sanity -= 2 
-- Old man: You appear to have decided to carry two items with you. # CLASS: oldMan
+- Old man: You appear to have decided to carry {commercial_max} items with you. # CLASS: oldMan
  
 - You left the commercial center with the {commercial_max} items you had purchased, constantly feeling as though something had changed but not knowing what.
 
@@ -465,7 +465,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
 
 // keep track how many cards has already chose
 == function card_cal(i) ==
-card count: {card_count}
+// card count: {card_count}
 
 {
 - card_count == 1:
@@ -1871,13 +1871,13 @@ Nicolas Erebos # CLASS: bojue
 
 - Jeff: Jennifer! Don't allow this evil take control of your head! Consider your children! He still requires your assistance. He cannot survive without his mother! # CLASS: Jeff
 
-- [Inside of Jennifer's mind] 
+ * [Inside Jennifer's mind] 
 
 - Jennifer: Doctor, I think I heard what the doctor said. # CLASS: Jennifer
 
 - Jennifer: My son, Justin, he needs me, I shouldn't be sunk in sleep any more, I have to wake up. # CLASS: Jennifer
 
-- [Outside of Jennifer's mind]
+- * [Outside Jennifer's mind]
 
 - Jeff: Wake up, Jennifer! # CLASS: Jeff
 
@@ -1920,8 +1920,6 @@ Nicolas Erebos # CLASS: bojue
 === Seal
 
 - Lord Erebos: Oh, it appears that you haven't yet been fully eroded by madness, but it appears that you will be soon. So, do you want to come along with me? Doctor? # CLASS: bojue
-
-- Jeff: I refused! # CLASS: Jeff
 
 -> seal_soul
 
@@ -2056,6 +2054,6 @@ Nicolas Erebos # CLASS: bojue
 
 - ???: I didn't anticipate a human to dare to look at this deity, and while the bravery is sufficient, having a human sent to the door is not a terrible thing. Then you've been chosen as the protagonist of the next tale!! # CLASS: hasita
 
-- The END
+- THE END # CLASS: middle
 
 ->END

@@ -227,6 +227,10 @@ img {
     color: rgb(255, 151, 215);
 }
 
+.middle{
+    text-align: center;
+}
+
 #controls {
     z-index: 4;
     font-size: 9pt;
