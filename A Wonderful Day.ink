@@ -2048,7 +2048,7 @@ Nicolas Erebos # CLASS: bojue
 
 - A yellow tentacle gently closed the book, wearing a yellow cloak and carrying a book and a pen, writing and sketching in the air.
 
-- ???: This seems to be his end; yet, it is not the ending I desire, therefore let him reincarnate. # CLASS: hasita
+- ???: This seems to be his end. Yet, it is not the ending I desire, therefore let him reincarnate. # CLASS: hasita
 
 - ???: Hm? Who's there? Hm…a human? # CLASS: hasita
 
