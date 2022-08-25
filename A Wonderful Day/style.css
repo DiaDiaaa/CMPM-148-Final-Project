@@ -188,7 +188,7 @@ img {
 }
 
 .Jennifer{
-    color:rgb(177, 176, 176);
+    color:rgb(212, 255, 132);
 }
 
 .oldMan{
@@ -211,14 +211,17 @@ img {
     color:rgb(151, 143, 255);
 }
 
-.boJue{
+.bojue{
     color:rgb(128, 0, 0);
 }
 
-.haSiTa{
+.hasita{
     color:rgb(233, 222, 122);
 }
 
+.emo{
+    color: rgb(83, 18, 13);
+}
 #controls {
     z-index: 4;
     font-size: 9pt;

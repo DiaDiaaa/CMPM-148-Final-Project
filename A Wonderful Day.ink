@@ -17,6 +17,9 @@ VAR visited_psy = false
 
 LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, toy, disc
 
+
+- There are many stories hidden in this small town. Mermaid Song, Death Ballad, Inheriting Personality. Many people may feel that their life is perfect, with a wonderful family and a wonderful job. Or maybe some people feel that their lives are terrible, being betrayed, or families split. But what they don't know is that the whole of this world is just a script in the hands of others.
+
  * [Day 1] -> day1
 // * [Day 2] -> day1
 
@@ -25,7 +28,6 @@ LIST shop_item = scalpel, sheep, justice, painting, tentacle, tooth, writing, to
 [Day 1]
 
 ~ current_day = 1 
-me
 
 - As usual, you drove from your house to your clinic.
  * [Open the door]
@@ -58,7 +60,7 @@ Jennifer
 
 == patient_age
 :
-26 years old, born on April 4th, 1996.
+26 years old, born on April 4th, 1996
  * {not patient_name} Patient's name -> patient_name
  * {not patient_address} Patient's address -> patient_address
  * {not diagnose_disorder} Diagnose disorder -> diagnose_disorder
@@ -151,40 +153,39 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
  
  Hearing what she said, you slowly relaxed. Although she didn't know it, your hand was on the alert button all the time.
  
- * Jeff: Seems that our treatment is working well, which means that's great! Ms. Jennifer, and "he" should not come out in the near future # CLASS: Jeff
+ * Jeff: Seems that our treatment is working well, which means that's great! Ms. Jennifer, and "he" should not come out in the near future. # CLASS: Jeff
  
 - * [Jeff: All right, give me a second, I will give you your medicine for next week.] -> day1_medicine_cabinet
 
 == day1_medicine_cabinet
  Jeff: All right, give me a second, I will give you your medicine for next week. # CLASS: Jeff
  
-- you went to your medicine cabinet, 
-  Where is Jennifer's medicine?
-  
+- You went to your medicine cabinet. 
+  Where is Jennifer's medicine? -> choose_drawer
+ 
+== choose_drawer
   * [Top drawer] -> day1_top_drawer
 //   - This is not Jennifer's medicine
   
-  * The Middle Drawer -> day1_right_drawer
+  * [The Middle Drawer] -> day1_right_drawer
 //   - * [Bingo, Jennifer's medicine in a green bottle] -> day1_right_drawer
   * [The bottom drawer] -> day1_bottom_drawer
 
 == day1_top_drawer
-- Top drawer
-  This is not Jennifer's medicine
+  This is not Jennifer's medicine.
 
- * [Back] -> day1_medicine_cabinet
+ * [Back] -> choose_drawer
  
 == day1_bottom_drawer
-- The bottom drawer
  There are only some sleeping pills.
 
-* [Back] -> day1_medicine_cabinet
+* [Back] -> choose_drawer
   
 == day1_right_drawer
-* Bingo, Jennifer's medicine in a green bottle
+* Bingo, Jennifer's medicine in a green bottle.
 
 
-- * Ms. Jennifer, this is your medicine. The dose can be lowered to two per day, one in the morning and one in the evening, depending on your condition. Keep in mind to take it after meals.
+- * Ms. Jennifer, this is your medicine. The dose can be lowered to two per day, one in the morning and one in the evening, depending on your condition. Keep in mind to take it after meals. # CLASS: Jeff
         ~ Kindness += 2
         ~ Sanity += 1
         
@@ -199,7 +200,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
 
   Jeff: Ms.Jennifer, that's all for now; I'll see you again next week at the same time as today. I hope your condition improves. # CLASS: Jeff
   
-  you opened the door for her once I finished the conversation.
+  You opened the door for her once I finished the conversation.
   
  * Jennifer: Sure, but I feel we'll cross paths again soon. # CLASS: Jennifer
 
@@ -245,7 +246,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
  
   You was strolling down the street when You noticed a store called "Home of Soul," and your curiosity compelled you to go inside.
  
- * [Enter the store.]
+ * [Enter the store]
  
 - You walked into the store and took a look around. The shop is small, but it sells a variety of unusual products such as tributes, sculptures, dream nets, and much more stuff that You cannot name.
 
@@ -365,7 +366,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
 
 - Nurse: She's in building 44, room 44. Please, Doctor Jeff. # CLASS: nurse
 
- * [Go to building 44, room 44.]
+ * [Go to building 44, room 44]
  
 - As You got closer and closer to the enigmatic woman, You could sense a suffocating atmosphere creeping up on me. You was standing in front of the door of Room 44, and the awful atmosphere had totally swallowed me up as if a pair of chilly hands had gripped your throat and taken your breath away.
 
@@ -389,7 +390,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
 
   A villainous smile on her shriveled face.
   
-  The old lady: Oh yeah, young man # CLASS: oldLady
+  The old lady: Oh yes, young man. # CLASS: oldLady
 
   She raised her arm and pointed at me.
 
@@ -407,7 +408,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
 
   The old lady: I will give you three cards, Jeff. And these three cards represent some revelation, and I'm going to give you some little revelations from the cards. # CLASS: oldLady
   
- * Jeff: Okay, Ma'am # CLASS: Jeff
+ * Jeff: Okay, Ma'am. # CLASS: Jeff
 
 - The old lady: And of course, every card you open has a price, so are you ready, young man?  # CLASS: oldLady
 
@@ -442,7 +443,7 @@ You dusted the crystal award and Certificates on the shelf with care. Several ho
     ~ card_count += 1 
 
 - The Star, XVII: 
-  The old lady: This is a star in a positive position, which represents the hope hidden in the depths. Although it is not big, it may change your destiny. However, this star has dimmed, maybe, under you In a reincarnation, you should choose a way home # CLASS: oldLady
+  The old lady: This is a star in a positive position, which represents the hope hidden in the depths. Although it is not big, it may change your destiny. However, this star has dimmed, maybe, under you In a reincarnation, you should choose a way home. # CLASS: oldLady
 
  * [Back] -> day1_choose_card
 
@@ -485,7 +486,7 @@ card count: {card_count}
 
 ~ card_count = 0
 
-- The old lady: It seems that you have already made a choice, and I have given you a revelation. I hope to see you next time, Jeff # CLASS: oldLady
+- The old lady: It seems that you have already made a choice, and I have given you a revelation. I hope to see you next time, Jeff. # CLASS: oldLady
  
  * Leave the Psychiatric institution
     ** [Back Home] -> home
@@ -517,7 +518,7 @@ card count: {card_count}
 
  * Open DSM-5
  
-- you opened the DSM-5, which lists several typical forms of mental disorders.
+- You opened the DSM-5, which lists several typical forms of mental disorders.
 
  * [Mental Disorders List] -> mental_disorders_list
 
@@ -595,7 +596,7 @@ card count: {card_count}
 
 - The sudden knock on the door made me feel a little surprised. You remember that all the patients have come today, and no one should have an appointment.
 -
-* Come in # CLASS: Jeff
+* Come in. # CLASS: Jeff
 -
 - The patient from yesterday appeared in front of you again.
 
@@ -624,7 +625,7 @@ card count: {card_count}
 - Jennifer: Last night, I had a dream that several of the chains on the man seemed to be broken, and he could stand up. What is the meaning behind it? I wonder know. # CLASS: Jennifer
 
 - 
- * Jeff: Ms. Jennifer, seems this is a bad sign. I will give you some stronger medicines. You need to take 5 times today, one pill each time # CLASS: Jeff
+ * Jeff: Ms. Jennifer, seems this is a bad sign. I will give you some stronger medicines. You need to take 5 times today, one pill each time. # CLASS: Jeff
 - Jennifer: Okay, thank you, Dr. Jeff. # CLASS: Jennifer
 
 -
@@ -656,7 +657,7 @@ card count: {card_count}
 
  * [The Hidden drawer] 
  
--  Found a strong medicine in a red bottle
+-  Found a strong medicine in a red bottle.
 
  * [Leave]
  
@@ -677,7 +678,7 @@ card count: {card_count}
         ~ Evilness += 2
     
     
-- Jennifer: Got it, thank you. Wish you have a great rest of your day! Hehe # CLASS: Jennifer
+- Jennifer: Got it, thank you. Wish you have a great rest of your day! Hehe. # CLASS: Jennifer
 
 - Then, Jennifer leaves the room.
 
@@ -697,7 +698,7 @@ No matter what time it is here, it is so comfortable, and nice for you to relax 
 - You found an empty bench at random and sat down, enjoying the sunshine.
 ~ Sanity += 3
 
-* [It's getting late. And It's time to go home] -> day2_home
+* [It's getting late. And It's time to go home.] -> day2_home
 
 === day2_commercial_center
 You return to the commercial center and enter the "Home of Soul" store.
@@ -726,17 +727,17 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 === day2_psychiatric_institution
 - You immediately left your clinic and went to the mental hospital. You needed to see the old lady. You needed her inspiration.
 -
-*[building 44, room 44]
+*[Building 44, Room 44]
 -
 
-- The old lady: Nice to see you again, young man, seems something bad happened to you # CLASS: oldLady
+- The old lady: Nice to see you again, young man, seems something bad happened to you. # CLASS: oldLady
 
-- The old lady takes out the tarot cards
+- The old lady takes out the tarot cards.
 
 - The old lady: I know what you want, young man, let's get to the point, Come over here young man and we start divination immediately. # CLASS: oldLady
 
 
-- There are three cards in front of you
+- There are three cards in front of you.
 
 * [Choose a card] -> date_of_card
 
@@ -745,7 +746,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 * [Judgement, XX] -> Judgement
 * [The Hermit, IX] -> Hermit
 
-* [Not choose] -> day2_card_finish
+* [Not Choose] -> day2_card_finish
 
 === Strength 
 ~ card_count += 1
@@ -779,7 +780,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - The old lady: It seems that you have already chosen and understood it. Remember, tomorrow will be a disaster for you. Be sure to remember the revelation of the tarot cards! # CLASS: oldLady
 
-- Thank you, Ma'am # CLASS: Jeff
+- Thank you, Ma'am. # CLASS: Jeff
 
 - After that, you hurried home.
 
@@ -821,7 +822,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
     ~ Sanity -= 1
 
 ~ Sanity += 1
-- Then you simply eat something for dinner and retire to bed.. -> day3
+- Then you simply eat something for dinner and retire to bed. -> day3
 
 /* ---------------- DAY 3 ------------------ */
 ==== day3 ====
@@ -854,7 +855,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
  * Who are you? Why are you following me! # CLASS: Jeff
  
-- you only saw the other party wearing a scarlet raincoat and seeing the person clearly clutching a corroded kitchen knife in her hand.
+- You only saw the other party wearing a scarlet raincoat and seeing the person clearly clutching a corroded kitchen knife in her hand.
 
 - Meanwhile, the individual in the scarlet raincoat gradually removed his hat. A familiar face stood in front of you, but her eyes does not look the same as usual.
 
@@ -889,7 +890,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 - You reach the second floor, where practically all of the stores are closed.
   However, you discover that the entrance to a furniture store is still open, leaving you with only one option.
   
- * Go to the bedding store
+ * [Go to the bedding store]
  
 - Jennifer: Stop running, You are running too fast, I can't catch up with you! # CLASS: Jennifer
 
@@ -1090,7 +1091,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
  ~ Sanity += 1
  
-* It is time to go to bed
+* It is time to go to bed.
 
 - * [Day 4] -> day4
 
@@ -1134,9 +1135,9 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - Orphanage director: Hey, long time no see, Dr.Jeff, What brought you here? # CLASS: whoever
 
-* Jeff: Long time no see. To be honest, I am looking for a kid called Justin, about 7 years old. He might be the child of one of my patients. I am here to see if there is any way to help my patient. May I see the child? #CLASS: Jeff
+* Jeff: Long time no see. To be honest, I am looking for a kid called Justin, about 7 years old. He might be the child of one of my patients. I am here to see if there is any way to help my patient. May I see the child? # CLASS: Jeff
 
-- Orphanage director: Justin? We have so many children with this name; give me a second, I'll look into it, and I'll get back to you later. You may feel free to visit our orphanage on your own if you want # CLASS: whoever
+- Orphanage director: Justin? We have so many children with this name; give me a second, I'll look into it, and I'll get back to you later. You may feel free to visit our orphanage on your own if you want. # CLASS: whoever
 
 * [Visit]
 
@@ -1202,7 +1203,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 - Katharine smiled as she pulled out candy from her pocket and handed it to you. 
 
 * Jeff: Thank you, Katherine! # CLASS: Jeff
-~Sanity += 1
+    ~Sanity += 1
 
 - Katherine: You are welcome, Jeff. One of my friends told me that candy is the sign of our friendship, so now we are friends. # CLASS: whoever
 
@@ -1224,7 +1225,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
  * Jeff: And see you later, Katherine. # CLASS: Jeff
 -
 
-- Katherine: see you later, Uncle Jeff. # CLASS: whoever
+- Katherine: See you later, Uncle Jeff. # CLASS: whoever
 
 * [Playroom] ->Playroom
 
@@ -1263,7 +1264,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 - Orphanage director: Sure, no problem. # CLASS: whoever
 
 * You take a second look at Justin before you leave, and hope Justin won't be influenced by his mother.
-~Evilness += 3
+    ~Evilness += 3
 
 - And just out of sight, there's a pair of eyes staring at you.
 
@@ -1275,7 +1276,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 - You choose to keep silent, and you believe that his friendship or love from a friend can truly protect him.
 
 * After a few words with the director, you left the orphanage.
-~Kindness += 3
+    ~Kindness += 3
 
 - And just out of sight, you felt that there were a pair of eyes staring at you.
 
@@ -1313,7 +1314,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 === kitchen 
 - When you walk into the kitchen, you discover that everything is exceptionally clean and neat, with no indication of dust throughout.
 
-~Sanity -= 1
+    ~Sanity -= 1
 
 ->kitchen_list
 
@@ -1348,9 +1349,9 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 - You arrive at the toilet.
 - The toilet is very clean, but there is something that makes you feel a slight sense of strangeness.
 
-~Sanity -= 1
+    ~Sanity -= 1
 
-->bathroom_list
+    ->bathroom_list
 
 === bathroom_list
 
@@ -1363,7 +1364,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 * [Leave the bathroom] -> inside_house
 
 === jennifer_sink
-- You see two toothbrushes, one red and one white, in the cup on the sink. But, as far as you know, Jennifer is living alone in the house so far.  So, who is this other toothbrush, you're puzzled.
+- You see two toothbrushes, one red and one white, in the cup on the sink. But, as far as you know, Jennifer is living alone in the house so far. So, who is this other toothbrush, you're puzzled.
 
 * [Back] ->bathroom_list
 
@@ -1395,7 +1396,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 * [Leave] -> leave_jennifer
 
 === red_area
-~Sanity -= 1
+    ~ Sanity -= 1
 - You reach the red area and find a red journal on the ground.
 
 * [Checkout the journal]
@@ -1404,7 +1405,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - Monday
 
-- She went to the doctor today. Although she appeared normal, my chains were loosening, and I would soon be able to fully possess her body. I gradually regained all of the time and memories I had lost.
+- She went to the doctor today. Although she appeared normal, my chains were loosening, and I would soon be able to fully possess her body. I gradually regained all of the time and memories I had lost. # CLASS: bojue
 
 * [Next Page]
 
@@ -1412,13 +1413,13 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - Tuesday
 
-- The feeling of being able to control this body is great. I went to the doctor early in the morning, hahahaha, I was so excited to see the doctor's horrified expression and shaking hands.
+- The feeling of being able to control this body is great. I went to the doctor early in the morning, hahahaha, I was so excited to see the doctor's horrified expression and shaking hands. # CLASS: bojue
 
-- What if the doctor is no longer alive, maybe I can completely occupy this body.
+- What if the doctor is no longer alive, maybe I can completely occupy this body. # CLASS: bojue
 
-- Rest in peace, Ms. Jennifer. 
+- Rest in peace, Ms. Jennifer. # CLASS: bojue
 
-- What belongs to me must be mine sooner or later.
+- What belongs to me must be mine sooner or later. # CLASS: bojue
 
 * [Next Page]
 
@@ -1426,7 +1427,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - Wednesday
 
-- Damn it! The coward flee and didn't even get to murder him today. I wouldn't have let him go away if it hadn't been for that jerk!
+- Damn it! The coward flee and didn't even get to murder him today. I wouldn't have let him go away if it hadn't been for that jerk! # CLASS: bojue
 
 * [Next Page]
 
@@ -1443,7 +1444,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - Monday
 
-- I saw the doctor Jeff today, and he said my condition is in remission. I'm pleased since it appears that I'll be able to get a nice night's sleep today. Oh, and don't forget to pay Justin a visit at the orphanage on Thursday; I haven't seen him in a week and I miss him very terribly.
+- I saw the doctor Jeff today, and he said my condition is in remission. I'm pleased since it appears that I'll be able to get a nice night's sleep today. Oh, and don't forget to pay Justin a visit at the orphanage on Thursday; I haven't seen him in a week and I miss him very terribly. # CLASS: Jennifer
 
 * [Next Page]
 
@@ -1451,7 +1452,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - Tuesday
 
-- Today, I feel as if I've been in a trance, and my memory is on and off. The body is becoming increasingly out of control, and every time I wake up strangely, my body is throbbing and I appear to have been battered. This is not good; I will have to increase the dose somewhat.
+- Today, I feel as if I've been in a trance, and my memory is on and off. The body is becoming increasingly out of control, and every time I wake up strangely, my body is throbbing and I appear to have been battered. This is not good; I will have to increase the dose somewhat. # CLASS: Jennifer
 
 * [Next Page]
 
@@ -1459,7 +1460,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - Wednesday
 
-- What did I do today? I awoke in an unusual location and injured my doctor with a knife. Oh my God, what have I done? My control over my body is eroding; I can't keep on like this; I have to stop him!
+- What did I do today? I awoke in an unusual location and injured my doctor with a knife. Oh my God, what have I done? My control over my body is eroding; I can't keep on like this; I have to stop him! # CLASS: Jennifer
 
 * [Next Page]
 
@@ -1469,13 +1470,13 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 
 === close_journal
-~Sanity -= 1
+    ~ Sanity -= 1
 - Reading Jennifer's journal also reveals that she appears to struggle with bodily control.
 
 + [Leave the area] -> area_check
 
 === leave_jennifer
-- You left Jennifer's room, and the clock struck twelve. It's time for me to depart. It will be hazardous if "he" returns if you do not leave.
+- You left Jennifer's room, and the clock struck twelve. It's time for me to depart. It will be hazardous if 'he' returns if you do not leave.
 
 - And as you're leaving, you see what appears to be a basement door in Jennifer's backyard, but there's no time to investigate. You hurry away.
 
@@ -1504,14 +1505,14 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - Time passed quickly. The sky is painted a beautiful golden color. It seems to be dusk.
 
-* [It's getting late. And It's time to go home] ->day4_home
+* [It's getting late. And it's time to go home.] ->day4_home
 
 === day4_commercial
-~commercial_max = 1
+    ~ commercial_max = 1
 
 - You return to the commercial center and enter the "Home of Soul" store.
 
-- Old man: Welcome, dear visitor. You are coming to my store again! Please select oneproducts from my store today.
+- Old man: Welcome, dear visitor. You are coming to my store again! Please select oneproducts from my store today. # CLASS: oldMan
 
 *[Begin] -> commercial_list
 
@@ -1520,7 +1521,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 * [Building 44, Room 44]
 
-- The old lady: Ah, young man, you seem to have barely survived, but the deadness within you is growing rapidly heavier and heavier, therefore let's start divination right now.
+- The old lady: Ah, young man, you seem to have barely survived, but the deadness within you is growing rapidly heavier and heavier, therefore let's start divination right now. # CLASS: oldLady
 
 - There are three cards in front of you.
 
@@ -1539,38 +1540,38 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 
 === Fool
-~ card_count += 1
+    ~ card_count += 1
 - The Fool, 0:
 
-- The old lady: This is The Fool. It marks the beginning or end of everything. You're going to meet someone who will drastically change your life. You have no choice except to confront him.
+- The old lady: This is The Fool. It marks the beginning or end of everything. You're going to meet someone who will drastically change your life. You have no choice except to confront him. # CLASS: oldLady
 
 *[Back] ->day4_card
 
 === Death
-~ card_count += 1
+    ~ card_count += 1
 - Death, XIII:
 
-- The old lady: This is a reversal, the death represents a silver lining in this reversal. Only kindness will keep you alive. If you chose evil, your journey to misery has just begun.
+- The old lady: This is a reversal, the death represents a silver lining in this reversal. Only kindness will keep you alive. If you chose evil, your journey to misery has just begun. # CLASS: oldLady
 
 *[Back] ->day4_card
 
 === Hanged_Man
-~ card_count += 1
+    ~ card_count += 1
 - The Hanged Man, XII:
 
-- Old lady: This is the Hanged Man, which represents the process of self-sacrifice; perhaps sacrifice is the only way to survival.
+- Old lady: This is the Hanged Man, which represents the process of self-sacrifice; perhaps sacrifice is the only way to survival. # CLASS: oldLady
 
 *[Back] ->day4_card
 
 === day4_card_finish
-{card_cal(1)}
-~ card_count = 0
+    {card_cal(1)}
+    ~ card_count = 0
 
-- The old lady: It seems that you have already made a choice, and I have given you a revelation. I hope to see you next time, Jeff.
+- The old lady: It seems that you have already made a choice, and I have given you a revelation. I hope to see you next time, Jeff. # CLASS: oldLady
 
-- Jeff: Thank you, Ma'am.
+- Jeff: Thank you, Ma'am. # CLASS: Jeff
 
-- After that, you hurried
+- After that, you hurried.
 
 * [Home] -> day4_home
 
@@ -1578,7 +1579,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - I decided to go home right away, and nothing occurred on the way.
 
-~Sanity += 1
+    ~ Sanity += 1
 
 ->day4_home
 
@@ -1586,15 +1587,15 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - You hurriedly ate something and went to the restroom as you got home.
 
-*[You then gaze at yourself in the mirror.]
+*[You then gaze at yourself in the mirror]
 
 - * [Sanity Check]
 
-{sanity_check(1)}
+    {sanity_check(1)}
 
 - * [Leave the bathroom]
 
-~Sanity += 1
+    ~ Sanity += 1
 
 - *[It is time to go to bed] -> day5
 
@@ -1619,7 +1620,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 }
 
 
-
+/* ---------------- DAY 5 ------------------ */
 === day5
 
 - Friday morning, you wake up feeling great and decide to go to work.
@@ -1630,15 +1631,15 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 * [Checkout the letter] 
 
-Dear Dr. Jeff
+Dear Dr. Jeff, # CLASS: bojue
 
-I heartily invited you to come to my homes. I also request that you arrive to my place on schedule at one o'clock in the afternoon. If you do not attend, I will surely "invite" you in person.
+I heartily invited you to come to my homes. I also request that you arrive to my place on schedule at one o'clock in the afternoon. If you do not attend, I will surely "invite" you in person. # CLASS: bojue
 
-Sincerely,
-Nicolas Erebos
+Sincerely, # CLASS: bojue
+Nicolas Erebos # CLASS: bojue
 
 -
- * It's him. He was not about to let me go.
+ * It's him. He was not about to let me go. # CLASS: Jeff
 -
 
 - You become increasingly restless as time passes and it is time to leave work. 
@@ -1659,103 +1660,103 @@ Nicolas Erebos
 
 - You showed there on time at Jennifer's house. At this time, a woman dressed formally stood in front of the door, seemingly for a long time.
 
-- Lord Erebos: Welcome, my dearest doctor. I've been anticipating this moment for quite some time. I've prepared a modest welcoming ceremony for you down below. Despite its simplicity, I hope you enjoy it.
+- Lord Erebos: Welcome, my dearest doctor. I've been anticipating this moment for quite some time. I've prepared a modest welcoming ceremony for you down below. Despite its simplicity, I hope you enjoy it. # CLASS: bojue
 
-- Lord Erebos: Please follow me.
+- Lord Erebos: Please follow me. # CLASS: bojue
 
-* You follow him down to the basement. I could sense a faint aroma only a few steps away.
+* You follow him down to the basement. You could sense a faint aroma only a few steps away.
 
-- Lord Erebos: This way please.Oh, I also made you a wonderful little gift.
+- Lord Erebos: This way please. Oh, I also made you a wonderful little gift. # CLASS: bojue
 
 * [Continue following]
 
 - This never-ending staircase perplexes you. Why is the underground space so vast and frightening? You have no idea why there is such a vast underground space. He appeared to read my mind the next second.
 
-- Lord Erebos: You may be wondering why the subterranean is so vast. Allow me to tell you a story.
+- Lord Erebos: You may be wondering why the subterranean is so vast. Allow me to tell you a story. # CLASS: bojue
 
-- Lord Erebos: An ancestor lived here hundreds of years ago, buying all land in the area and establishing his own murder empire. This kingdom and intelligence network were built by a top assassination family over many years, but it didn't take long for the kingdom to suffer a major mishap.
+- Lord Erebos: An ancestor lived here hundreds of years ago, buying all land in the area and establishing his own murder empire. This kingdom and intelligence network were built by a top assassination family over many years, but it didn't take long for the kingdom to suffer a major mishap. # CLASS: bojue
 
-- Lord Erebos: An ancestor lived here hundreds of years ago, buying all land in the area and establishing his own murder empire. This kingdom and intelligence network were built by a top assassination family over many years, but it didn't take long for the kingdom to suffer a major mishap.
+- Lord Erebos: An ancestor lived here hundreds of years ago, buying all land in the area and establishing his own murder empire. This kingdom and intelligence network were built by a top assassination family over many years, but it didn't take long for the kingdom to suffer a major mishap. # CLASS: bojue
 
-- Lord Erebos: The daughter of a sheriff on the ground fell in love with the oldest son in the family. Love put him in a trance, and in order to protect himself, he revealed all the secrets from the ground to the sheriff, leading the family to be slaughtered overnight. Women, children, and the senior in family were not spared and were mutilated horrifically.
+- Lord Erebos: The daughter of a sheriff on the ground fell in love with the oldest son in the family. Love put him in a trance, and in order to protect himself, he revealed all the secrets from the ground to the sheriff, leading the family to be slaughtered overnight. Women, children, and the senior in family were not spared and were mutilated horrifically. # CLASS: bojue
 
 * You noticed the hatred in his eyes when he said those words.
 
-- Lord Erebos: The lone remaining enraged patriarch recognized the traitor and gave his life to the ancient gods, who cursed the family and ensured that they would never escape their fate.
+- Lord Erebos: The lone remaining enraged patriarch recognized the traitor and gave his life to the ancient gods, who cursed the family and ensured that they would never escape their fate. # CLASS: bojue
 
-- Jeff: So you were created.
+- Jeff: So you were created. # CLASS: Jeff
 
 - He nodded.
 
-* So how long have you been?
+* So how long have you been alive? # CLASS: Jeff
 
-- Lord Erebos: Of course, I've been alive for 437 years. Whenever a member of this family dies, I am passed on to their next kid, and due to the curse, they will always have offspring.
+- Lord Erebos: Of course, I've been alive for 437 years. Whenever a member of this family dies, I am passed on to their next kid, and due to the curse, they will always have offspring. # CLASS: bojue
 
-- Jeff: That doesn't make sense.
+- Jeff: That doesn't make sense. # CLASS: Jeff
 
-- Lord Erebos: Does that make sense? Indeed, my existence cannot be explained by common reason, just as if there is faith, if you believe in the presence of gods, it exists, and if you do not believe, it does not exist.
+- Lord Erebos: That doesn't make sense? Indeed, my existence cannot be explained by common reason, just as if there is faith, if you believe in the presence of gods, it exists, and if you do not believe, it does not exist. # CLASS: bojue
 
-- Jeff: Then how come you wanted to murder me before?
+- Jeff: Then how come you wanted to murder me before? # CLASS: Jeff
 
-- Lord Erebos: You had already endangered my life by then. But now you're a partner who can help me the most.
+- Lord Erebos: You had already endangered my life by then. But now you're a partner who can help me the most. # CLASS: bojue
 
-- Jeff: Partner? Why partner?
+- Jeff: Partner? Why partner? # CLASS: Jeff
 
-- Lord Erebos: I'm aware of what you done in the past. Since you're a doctor; as long as you're there, I can manage this body and do anything I want, and as long as you're there, I won't even go to a psychiatric institution.
+- Lord Erebos: I'm aware of what you done in the past. Since you're a doctor; as long as you're there, I can manage this body and do anything I want, and as long as you're there, I won't even go to a psychiatric institution. # CLASS: bojue
 
-- Lord Erebos: So, now that we've covered a lot of ground, let's look at the small gift I've prepared for you.
+- Lord Erebos: So, now that we've covered a lot of ground, let's look at the small gift I've prepared for you. # CLASS: bojue
 
 - From his arms, he grabbed a pretty small mirror.
 
-- Lord Erebos: This mirror is a small gift from me to you. Although it appears to be pointless, it can determine the shape of your heart. Come try it out.
+- Lord Erebos: This mirror is a small gift from me to you. Although it appears to be pointless, it can determine the shape of your heart. Come try it out. # CLASS: bojue
 
-* [Take the mirror and take a look.] 
+* [Take the mirror and take a look] 
 
-- {sanity_check_ending(1)}
+    - {sanity_check_ending(1)}
 
 * [Ending Check] -> ending_check
 
 === ending_check
 
 { 
-- Sanity >= 20 && Kindness >= 20:
-    ->Sacrifices_ending
+    - Sanity >= 20 && Kindness >= 20:
+        ->Sacrifices_ending
 
-- Sanity > 0 && Sanity < 20 && Kindness >= 5:
-    -> Seal
+    - Sanity > 0 && Sanity < 20 && Kindness >= 5:
+        -> Seal
     
-- Sanity <= 0 && Sanity >= -10 && Evilness >= 2:
-    ->join
+    - Sanity <= 0 && Sanity >= -10 && Evilness >= 2:
+        ->join
 
-- Sanity < -10 && Evilness >= 5:  
-    ->Substitution
+    - Sanity < -10 && Evilness >= 5:  
+        ->Substitution
     
 }
 
 === Sacrifices_ending
-- Lord Erebos: Hmph~ It appears that you are rather cheerful, but so what? Would you want to join my squad, doctor? As long as you are here, one act under cover while the other is in the open, then we will obtain all we desire.
+- Lord Erebos: Hmph~ It appears that you are rather cheerful, but so what? Would you want to join my squad, doctor? As long as you are here, one act under cover while the other is in the open, then we will obtain all we desire. # CLASS: bojue
 
 * [You noted that his right hand appeared to be pointing in a certain direction at this point. You sneaked a peek there and discovered a very hidden letter.]
 
-- Jeff: I think I require some thought time.
+- Jeff: I think I require some thought time. # CLASS: Jeff
 
 * [You move towards that place as you speak, but you dare not go too fast.]
 
-- Lord Erebos: No worries, my dear doctor. I'll give you 10 minutes, and because I've been talking for so long, please allow me to grab something to drink. By the way, don't even think of running away. The entire underground has been locked off, and you can't get out.
+- Lord Erebos: No worries, my dear doctor. I'll give you 10 minutes, and because I've been talking for so long, please allow me to grab something to drink. By the way, don't even think of running away. The entire underground has been locked off, and you can't get out. # CLASS: bojue
 
-* [Lord Erebos left.]
+* [Lord Erebos left]
 
 - This is a fantastic chance for you. You rush over to the message.
 
 * [Open the message]
 
-- Doctor, This is Jennifer, and I've hidden this message here. The only way to get rid of him is described here, but it comes at a high price. Doctor, in order to completely free yourself of him, you must first gain his trust and enable his personality to infiltrate your body. I don't have a better solution for you right now, so I'll have to rely on your doctor.
+- Doctor, This is Jennifer, and I've hidden this message here. The only way to get rid of him is described here, but it comes at a high price. Doctor, in order to completely free yourself of him, you must first gain his trust and enable his personality to infiltrate your body. I don't have a better solution for you right now, so I'll have to rely on your doctor. # CLASS: Jennifer
 
-- Then there's a "killed" knife beneath your feet. He uses this knife to stab into the heart as he enters your body, trapping him. He'll never live beyond his death in this knife!
+- Then there's a knife called "Paradise" beneath your feet. You need to use this knife to stab into your heart when he enters your body which can trapping him. He'll never live beyond his death in this knife! # CLASS: Jennifer
 
-- I know the price is high, and you must exchange your life, but if you do not, you must find a way to wake me up and seal him.
+- I know the price is high, and you must exchange your life, but if you do not do so, you must find a way to wake me up and seal him. # CLASS: Jennifer
 
-* You dig up the earth beneath your feet and, indeed, conceal a pale knife.
+* You dig up the dirt beneath your feet and, indeed, conceal a pale knife.
 
 - You gently place it in your pocket, and then it's time to make the decision!
 
@@ -1768,31 +1769,31 @@ Nicolas Erebos
 
 - At the same moment, Lord Erebos returned with a cup of tea in his hand.
 
-- Lord Erebos: So what is the decision?
+- Lord Erebos: So what is the decision? # CLASS: bojue
+ 
+- Jeff: I'd would like to join you, but there is one request. # CLASS: Jeff
 
-- Jeff: I'd would like to join you, but there is one request.
-
-- Lord Erebos: What request?
+- Lord Erebos: What request? # CLASS: bojue
 
 -
- * You know what you're about to do next is going to be extremely hazardous, but you're willing to try.
+ * You know what you're about to do next is going to be extremely hazardous, but you're willing to try. 
 -
 
-- Jeff: Lord Erebos, don't you think it's uncomfortable for you to be in this woman's body? You're plainly a male, but you have to share a woman's body.
+- Jeff: Lord Erebos, don't you think it's uncomfortable for you to be in this woman's body? You're plainly a male, but you have to share a woman's body. # CLASS: Jeff
 
-- Lord Erebos: What do you mean?
+- Lord Erebos: What do you mean? # CLASS: bojue
 
-- Jeff: Why not you want to enter my body? I control it during the day, and you control it at night. so that we may genuinely become one is acting behind the scenes while the other is out in the open.
+- Jeff: Why not you want to enter my body? I control it during the day, and you control it at night. So that we may genuinely become one is acting behind the scenes while the other is out in the open. # CLASS: Jeff
 
 * When Lord Erebos heard what you said, he laughed.
 
-- Lord Erebos: My dear doctor, you definitely match my hunger; I know you and I are the same!
+- Lord Erebos: My dear doctor, you definitely match my hunger. I know you and I are the same! # CLASS: bojue
 
-- Jeff: So, would you want to come in?
+- Jeff: So, would you want to come in? # CLASS: Jeff
 
-- Lord Erebos: Of course, I can't wait, and you may begin whenever you're ready!
+- Lord Erebos: Of course, I can't wait anymore, and you may begin whenever you're ready! # CLASS: bojue
 
-- Jeff: I'm fully ready!
+- Jeff: I'm fully ready! # CLASS: Jeff
 
 * [You witness Jennifer's body collapse instantly, and a foreign soul squeezes into your mind, giving you a searing headache, but you know, the opportunity is here!]
 
@@ -1800,9 +1801,9 @@ Nicolas Erebos
 
 - You thrust the knife into your own heart, causing terrible agony, and the earl in your body realized this as well, roaring in pain.
 
-- Lord Erebos: How dare you deceive me! I can, believe it or not, make your life worse than death!
+- Lord Erebos: How dare you deceive me! I can, believe it or not, make your life worse than death! # CLASS: bojue
 
-- Jeff: If only you could!
+- Jeff: If only you could! # CLASS: Jeff
 
 * [The knife in your hand emits a faint glow, and you can feel the alien spirit filling your head being drawn slowly into the knife.]
 
@@ -1812,7 +1813,8 @@ Nicolas Erebos
 
 - Ah, it's over.
 
-* A year later
+* [A year later]
+- [A Year Later]
 
 - A mother and a kid approached a gravestone.
 
@@ -1830,59 +1832,58 @@ Nicolas Erebos
 
 - At the same moment, Lord Erebos returned with a cup of espresso in his hand.
 
-- Lord Erebos: So what is the decision?
+- Lord Erebos: So what is the decision? # CLASS: bojue
 
 - -> seal_soul
 
-something
 
 === seal_soul
 
-- Jeff: I refused!
+- Jeff: I refused! # CLASS: Jeff
 
 - 
  * When he heard your refusal, the Lord Erebos paused for a time in his drinking. He then drank his drink and flung it to the ground.
 -
 
-- Lord Erebos: Refuse? Hahahhah, Then there is only one option for those who reject me is death!
+- Lord Erebos: Refuse? Hahahhah, Then there is only one option for those who reject me is death! # CLASS: bojue
 
 - 
  * You saw the him get a knife from his arms.
 -
 
-- Lord Erebos: Did you see the doctor? This knife is known as 'Hell'. '
+- Lord Erebos: Did you see the doctor? This knife is known as 'Hell'. # CLASS: bojue
 
 - He looked at the knife, placed his finger in front of his lip, and struck a quiet posture.
 
-- Lord Erebos: Shhh, pay attention, this knife is screaming all the time. There are over 100 individuals imprisoned here, each of which I killed personally, and you, doctor, will be the next!
+- Lord Erebos: Shhh, pay attention, this knife is screaming all the time. There are over 100 individuals imprisoned here, each of which I killed personally, and you, doctor, will be the next! # CLASS: bojue
 
 * When he finished speaking, he held it out toward your direction.
 
 - It scrapes a lot of scars no matter how successfully you dodge.
 
-- You know you have no chance of winning, so the only thing you can do now is wake up Jennifer!
+- You know you have no chance of win, so the only thing you can do now is wake up Jennifer!
 
-- Jeff: Jennifer! Don't allow this evil take control of your head! Consider your children! He still requires your assistance; he cannot survive without his mother!
+- Jeff: Jennifer! Don't allow this evil take control of your head! Consider your children! He still requires your assistance. He cannot survive without his mother! # CLASS: Jeff
 
 - [Inside of Jennifer's mind] 
 
-- Jennifer: Doctor, I think I heard what the doctor said.
+- Jennifer: Doctor, I think I heard what the doctor said. # CLASS: Jennifer
 
-- Jennifer: My son, Justin, he needs me, I shouldn't be sunk in sleep any more, I have to wake up.
+- Jennifer: My son, Justin, he needs me, I shouldn't be sunk in sleep any more, I have to wake up. # CLASS: Jennifer
 
 - [Outside of Jennifer's mind]
 
-- Jeff: Wake up, Jennifer!
+- Jeff: Wake up, Jennifer! # CLASS: Jeff
 
-- Lord Erebos: Why are you still awake! I should have obliterated your existence!
+- Lord Erebos: Why are you still awake! I should have obliterated your existence! # CLASS: bojue
 
-- Jennifer: Grab his knife right now! And pierce my body!
+- Jennifer: Grab his knife right now! And pierce my body! # CLASS: Jennifer
 
-- Lord Erebos: Don't even consider it!
+- Lord Erebos: Don't even consider it! # CLASS: bojue
 
 * When you saw Lord Erebos screaming on the ground, you grabbed the knife from his fingers and stabbed him and her body hard.
 
-- Lord Erebos: Nooooooooo!
+- Lord Erebos: Nooooooooo! # CLASS: bojue
 
 * The soul in the knife flowed into this body, and all the souls within became chains, trapping the Lord Erebos in the depths of consciousness.
 
@@ -1892,7 +1893,8 @@ something
 
 - The warm sunlight fell on you and Jennifer the instant you opened the cellar door, like a heavenly light descending, extremely sacred.
 
-* [A year later] 
+* [A Year Later] 
+- [A Year Later]
 
 - You arrived at the clinic as usual. Jennifer's follow-up appointment is today. It's been a year since our previous visit.
 
@@ -1904,37 +1906,37 @@ something
 
 - This letter has just five words, yet it gives you the shivers.
 
-- I miss you, dearest Doctor.
+- I miss you, Dear Doctor. # CLASS: bojue
 
 -> ending_chapter
 
 
 === Seal
 
-- Lord Erebos: Oh, it appears that you haven't yet been fully eroded by madness, but it appears that you will be soon. So, do you want to come along with me? doctor?
+- Lord Erebos: Oh, it appears that you haven't yet been fully eroded by madness, but it appears that you will be soon. So, do you want to come along with me? Doctor? # CLASS: bojue
 
-- Jeff: I refused!
+- Jeff: I refused! # CLASS: Jeff
 
 -> seal_soul
 
 === join 
-- Lord Erebos: It appears that the craziness is progressively disintegrating you, which is excellent, doctor; it demonstrates that you and I are a wonderful match!
+- Lord Erebos: It appears that the craziness is progressively disintegrating you, which is excellent, doctor. It demonstrates that you and I are a wonderful match! # CLASS: bojue
 
-- Lord Erebos: So would you like to join me?
+- Lord Erebos: So would you like to join me? # CLASS: bojue
 
-- Jeff: What advantage I could get to be your partner?
+- Jeff: What advantage I could get to be your partner? # CLASS: Jeff
 
-* Your eyes are going wild; you don't care if Jennifer can be spared; all you want to do is follow your heart.
+* Your eyes are going wild. You don't care if Jennifer can be spared. All you want to do is follow your heart.
 
-- Lord Erebos: Advantage! Of course there are advantages! As long as you join me, I can offer you whatever you desire, glory, fortune, women, power, and I can teach you our family's top assassination method, at least in this world. People do not survive more than 5 days.
+- Lord Erebos: Advantage! Of course there are advantages! As long as you join me, I can offer you whatever you desire, glory, fortune, women, power, and I can teach you our family's top assassination method, at least in this world. People do not survive more than 5 days. # CLASS: bojue
 
-- Jeff: I have no enemies, but I am obsessed with money and beauty.
+- Jeff: I have no enemies, but I am obsessed with money and beauty. # CLASS: Jeff
 
-- Lord Erebos: You are free to obtain it whenever you want! Allow me to arrange the ceremony props.
+- Lord Erebos: You are free to obtain it whenever you want! Allow me to arrange the ceremony props. # CLASS: bojue
 
 * With that, Lord Erebos went, but he returned after a while.
 
-- I noticed he was carrying five candles and a jug of crimson liquid.
+- You noticed that he was carrying five candles and a jug of crimson liquid.
 
 - He moved gently to the circular platform, poured the liquid into an upside-down five-pointed star, and lighted the five candles in the five corners.
 
@@ -1944,27 +1946,27 @@ something
 
 * [Pick up the cup]
 
-- Lord Erebos: We shall conduct the exchange ritual under the careful eye of the devil now that the ceremony has begun.
+- Lord Erebos: We shall conduct the exchange ritual under the careful eye of the devil now that the ceremony has begun. # CLASS: bojue
 
 - He moved gently to the circular platform, poured the liquid into an upside-down five-pointed star, and lighted the five candles in the five corners.
 
-- Lord Erebos: You must, like I did, slit your hand and allow the blood to run into my cup.
+- Lord Erebos: You must, like I did, slit your hand and allow the blood to run into my cup. # CLASS: bojue
 
-* [Take over the knife.]
+* [Take over the knife]
 
-- Lord Erebos: You must, like me, cut your palm and allow the blood to flow into my cup.
+- Lord Erebos: You must, like me, cut your palm and allow the blood to flow into my cup. # CLASS: bojue
 
 - You swiped your palm over the table without hesitation. You frowned, but you did not cry out in agony. The glass quickly filled up.
 
-- Lord Erebos: Then, when the ritual concludes, drink the blood that belongs to both of us, and the pact is accomplished. In the future, there will be no treachery between the two of us. Anyone who wishes to betray will be punished in hell.
+- Lord Erebos: Then, when the ritual concludes, drink the blood that belongs to both of us, and the pact is accomplished. In the future, there will be no treachery between the two of us. Anyone who wishes to betray will be punished in hell. # CLASS: bojue
 
 - You didn't say anything, but you drank the cup in one gulp. Your tongue was filled with a strong crimson stench, and the hint of sweetness made you feel a bit delectable.
 
-* He also finished drinking in front of you
+* He also finished drinking in front of you.
 
 - You instantly sensed a connection between your spirit and the Count. You could sense it even if it wasn't very powerful.
 
-- Lord Erebos: Then, let us alter the world and become true lords of it in the future!
+- Lord Erebos: Then, let us alter the world and become true lords of it in the future! # CLASS: bojue
 
 - You simply nodded without saying anything. You understand that your life has progressed to the point where you can no longer turn back.
 
@@ -1972,23 +1974,23 @@ something
 
 === Substitution
 
-- Lord Erebos: You appear to have gone utterly insane! You and I are identical!
+- Lord Erebos: You appear to have gone utterly insane! You and I are identical! # CLASS: bojue
 
-- Lord Erebos: So do you want to join me?
+- Lord Erebos: So do you want to join me? # CLASS: bojue
 
-- Jeff: What advantage I could get to be your partner?
+- Jeff: What advantage I could get to be your partner? # CLASS: Jeff
 
-* Yours is insane. You don't give a damn what happens to Jennifer, and you even have a plan in your head.
+* You are insane. You don't give a damn what happens to Jennifer, and you even have a plan in your head.
 
-- Lord Erebos: Advantage! Of course there are advantages! As long as you join me, I can offer you whatever you desire, glory, fortune, women, power, and I can teach you our family's top assassination method, at least in this world. People do not survive more than 5 days.
+- Lord Erebos: Advantage! Of course there are advantages! As long as you join me, I can offer you whatever you desire, glory, fortune, women, power, and I can teach you our family's top assassination method, at least in this world. People do not survive more than 5 days. # CLASS: bojue
 
-- Jeff: I have no enemies, but I am obsessed with money and beauty.
+- Jeff: I have no enemies, but I am obsessed with money and beauty. # CLASS: Jeff
 
-- Lord Erebos: You are free to obtain it whenever you want! Allow me to arrange the ceremony props.
+- Lord Erebos: You are free to obtain it whenever you want! Allow me to arrange the ceremony props. # CLASS: bojue
 
 * With that, Lord Erebos went, but he returned after a while.
 
-- I noticed he was carrying five candles and a jug of crimson liquid.
+- You noticed he was carrying five candles and a jug of crimson liquid.
 
 - He moved gently to the circular platform, poured the liquid into an upside-down five-pointed star, and lighted the five candles in the five corners.
 
@@ -1998,41 +2000,41 @@ something
 
 * [Pick up the cup]
 
-- Lord Erebos: We shall conduct the exchange ritual under the careful eye of the devil now that the ceremony has begun.
+- Lord Erebos: We shall conduct the exchange ritual under the careful eye of the devil now that the ceremony has begun. # CLASS: bojue
 
-- Lord Erebos removed the knife from his arms and sliced his hand, allowing the blood to gently drip into the cup you were holding. It will be full in no time.
+- Lord Erebos removed the knife from his arms and sliced his hand, allowing the blood to gently drip into the cup you were holding. In no time, it becomes full.
 
 - The knife is then handed to you.
 
 - Take over the knife.
 
-- Lord Erebos: You must, like I did, slit your hand and allow the blood to run into my cup.
+- Lord Erebos: You must, like I did, slit your hand and allow the blood to run into my cup. # CLASS: bojue
 
 - You took the knife, but instead of swiping it towards your palm, you stabbed Lord Erebos. The knife penetrated the heart precisely.
 
 - He looks at you in bewilderment, unable to comprehend what you're doing right now.
 
-- Lord Erebos: Why?
+- Lord Erebos: Why? # CLASS: bojue
 
-- Jeff: Why? The rationale is straightforward. It's too dull for me to be with you. It's better to let me take your place and become a new demon. Think about it, I'm a doctor by day and a devil at night, what a fantastic idea.
+- Jeff: Why? The rationale is straightforward. It's too dull for me to be with you. It's better to let me take your place and become a new demon. Think about it, I'm a doctor by day and a devil at night, what a fantastic idea. # CLASS: Jeff
 
-- Lord Erebos: Hmph, hum, hum, I honestly misjudged you, doctor; it was my negligence that placed it in your hands, but I won't die; I will be back at any moment as long as there is a possibility.
+- Lord Erebos: Hmph, hum, hum, I honestly misjudged you, doctor; it was my negligence that placed it in your hands, but I won't die; I will be back at any moment as long as there is a possibility. # CLASS: bojue
 
 * You have a creepy grin, but it's a really dismal smile.
 
-- Jeff: Will you be back? Hahaha. No No. You will never get the opportunity. My dearest, Erebos.
+- Jeff: Will you be back? Hahaha. No No. You will never get the opportunity. My dearest, Erebos. # CLASS: Jeff
 
 - You slowly kneel on the ground and read the words towards the inverted pentagram that is in front of you.
 
-- My dear demon, I sacrifice the body and two souls of the sinner in front of me to you, and I hope to get a little attention from you, as long as you look at me, I will be satisfied!
+- My dear demon, I will sacrifice this body and two souls of the sinner in front of me to you, and I hope to get a little attention from you, as long as you look at me, I will be satisfied! # CLASS: Jeff
 
 - Your eyes are filled with lunacy at this point, and the magical circle in front of you is slowly glowing. Jennifer's body vanishes in front of you in a moment, and your head is filled with insane ravings.
 
-* ya -nyth, ya goka athg (My servent, I grant sign)
+* Y' admit ymg', shuggoth. s'uhn reached (I admit you, human. Contract reached.) # CLASS: emo
 
 - When you heard the Crusoe response, your whole body trembled, and the yellow brains flowed out of your seven orifices. You know, you have obtained His approval.
 
-- At this moment, your life is going in a completely different direction
+- At this moment, your life is going in a completely different direction.
 
 ->ending_chapter
 
@@ -2042,11 +2044,11 @@ something
 
 - A yellow tentacle gently closed the book, wearing a yellow cloak and carrying a book and a pen, writing and sketching in the air.
 
-- ???: This seems to be his end; yet, it is not the ending I desire, therefore let him reincarnate.
+- ???: This seems to be his end; yet, it is not the ending I desire, therefore let him reincarnate. # CLASS: hasita
 
-- ???: Hm? Who's there? Hm…a human?
+- ???: Hm? Who's there? Hm…a human? # CLASS: hasita
 
-- ???: I didn't anticipate a human to dare to look at this deity, and while the bravery is sufficient, having a human sent to the door is not a terrible thing. Then you've been chosen as the protagonist of the next tale!!
+- ???: I didn't anticipate a human to dare to look at this deity, and while the bravery is sufficient, having a human sent to the door is not a terrible thing. Then you've been chosen as the protagonist of the next tale!! # CLASS: hasita
 
 - The END
 
