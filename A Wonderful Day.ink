@@ -463,10 +463,12 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 
 // keep track how many cards has already chose
 == function card_cal(i) ==
+card count: {card_count}
+
 {
 - card_count == 1:
     ~ Sanity -= 1 
-    // Sanity -s 1
+    // Sanity - 1
         
 - card_count == 2:
     ~ Sanity -= 3 
@@ -1593,7 +1595,7 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 
 ~Sanity += 1
 
-- *It is time to go to bed -> day5
+- *[It is time to go to bed] -> day5
 
 
 === function sanity_check_ending(s) ===
@@ -1618,8 +1620,6 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 
 
 === day5
-- * [Day 5]
-- [Day 5]
 
 - Friday morning, you wake up feeling great and decide to go to work.
 
@@ -1715,22 +1715,20 @@ Nicolas Erebos
 * [Ending Check] -> ending_check
 
 === ending_check
-- Sanity: {Sanity} # CLASS: statusCheck
-- Evilness: {Evilness} # CLASS: statusCheck
-- Kindness: {Kindness} # CLASS: statusCheck
 
 { 
-- Sanity >= 20 && Kindness >= 10:
-    -> Sacrifices_ending
+- Sanity >= 20 && Kindness >= 20:
+    ->Sacrifices_ending
+
+- Sanity > 0 && Sanity < 20 && Kindness >= 5:
+    -> Seal
     
 - Sanity <= 0 && Sanity >= -10 && Evilness >= 2:
-    -> join
+    ->join
+
+- Sanity < -10 && Evilness >= 5:  
+    ->Substitution
     
-- Sanity < -10 && Evilness >= 5:
-    -> Substitution
-    
-- else:
-    -> Seal
 }
 
 === Sacrifices_ending
@@ -1969,6 +1967,8 @@ something
 
 - You simply nodded without saying anything. You understand that your life has progressed to the point where you can no longer turn back.
 
+* [The End?]
+
 -> ending_chapter
 
 === Substitution
@@ -2038,6 +2038,9 @@ something
 ->ending_chapter
 
 === ending_chapter
+
+- * [The End?]
+
 - A yellow tentacle gently closed the book, wearing a yellow cloak and carrying a book and a pen, writing and sketching in the air.
 
 - ???: This seems to be his end; yet, it is not the ending I desire, therefore let him reincarnate.
