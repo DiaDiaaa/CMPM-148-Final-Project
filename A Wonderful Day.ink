@@ -466,7 +466,7 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
 {
 - card_count == 1:
     ~ Sanity -= 1 
-    // Sanity - 1
+    // Sanity -s 1
         
 - card_count == 2:
     ~ Sanity -= 3 
@@ -1593,7 +1593,7 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 
 ~Sanity += 1
 
-- *[It is time to go to bed] -> day5
+- *It is time to go to bed -> day5
 
 
 === function sanity_check_ending(s) ===
@@ -1618,6 +1618,8 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 
 
 === day5
+- * [Day 5]
+- [Day 5]
 
 - Friday morning, you wake up feeling great and decide to go to work.
 
@@ -1713,17 +1715,22 @@ Nicolas Erebos
 * [Ending Check] -> ending_check
 
 === ending_check
+- Sanity: {Sanity} # CLASS: statusCheck
+- Evilness: {Evilness} # CLASS: statusCheck
+- Kindness: {Kindness} # CLASS: statusCheck
 
 { 
-- Sanity >= 20 && Kindness >= 20:
-    ->Sacrifices_ending
-
-- Sanity > 0 && Sanity < 20 && Kindness >= 5:
+- Sanity >= 20 && Kindness >= 10:
+    -> Sacrifices_ending
+    
+- Sanity <= 0 && Sanity >= -10 && Evilness >= 2:
+    -> join
+    
+- Sanity < -10 && Evilness >= 5:
+    -> Substitution
+    
+- else:
     -> Seal
-    
-- Sanity <= 0 && Sanity >= -1 && Evilness >= 2:
-    ->join
-    
 }
 
 === Sacrifices_ending
