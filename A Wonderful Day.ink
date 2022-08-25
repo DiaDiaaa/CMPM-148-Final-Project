@@ -1967,8 +1967,6 @@ something
 
 - You simply nodded without saying anything. You understand that your life has progressed to the point where you can no longer turn back.
 
-* [The End?]
-
 -> ending_chapter
 
 === Substitution
