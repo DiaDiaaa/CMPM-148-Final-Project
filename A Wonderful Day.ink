@@ -1698,7 +1698,7 @@ Nicolas Erebos # CLASS: bojue
 
 - Lord Erebos: That doesn't make sense? Indeed, my existence cannot be explained by common reason, just as if there is faith, if you believe in the presence of gods, it exists, and if you do not believe, it does not exist. # CLASS: bojue
 
-- Jeff: Then how come you wanted to murder me before? # CLASS: Jeff
+ * Jeff: Then how come you wanted to murder me before? # CLASS: Jeff
 
 - Lord Erebos: You had already endangered my life by then. But now you're a partner who can help me the most. # CLASS: bojue
 
@@ -1708,7 +1708,7 @@ Nicolas Erebos # CLASS: bojue
 
 - Lord Erebos: So, now that we've covered a lot of ground, let's look at the small gift I've prepared for you. # CLASS: bojue
 
-- From his arms, he grabbed a pretty small mirror.
+* From his arms, he grabbed a pretty small mirror.
 
 - Lord Erebos: This mirror is a small gift from me to you. Although it appears to be pointless, it can determine the shape of your heart. Come try it out. # CLASS: bojue
 
@@ -1828,7 +1828,9 @@ Nicolas Erebos # CLASS: bojue
 
 - Step by step, you ascend the lengthy stairwell. Just as you were ready to enter paradise, a vortex erupted in front of your eyes, radiating a brilliant light and eventually engulfing you and you vanished.
 
-->END
+-> ending_chapter
+
+// ->END
 
 === not_sacrifice
 
