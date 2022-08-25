@@ -705,7 +705,7 @@ You return to the commercial center and enter the "Home of Soul" store.
 
 Old man: Welcome, dear visitor. Are you going to my store today? Please select two products from my store today. # CLASS: oldMan
 
-* [Begin] -> commercial_list
+* [Commercial List] -> commercial_list
 
 === check_visited
 { 
@@ -804,29 +804,30 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 - You wander into the living room, desperate for some way to unwind.
 
 * [Turn on the computer] 
-    - You find an old yellow book named "Enjoy Life" and read it slowly. Seem learned something new.
+     You powered on your computer, activated sbeam, and spent a long time playing RPG games. 
     ~ Sanity += 2
 
 * [Read]
-    - You find an old yellow book named "Enjoy Life" and read it slowly. Seem learned something new.
+     You find an old yellow book named "Enjoy Life" and read it slowly. Seem learned something new.
     ~ Sanity += 1
 
 * [Watch horror movie]
-    - You turn on the smart TV and quickly discovered a high-rated horror film on the Internet. Then, you turn off the light and start to watch it. After watching it, you felt even more uneasy.
+     You turn on the smart TV and quickly discovered a high-rated horror film on the Internet. Then, you turn off the light and start to watch it. After watching it, you felt even more uneasy.
     ~ Sanity -= 1
 
 ~ Sanity += 1
-- * Then you simply eat something for dinner and retire to bed.. -> day3
+- Then you simply eat something for dinner and retire to bed.. -> day3
 
 /* ---------------- DAY 3 ------------------ */
 ==== day3 ====
     ~ current_day = 3
     
+- *[Day 3]
 - [Day 3]
 
 - I awoke drowsily from my bed and struggled to get out of it. Today's condition isn't great, but my head is swollen like a balloon, it hurts somewhat, and my entire body is incredibly weak. It might have been somewhat due to the woman from yesterday, but I still have to go to the clinic today.
 
- * Take a few bites of breakfast and head to work
+ * [Take a few bites of breakfast and head to work]
  
  - As usual, when you arrive at the clinic, you make yourself a cup of freshly brewed espresso. You're sitting on your chair, quietly staring at Newton's balance balls in front of you. Praying that patient does not appear today.
 
@@ -1084,7 +1085,9 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 
  ~ Sanity += 1
  
-* [It is time to go to bed] -> day4
+* It is time to go to bed
+
+- * [Day 4] -> day4
 
 
 
@@ -1093,7 +1096,7 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 
 /* ---------------- DAY 4 ------------------ */
 === day4 ===
-Day 4
+[Day 4]
 ~current_day = 4
 
 { Pendant == 1: 
@@ -1310,11 +1313,11 @@ Day 4
 ->kitchen_list
 
 === kitchen_list
-* Open the fridge ->fridge
+* [Open the fridge] ->fridge
 
-* Check the closet ->closet
+* [Check the closet] ->closet
 
-* Check the teapot ->teapot
+* [Check the teapot] ->teapot
 
 * [Leave the kitchen] ->inside_house
 
@@ -1346,13 +1349,13 @@ Day 4
 
 === bathroom_list
 
-* Check the sink -> jennifer_sink
+* [Check the sink] -> jennifer_sink
 
-* Checkout the bathtub ->jennifer_bathtub
+* [Checkout the bathtub] ->jennifer_bathtub
 
-* Check the drawer ->jennifer_drawer
+* [Check the drawer] ->jennifer_drawer
 
-* Leave the bathroom -> inside_house
+* [Leave the bathroom] -> inside_house
 
 === jennifer_sink
 - You see two toothbrushes, one red and one white, in the cup on the sink. But, as far as you know, Jennifer is living alone in the house so far.  So, who is this other toothbrush, you're puzzled.
@@ -1378,16 +1381,19 @@ Day 4
 
 -The bedroom is completely separated into two halves, the left area has a red bed, and the left wall is also dyed red. However, my scalp was numb because there were many knife marks on the walls, and some new scratches were buried in the old scratches. It's similar to a great work of art that was created over a long time.
 
-- However, the right space is totally white, with white walls, a white bed and comforter, and even white table and chairs, which contrasts sharply with the red area next to it.
+- However, the right space is totally white, with white walls, a white bed and comforter, and even white table and chairs, which contrasts sharply with the red area next to it. -> area_check
 
-* Checkout the ‘red’ area -> red_area
 
+== area_check
+* [Checkout the ‘red’ area] -> red_area
+* [Checkout the 'white' area] -> white_area
+* [Leave] -> leave_jennifer
 
 === red_area
 ~Sanity -= 1
 - You reach the red area and find a red journal on the ground.
 
-* Checkout the journal
+* [Checkout the journal]
 
 
 
@@ -1426,7 +1432,7 @@ Day 4
 === white_area
 - You enter the "white" area and find a pristine white journal on the desk.
 
-* Checkout the journal
+* [Checkout the journal]
 
 
 
@@ -1461,7 +1467,7 @@ Day 4
 ~Sanity -= 1
 - Reading Jennifer's journal also reveals that she appears to struggle with bodily control.
 
-* [Leave the room] ->leave_jennifer
++ [Leave the area] -> area_check
 
 === leave_jennifer
 - You left Jennifer's room, and the clock struck twelve. It's time for me to depart. It will be hazardous if "he" returns if you do not leave.
