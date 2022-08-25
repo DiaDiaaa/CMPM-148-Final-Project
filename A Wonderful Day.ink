@@ -745,32 +745,34 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 * [Not choose] -> day2_card_finish
 
 === Strength 
+~ card_count += 1
+
 - Strength, VIII: 
 - The old lady: “This is a positive force. Meaning that tomorrow, something very bad may happen to you, but your inner courage will be very important. Only by facing your fears can things turn around.” # CLASS: oldLady
 
-~ Sanity -= 1
 
 *[Back] ->day2_card
 
 === Judgement
+~ card_count += 1
+
 - Judgement，XX: 
 - The old lady: “This approval looks very strange. Although it represents resurrection, in a sense, you will not die tomorrow, but in the future, it may be resurrected in another way.” # CLASS: oldLady
 
-~ Sanity -= 2
 
 *[Back] -> day2_card
 
 === Hermit
+~ card_count += 1
+
 - The Hermit，IX: 
 - The old lady: “This is a hermit in an upright position. He represents slow progress in the dark. From the orientation of this card, walking to the left may lead to a seemingly better place.” # CLASS: oldLady
-
-~ Sanity -= 3
 
 *[Back] -> day2_card
 
 === day2_card_finish
-
-~ commercial_count = 0
+{card_cal(1)}
+~ card_count = 0
 
 - The old lady: “It seems that you have already chosen and understood it. Remember, tomorrow will be a disaster for you. Be sure to remember the revelation of the tarot cards!” # CLASS: oldLady
 
@@ -1480,13 +1482,13 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 === day4_choose
 - It's noon, it's still early, do you want to go somewhere?
 
-* Park ->day4_park
+* [Park] ->day4_park
 
-* Commercial Center ->day4_commercial
+* [Commercial Center] ->day4_commercial
 
-* Psychiatric institution -> check_visited
+* [Psychiatric institution] -> check_visited
 
-* Return Home -> day4_return_home
+* [Return Home] -> day4_return_home
 
 === day4_park
 - I went to a nearby park.
@@ -1530,29 +1532,37 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 
 * [The Hanged Man，XII] -> Hanged_Man
 
-* Not choose -> day4_card_finish
+* [Not choose] -> day4_card_finish
 
 
 === Fool
-~card_count += 1
+~ card_count += 1
+- The Fool，0:
 
 - The old lady: This is The Fool. It marks the beginning or end of everything. You're going to meet someone who will drastically change your life. You have no choice except to confront him.
 
 *[Back] ->day4_card
 
 === Death
-~card_count += 1
+~ card_count += 1
+- Death，XIII:
 
 - The old lady: This is a reversal, the death represents a silver lining in this reversal. Only kindness will keep you alive. If you chose evil, your journey to misery has just begun.
 
 *[Back] ->day4_card
 
 === Hanged_Man
+~ card_count += 1
+- The Hanged Man，XII:
+
 - Old lady: This is the Hanged Man, which represents the process of self-sacrifice; perhaps sacrifice is the only way to survival.
 
 *[Back] ->day4_card
 
 === day4_card_finish
+{card_cal(1)}
+~ card_count = 0
+
 - The old lady: “It seems that you have already made a choice, and I have given you a revelation. I hope to see you next time, Jeff.”
 
 - Jeff: “Thank you, Ma’am.”
