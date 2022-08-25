@@ -414,7 +414,20 @@ I dusted the crystal award and Certificates on the shelf with care. Several hono
  
 - There are three cards in front of you.
  
- * [Choose a card] -> day1_choose_card
+ * [Choose a card] -> date_of_card
+
+=== date_of_card
+{
+- current_day == 1:
+    -> day1_choose_card
+    
+- current_day == 2:
+    ->day2_card
+    
+- current_day == 4:
+    ->day4_card
+}
+
 
 == day1_choose_card ==
  
@@ -695,10 +708,16 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 * [Begin] -> commercial_list
 
 === check_visited
-{ - visited_psy == false:
+{ 
+- visited_psy == false:
     ->day1_psychiatric_institution
-  - else:
+
+- visited_psy == true && current_day == 2:
     ->day2_psychiatric_institution
+
+- visited_psy == true && current_day == 4:
+    ->day4_psy
+
 }
 
 === day2_psychiatric_institution
@@ -716,7 +735,7 @@ Old man: Welcome, dear visitor. Are you going to my store today? Please select t
 
 - There are three cards in front of you
 
-* [Choose a card] -> day2_card
+* [Choose a card] -> date_of_card
 
 === day2_card
 * [Strength，VIII] -> Strength
@@ -1459,7 +1478,7 @@ Day 4
 
 * Commercial Center ->day4_commercial
 
-* Psychiatric institution -> day4_psy
+* Psychiatric institution -> check_visited
 
 * Return Home -> day4_return_home
 
