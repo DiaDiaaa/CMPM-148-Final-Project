@@ -199,7 +199,7 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
 
 - Jennifer: Alright, thank you. # CLASS: Jennifer
 
-  Jeff: Ms.Jennifer, that's all for now. I'll see you again next week at the same time as today. I hope your condition improves. # CLASS: Jeff
+  Jeff: Ms. Jennifer, that's all for now. I'll see you again next week at the same time as today. I hope your condition improves. # CLASS: Jeff
   
   You opened the door for her once I finished the conversation.
   
@@ -623,7 +623,7 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
 - Your hands start to sweat, you feel nervous, and you already put your hand on the button of the alarm. You are glad that you had the Anesthesia needle ready in advance and put it in your pocket, just in case.
 
 
-- Jeff: Nice to see you, Ms.Jennifer, now let's start our routine inquiry. # CLASS: Jeff
+- Jeff: Nice to see you, Ms. Jennifer, now let's start our routine inquiry. # CLASS: Jeff
 
  * Jeff: Did you dream about something last night? # CLASS: Jeff
      
@@ -1110,6 +1110,8 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
  ~ Sanity += 1
  
 * It is time to go to bed.
+
+- Achieve [Narrow Escape] # CLASS: chengjiu
 
 - * [Day 4] -> day4
 
@@ -1846,6 +1848,8 @@ Nicolas Erebos # CLASS: bojue
 
 - Step by step, you ascend the lengthy stairwell. Just as you were ready to enter paradise, a vortex erupted in front of your eyes, radiating a brilliant light and eventually engulfing you and you vanished.
 
+- Achieve [Sacrifice] # CLASS: chengjiu
+
 -> ending_chapter
 
 // ->END
@@ -1895,6 +1899,8 @@ Nicolas Erebos # CLASS: bojue
 
 - Jennifer: My son, Justin, he needs me, I shouldn't be sunk in sleep any more, I have to wake up. # CLASS: Jennifer
 
+- Achieve [Mother's Love] # CLASS: chengjiu
+
 - * [Outside Jennifer's mind]
 
 - Jeff: Wake up, Jennifer! # CLASS: Jeff
@@ -1931,6 +1937,8 @@ Nicolas Erebos # CLASS: bojue
 - This letter has just five words, yet it gives you the shivers.
 
 - I miss you, Dear Doctor. # CLASS: bojue
+
+- Achieve [Sealed] # CLASS: chengjiu
 
 -> ending_chapter
 
@@ -1991,6 +1999,8 @@ Nicolas Erebos # CLASS: bojue
 - Lord Erebos: Then, let us alter the world and become true lords of it in the future! # CLASS: bojue
 
 - You simply nodded without saying anything. You understand that your life has progressed to the point where you can no longer turn back.
+
+ - Achieve [Dances With Wolves] # CLASS: chengjiu
 
 -> ending_chapter
 
@@ -2057,6 +2067,9 @@ Nicolas Erebos # CLASS: bojue
 - When you heard the Crusoe response, your whole body trembled, and the yellow brains flowed out of your seven orifices. You know, you have obtained His approval.
 
 - At this moment, your life is going in a completely different direction.
+
+- Achieve [Heir] # CLASS: chengjiu
+
 
 ->ending_chapter
 

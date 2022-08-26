@@ -231,6 +231,10 @@ img {
     text-align: center;
 }
 
+.chengjiu{
+    color: rgb(179, 222, 255);
+}
+
 #controls {
     z-index: 4;
     font-size: 9pt;
