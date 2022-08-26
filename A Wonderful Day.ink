@@ -355,7 +355,7 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
 
   You used to work here, but the environment was so dreary that You quit and decided to create your own clinic.
 
-  For some reason, You felt like someone was guiding you here, and You came to this place again.
+  For some reason, you felt like someone was guiding you here, and you came to this place again.
 
  * [Walk into the Psychiatric institution]
  
@@ -363,7 +363,7 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
  
   Nurse: Hi! Doctor Jeff, What brings you here? # CLASS: nurse
 
- * Jeff: Ohh, Hi! Nothing, I'm just looking around here. What have you been busy with recently?  # CLASS: Jeff
+ * Jeff: Ohh, Hi! Nothing. I'm just looking around here. What have you been busy with recently?  # CLASS: Jeff
 
 - Nurse: You are just in time. Recently, we received an elderly lady. She babbles every day. And hope that you can talk to her. # CLASS: nurse
 
@@ -373,7 +373,7 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
 
  * [Go to building 44, room 44]
  
-- As You got closer and closer to the enigmatic woman, You could sense a suffocating atmosphere creeping up on me. You was standing in front of the door of Room 44, and the awful atmosphere had totally swallowed me up as if a pair of chilly hands had gripped your throat and taken your breath away.
+- As You got closer and closer to the enigmatic woman, you could sense a suffocating atmosphere creeping up on me. You was standing in front of the door of Room 44, and the awful atmosphere had totally swallowed me up as if a pair of chilly hands had gripped your throat and taken your breath away.
 
  * [Knock on the door]
  
@@ -385,7 +385,7 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
 
 - The old lady: Aha, what do I smell? It's the smell of death. # CLASS: oldLady
 
-  The old lady: Young man, You're gonna die! # CLASS: oldLady
+  The old lady: Young man, you're gonna die! # CLASS: oldLady
 
  * Jeff: I have met so many patients, many of them have said these words as you say, but most of them are just to intimidate me. # CLASS: Jeff
 
@@ -448,7 +448,7 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
     ~ card_count += 1 
 
 - The Star, XVII: 
-  The old lady: This is a star in a positive position, which represents the hope hidden in the depths. Although it is not big, it may change your destiny. However, this star has dimmed, maybe, under you In a reincarnation, you should choose a way home. # CLASS: oldLady
+  The old lady: This is a star in a positive position, which represents the hope hidden in the depths. Although it is not big, it may change your destiny. However, this star has dimmed, maybe, under you in a reincarnation, you should choose a way home. # CLASS: oldLady
 
  * [Back] -> day1_choose_card
 
@@ -500,7 +500,7 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
 
 
 === go_home ===
-- Just as you was about to leave the clinic, I noticed that Ms.Jennifer seem left something on the couch.
+- Just as you was about to leave the clinic, I noticed that Ms. Jennifer seem left something on the couch.
  
  * [Check out]
  
@@ -560,15 +560,15 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
 {
     - Sanity <= -10:
         Sanity : {Sanity} # CLASS: statusCheck
-        You've completely lost control of yourself; your left and right faces are distorted and utterly incorrect, your left face's eyes are insane, and your tongue is protruding out of your mouth. Your right face, on the other hand, is terribly depressed. The right eye appears to have recently sobbed, and the corner of the lips is fully down, obviously miserable.
+        You've completely lost control of yourself. Your left and right faces are distorted and utterly incorrect, your left face's eyes are insane, and your tongue is protruding out of your mouth. Your right face, on the other hand, is terribly depressed. The right eye appears to have recently sobbed, and the corner of the lips is fully down, obviously miserable.
 
     - Sanity > -10 && Sanity <= 0:
         Sanity : {Sanity} # CLASS: statusCheck
-        Something is amiss with you today; your eyes are visibly red, but you are thrilled, and the grin at the corner of your mouth is somewhat evil.
+        Something is amiss with you today. Your eyes are visibly red, but you are thrilled, and the grin at the corner of your mouth is somewhat evil.
 
     - Sanity > 0 && Sanity <= 10:
         Sanity : {Sanity} # CLASS: statusCheck
-        You appear fatigued today, with black bags under your eyes; you may need to take a break.
+        You appear fatigued today, with black bags under your eyes. You may need to take a break.
 
     - Sanity > 10 && Sanity <= 20:
         Sanity : {Sanity} # CLASS: statusCheck
@@ -617,10 +617,10 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
         ~ Sanity -= 1
 
 
-- Jennifer: Hi dr.Jeff, nice to see you, something brought me here, and want me to see you again, to let you know more about me. # CLASS: Jennifer
+- Jennifer: Hi Dr.Jeff, nice to see you, something brought me here, and want me to see you again, to let you know more about me. # CLASS: Jennifer
 
 - You have no idea that she will come to see me again, but you have a bad feeling about her state. 
-- Your hands start to sweat, you feel nervous, and you already put your hand on the button of the alarm. you are glad that you had the Anesthesia needle ready in advance and put it in your pocket, just in case.
+- Your hands start to sweat, you feel nervous, and you already put your hand on the button of the alarm. You are glad that you had the Anesthesia needle ready in advance and put it in your pocket, just in case.
 
 
 - Jeff: Nice to see you, Ms.Jennifer, now let's start our routine inquiry. # CLASS: Jeff
@@ -678,7 +678,7 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
     * Tell her the truth: The medicine here has significant adverse effects, and you may vomit after taking it, but the impact is excellent. # CLASS: Jeff
         ~ Sanity += 1
         ~ Kindness += 1
-    * Lie: This medicine has no negative side effects; it is simply more potent. # CLASS: Jeff
+    * Lie: This medicine has no negative side effects. It is simply more potent. # CLASS: Jeff
         ~ Sanity -= 2
         ~ Evilness += 2
     
@@ -688,7 +688,7 @@ You dusted the crystal award and certificates on the shelf with care. Several ho
 - Then, Jennifer leaves the room.
 
 - You slumped to the ground, and what had just happened seemed to suffocate me over and over again. You wanted to get out of here before she came back.
- It's time to leave the clinic; where should you go next?
+ It's time to leave the clinic. Where should you go next?
 
 * [Park] ->Park
 * [Commercial Center] -> check_visited_shop
@@ -752,7 +752,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - The old lady takes out the tarot cards.
 
-- The old lady: I know what you want, young man, let's get to the point, Come over here young man and we start divination immediately. # CLASS: oldLady
+- The old lady: I know what you want, young man, let's get to the point, come over here young man and we start divination immediately. # CLASS: oldLady
 
 
 - There are three cards in front of you.
@@ -881,7 +881,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
  
 - She smiled contemptuously.
 
-- Jennifer: What am I doing here? Of course, my lovely doctor, I am here for you. # CLASS: bojue
+- Jennifer: What am I doing here? Of course, my Dear Doctor, I am here for you. # CLASS: bojue
 
 - She raised her hand, clutching the rusty knife in her hand, and took a glance at it with a smile. She exuded a bloodthirsty vibe all over her.
 
@@ -926,7 +926,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - * Jennifer: Where are you, Doctor? Ha, you want to play Peek-a-boo, right? Ho! You're not going to conceal yourself behind the quilt, aren't you? # CLASS: bojue
 
-- Woosh, She stabbed the bed next to her fiercely as soon as she finished speaking.
+- Woosh. She stabbed the bed next to her fiercely as soon as she finished speaking.
 
 - * Jennifer: Aha, how about the counter? You're hiding under the counter, aren't you? # CLASS: bojue
 
@@ -960,13 +960,13 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
  * Jennifer: Where are you, Doctor? Ha, you want to play Peek-a-boo, right? Ho! You're not going to conceal yourself behind the quilt, aren't you? # CLASS: bojue
  
- - Woosh, She stabbed the bed next to her fiercely as soon as she finished speaking.
+ - Woosh. She stabbed the bed next to her fiercely as soon as she finished speaking.
 
  * Jennifer: Ah, you won't hide under the bed, will you? # CLASS: bojue
  
 - She didn't say anything else, but her silence worried you more. 
 
- * Jennifer: How come I can't find you anywhere, doctor. # CLASS: bojue
+ * Jennifer: How come I can't find you anywhere, Doctor. # CLASS: bojue
  
 - The phone fell to the ground unexpectedly. She seemed to have sensed sound and halted her footsteps.
 
@@ -1010,7 +1010,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
  * Jennifer: Hello there, Dear Doctor. What a lovely spot to hide. # CLASS: bojue
  
-- * Jennifer: Hey, doctor, peek-a-boo is a lot of fun, but I'm bored of it, so it's time for execution! # CLASS: bojue
+- * Jennifer: Hey, Doctor, peek-a-boo is a lot of fun, but I'm bored of it, so it's time for execution! # CLASS: bojue
 
 - You shut your eyes closed and refuse to face death. As the knife was about to penetrate your chest, the hand that was clutching your neck gradually loosen. You slowly opened your eyes and tried to breathe again and saw Jennifer clutching her head in her hands, as if in anguish.
 
@@ -1031,7 +1031,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
     ~ Sanity -= 2
     ~ Evilness += 1
     
-- You still opted to flee, leaving the lady wailing alone; you know you can't do anything but rush home and lock the door.
+- You still opted to flee, leaving the lady wailing alone. You know you can't do anything but rush home and lock the door.
 
  *[Go Home] -> day3_back_home
 
@@ -1041,11 +1041,11 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - You chose to stay and approached the woman carefully and softly. You had a firm grasp on her shoulders.
 
- * Jeff: I'm not leaving, Ms. Jennifer; think of the most valuable person or object in your life! Don't allow 'he' take over you or your thinking! # CLASS: Jeff
+ * Jeff: I'm not leaving, Ms. Jennifer. Think of the most valuable person or object in your life! Don't allow 'he' take over you or your thinking! # CLASS: Jeff
  
- - Jennifer: Shut up! Dr.Jeff! You don' know anything! After I take control of this body, I will definitely not kill you easily this time. I will torment you slowly. until you feel death is the real detachment! # CLASS: bojue
+ - Jennifer: Shut up! Dr.Jeff! You don't know anything! After I take control of this body, I will definitely not kill you easily this time. I will torment you slowly until you feel death is the real detachment! # CLASS: bojue
  
- - Jennifer:  My son! Justin, I miss him. He is in the orphanage, I haven't seen him this week, I miss him so much! Dr.Jeff, Justin is my most precious one. I can't let you, I can't let you take control of my body, not even a little bit, I want to see my Justin. # CLASS: Jennifer
+ - Jennifer:  My son! Justin, I miss him. He is in the orphanage, I haven't seen him this week, I miss him so much! Dr. Jeff, Justin is my most precious one. I can't let you, I can't let you take control of my body, not even a little bit, I want to see my Justin. # CLASS: Jennifer
  
  * Jeff: Jennifer! You can do it! Justin, he misses you too. Now hurry up and think about the best things between you and your son, and that is the only way to temporarily seal 'he'. # CLASS: Jeff
  
@@ -1061,11 +1061,11 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
   
   The path to the right leads to the commercial's center subterranean garage.
   
-  You have a lot of options right now because there are so many cars in the basement garage; you may hide in numerous areas to try to avoid the chase.
+  You have a lot of options right now because there are so many cars in the basement garage. You may hide in numerous areas to try to avoid the chase.
 
- * [Pick a car and hide under it.] -> day3_under_car
- * [Randomly pick a car and hide behind it.] -> day3_behind_car
- * [Find a pillar and hide.] -> day3_pillar
+ * [Pick a car and hide under it] -> day3_under_car
+ * [Randomly pick a car and hide behind it] -> day3_behind_car
+ * [Find a pillar and hide] -> day3_pillar
  
  
 == day3_under_car 
@@ -1155,7 +1155,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 * Jeff: Long time no see. To be honest, I am looking for a kid called Justin, about 7 years old. He might be the child of one of my patients. I am here to see if there is any way to help my patient. May I see the child? # CLASS: Jeff
 
-- Orphanage director: Justin? We have so many children with this name; give me a second, I'll look into it, and I'll get back to you later. You may feel free to visit our orphanage on your own if you want. # CLASS: whoever
+- Orphanage director: Justin? We have so many children with this name. Give me a second, I'll look into it, and I'll get back to you later. You may feel free to visit our orphanage on your own if you want. # CLASS: whoever
 
 * [Visit]
 
@@ -1252,7 +1252,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - You noticed a little boy playing with building blocks alone in a corner, while the other children seem to be isolating him.
 
-- Orphanage director: Justin is the child in the corner; he's not an orphan; Her mother left him at the door of the orphanage; his mother comes to see him once or twice a week; I'm not sure why I haven't been here this week. # CLASS: whoever
+- Orphanage director: Justin is the child in the corner. He's not an orphan. His mother left him at the door of the orphanage. His mother comes to see him once or twice a week. I'm not sure why I haven't been here this week. # CLASS: whoever
 
 - Looking back on what happened this week, you can see why she didn't visit her son.
 
@@ -1358,7 +1358,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 === teapot
 
-- In one corner, you see a peculiar circular ceramic teapot. You stepped over to the teapot, gently lifted it up, and shook it; it was empty. You opened the teapot and smelled a faint odor of blood rising from it.
+- In one corner, you see a peculiar circular ceramic teapot. You stepped over to the teapot, gently lifted it up, and shook it. It was empty. You opened the teapot and smelled a faint odor of blood rising from it.
 
 * [Back] ->kitchen_list
 
@@ -1462,7 +1462,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - Monday
 
-- I saw the doctor Jeff today, and he said my condition is in remission. I'm pleased since it appears that I'll be able to get a nice night's sleep today. Oh, and don't forget to pay Justin a visit at the orphanage on Thursday; I haven't seen him in a week and I miss him very terribly. # CLASS: Jennifer
+- I saw the doctor Jeff today, and he said my condition is in remission. I'm pleased since it appears that I'll be able to get a nice night's sleep today. Oh, and don't forget to pay Justin a visit at the orphanage on Thursday. I haven't seen him in a week and I miss him very terribly. # CLASS: Jennifer
 
 * [Next Page]
 
@@ -1470,7 +1470,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - Tuesday
 
-- Today, I feel as if I've been in a trance, and my memory is on and off. The body is becoming increasingly out of control, and every time I wake up strangely, my body is throbbing and I appear to have been battered. This is not good; I will have to increase the dose somewhat. # CLASS: Jennifer
+- Today, I feel as if I've been in a trance, and my memory is on and off. The body is becoming increasingly out of control, and every time I wake up strangely, my body is throbbing and I appear to have been battered. This is not good. I will have to increase the dose somewhat. # CLASS: Jennifer
 
 * [Next Page]
 
@@ -1478,7 +1478,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
 - Wednesday
 
-- What did I do today? I awoke in an unusual location and injured my doctor with a knife. Oh my God, what have I done? My control over my body is eroding; I can't keep on like this; I have to stop him! # CLASS: Jennifer
+- What did I do today? I awoke in an unusual location and injured my doctor with a knife. Oh my God, what have I done? My control over my body is eroding. I can't keep on like this. I have to stop him! # CLASS: Jennifer
 
 * [Next Page]
 
@@ -1577,7 +1577,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
     ~ card_count += 1
 - The Hanged Man, XII:
 
-- Old lady: This is the Hanged Man, which represents the process of self-sacrifice; perhaps sacrifice is the only way to survival. # CLASS: oldLady
+- Old lady: This is the Hanged Man, which represents the process of self-sacrifice. Perhaps sacrifice is the only way to survival. # CLASS: oldLady
 
 *[Back] ->day4_card
 
@@ -1630,7 +1630,7 @@ Old man: Welcome, dear visitor. You come to my store again! Please select two pr
 
     - Sanity > 0 && Sanity <= 20:
         Sanity : {Sanity} # CLASS: statusCheck
-        You appear fatigued today, with black bags under your eyes; you may need to take a break.
+        You appear fatigued today, with black bags under your eyes. You may need to take a break.
         
     - Sanity > 20:
         Sanity : {Sanity} # CLASS: statusCheck
@@ -1722,7 +1722,7 @@ Nicolas Erebos # CLASS: bojue
 
 - Jeff: Partner? Why partner? # CLASS: Jeff
 
-- Lord Erebos: I'm aware of what you done in the past. Since you're a doctor; as long as you're there, I can manage this body and do anything I want, and as long as you're there, I won't even go to a psychiatric institution. # CLASS: bojue
+- Lord Erebos: I'm aware of what you done in the past. Since you're a doctor, as long as you're there, I can manage this body and do anything I want. And as long as you're there, I won't even go to a psychiatric institution. # CLASS: bojue
 
 - Lord Erebos: So, now that we've covered a lot of ground, let's look at the small gift I've prepared for you. # CLASS: bojue
 
@@ -1764,7 +1764,7 @@ Nicolas Erebos # CLASS: bojue
 
 * [You move towards that place as you speak, but you dare not go too fast.]
 
-- Lord Erebos: No worries, my dear doctor. I'll give you 10 minutes, and because I've been talking for so long, please allow me to grab something to drink. By the way, don't even think of running away. The entire underground has been locked off, and you can't get out. # CLASS: bojue
+- Lord Erebos: No worries, my Dear Doctor. I'll give you 10 minutes, and because I've been talking for so long, please allow me to grab something to drink. By the way, don't even think of running away. The entire underground has been locked off, and you can't get out. # CLASS: bojue
 
 * [Lord Erebos left]
 
@@ -1986,7 +1986,7 @@ Nicolas Erebos # CLASS: bojue
 
 * He also finished drinking in front of you.
 
-- You instantly sensed a connection between your spirit and the Count. You could sense it even if it wasn't very powerful.
+- You instantly sensed a connection between your spirit and the count. You could sense it even if it wasn't very powerful.
 
 - Lord Erebos: Then, let us alter the world and become true lords of it in the future! # CLASS: bojue
 
@@ -2040,7 +2040,7 @@ Nicolas Erebos # CLASS: bojue
 
 - Jeff: Why? The rationale is straightforward. It's too dull for me to be with you. It's better to let me take your place and become a new demon. Think about it, I'm a doctor by day and a devil at night, what a fantastic idea. # CLASS: Jeff
 
-- Lord Erebos: Hmph, hum, hum, I honestly misjudged you, doctor; it was my negligence that placed it in your hands, but I won't die; I will be back at any moment as long as there is a possibility. # CLASS: bojue
+- Lord Erebos: Hmph, hum, hum, I honestly misjudged you, doctor. It was my negligence that placed it in your hands, but I won't die. I will be back at any moment as long as there is a possibility. # CLASS: bojue
 
 * You have a creepy grin, but it's a really dismal smile.
 
