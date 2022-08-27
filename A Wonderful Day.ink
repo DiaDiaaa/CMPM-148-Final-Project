@@ -1698,8 +1698,6 @@ Nicolas Erebos # CLASS: bojue
 
 - Lord Erebos: An ancestor lived here hundreds of years ago, buying all land in the area and establishing his own murder empire. This kingdom and intelligence network were built by a top assassination family over many years, but it didn't take long for the kingdom to suffer a major mishap. # CLASS: bojue
 
-- Lord Erebos: An ancestor lived here hundreds of years ago, buying all land in the area and establishing his own murder empire. This kingdom and intelligence network were built by a top assassination family over many years, but it didn't take long for the kingdom to suffer a major mishap. # CLASS: bojue
-
 - Lord Erebos: The daughter of a sheriff on the ground fell in love with the oldest son in the family. Love put him in a trance, and in order to protect himself, he revealed all the secrets from the ground to the sheriff, leading the family to be slaughtered overnight. Women, children, and the senior in family were not spared and were mutilated horrifically. # CLASS: bojue
 
 * You noticed the hatred in his eyes when he said those words.
@@ -1734,9 +1732,7 @@ Nicolas Erebos # CLASS: bojue
 
 * [Take the mirror and take a look] 
 
-    - {sanity_check_ending(1)}
-
-* [Ending Check] -> ending_check
+    - * [Ending Check] -> ending_check
 
 === ending_check
 - Sanity: {Sanity} # CLASS: statusCheck
